@@ -307,25 +307,33 @@ export default function ListingCard() {
         </section>
 
         {/* Shortfalls are never hidden */}
-        <section
-          aria-labelledby="house-shortfalls"
-          className="rounded-xl border border-[#DFB391] bg-[#FBF1E8] p-3"
-        >
-          <h3 id="house-shortfalls" className="text-sm font-bold text-[#7A3415]">
-            Doesn&apos;t fully fit
-          </h3>
-          {shortfalls.length > 0 ? (
+        {shortfalls.length > 0 ? (
+          <section
+            aria-labelledby="house-shortfalls"
+            className="rounded-xl border border-[#DFB391] bg-[#FBF1E8] p-3"
+          >
+            <h3 id="house-shortfalls" className="text-sm font-bold text-[#7A3415]">
+              Doesn&apos;t fully fit
+            </h3>
             <ul className="mt-1.5 list-disc space-y-1 pl-5 text-xs leading-relaxed text-[#7A3415]">
               {shortfalls.map((sf, idx) => (
                 <li key={idx}>{sf}</li>
               ))}
             </ul>
-          ) : (
-            <p className="mt-1 text-xs text-[#7A3415]">
-              Every priority is fully met based on what you&apos;ve told us so far.
+          </section>
+        ) : (
+          <section
+            aria-labelledby="house-shortfalls"
+            className="rounded-xl border border-[#C8D3C1] bg-[#DFEAE2] p-3"
+          >
+            <h3 id="house-shortfalls" className="text-sm font-bold text-[#1C452C]">
+              Fits everything you&apos;ve told us
+            </h3>
+            <p className="mt-1 text-xs text-[#1C452C]">
+              Every priority is fully met. Add more priorities to compare more closely.
             </p>
-          )}
-        </section>
+          </section>
+        )}
 
         {cost && (
           <section aria-labelledby="house-cost" className="rounded-xl border border-[#C8D3C1] bg-[#F3F5EF] p-3">
