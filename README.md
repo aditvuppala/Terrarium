@@ -120,6 +120,12 @@ To regenerate `data/processed/` (needs network; uses caches in `data/cache/`), r
 | 6 | `enrich.ts`: GTFS stops/routes/headsigns, Overpass places, building times | `enrichment.json`, `gtfs-stops.json`, `places.json` |
 | 7 | `construction.ts`: City of Ann Arbor active construction projects within 250 m of each listing (cached in `data/cache/construction.geojson`; delete it to refresh) | `enrichment.json` (`construction`), `construction-source.json` |
 
+Map overlays are a separate step: `npm run overlays` (`scripts/overlays.ts`) reads `data/processed/places.json` and downloads ACS + TIGERweb data (cached in `data/cache/overlays-*.json`; delete to refresh).
+
+| Step | Script | Output |
+| --- | --- | --- |
+| overlays | `overlays.ts`: bars/pubs within 400 m on a ~250 m grid; ACS B14001 college + grad enrollment share per census tract (Census Data API if `CENSUS_API_KEY` is set, else Census Reporter's mirror of the same table) joined to TIGERweb tract polygons | `public/overlays/nightlife.geojson`, `public/overlays/students.geojson` (each with a `metadata` object: source, vintage, retrieved) |
+
 Steps 2 and 5 call Gemini only when it's configured; without it, normalize leaves fields unknown and scam-check uses rules only. `npm run buildings` regenerates `data/um-buildings.json`.
 
 ### Real listings are entered by hand
@@ -139,6 +145,7 @@ R1 rent < 60% of the median for the same bedroom count (per-unit equivalent) · 
 - **Construction**: City of Ann Arbor "Active Construction Projects" layer, the data behind [a2gov.org/A2ConstructionStatus](https://www.a2gov.org/A2ConstructionStatus) (ArcGIS FeatureServer; license not specified in the city's catalog). Retrieved 2026-11-20; projects marked "Project Complete" are dropped. The layer has no start/end dates, only the city's free-text description.
 - **Places and building coordinates**: © OpenStreetMap contributors (ODbL), via the Overpass API.
 - **Geocoding**: U.S. Census Bureau Geocoder; fallback Nominatim (OpenStreetMap).
+- **Map overlays** (off by default on `/explore`): "Nightlife density (bars & pubs)" counts named OSM `amenity=bar|pub` (© OpenStreetMap contributors, ODbL) within 400 m of each ~250 m grid cell. "Student population share" is U.S. Census Bureau American Community Survey 5-year estimates, 2020–2024 (vintage 2024), table B14001: (B14001_008E undergraduate + B14001_009E graduate or professional) ÷ B14001_001E population 3+, per census tract; tract shapes from Census TIGERweb (`tigerWMS_ACS2024`). The Census Data API now redirects keyless requests to a "missing key" page, so the 2026-11-20 values were retrieved through Census Reporter (api.censusreporter.org, release `acs2024_5yr`), which republishes the same ACS table; set `CENSUS_API_KEY` to fetch from api.census.gov directly. It shows where enrolled students live, not student housing, and estimates have margins of error.
 
 **`data/um-buildings.json` source:** 54 U-M buildings. Coordinates are OpenStreetMap building centroids, matched by name (`scripts/buildings-osm.ts`), except DENN (Dennison Building) and DENT (School of Dentistry), which are hand-entered approximations. The per-building source is in `data/um-buildings.sources.json`. `data/course-buildings.json` maps subject prefixes to a likely building and is used **only** to guess (always `source: "guess"`, `confirmed: false`).
 

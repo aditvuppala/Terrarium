@@ -222,3 +222,22 @@ html[data-theme="dark"] .rm-pin--focused.rm-pin--top {
 html[data-theme="dark"] .rm-pin--focused::after {
   border-color: #ecf2eb;
 }
+
+/* ---------- Overlay toggles (components/map/MapOverlays.tsx) ---------- */
+.rm-ov-pill:hover {
+  background: #e6ece1;
+}
+
+.rm-ov-pill[aria-pressed="true"] {
+  background: #16241b;
+  color: #fff;
+}
+
+html[data-theme="dark"] .rm-ov-pill:hover {
+  background: #22302a;
+}
+
+html[data-theme="dark"] .rm-ov-pill[aria-pressed="true"] {
+  background: #e6eee5;
+  color: #16241b;
+}

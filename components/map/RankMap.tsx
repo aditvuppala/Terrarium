@@ -28,6 +28,12 @@ import {
 } from "@/components/map/houseRoutes";
 import { GOLD, RANK_GRADIENT_CSS, TOP_TIER, rankColor } from "@/components/map/rankColors";
 import { useTheme } from "@/components/map/useTheme";
+import {
+  OverlayControl,
+  OverlayLayer,
+  useOverlayData,
+  type OverlayId,
+} from "@/components/map/MapOverlays";
 import { CAMPUS_CENTROIDS } from "@/lib/geo";
 import type { ScoredListing } from "@/lib/schemas";
 import { useTerrarium } from "@/lib/store";
@@ -387,6 +393,8 @@ export default function RankMap() {
   const enrichment = useTerrarium((s) => (selectedId ? s.enrichmentById[selectedId] : undefined));
   const theme = useTheme();
   const [visible, setVisible] = useState<Record<RouteKind, boolean>>(ALL_VISIBLE);
+  const [overlay, setOverlay] = useState<OverlayId | null>(null);
+  const overlayData = useOverlayData(overlay);
 
   const focusedIndex = useMemo(
     () => (selectedId ? results.findIndex((r) => r.listing.id === selectedId) : -1),
@@ -449,6 +457,10 @@ export default function RankMap() {
           maxZoom={18}
         />
 
+        {overlay && overlayData.data && (
+          <OverlayLayer id={overlay} data={overlayData.data} theme={theme} />
+        )}
+
         {AREA_ICONS.map((a) => (
           <Marker
             key={a.name}
@@ -503,6 +515,14 @@ export default function RankMap() {
           );
         })}
       </MapContainer>
+
+      <OverlayControl
+        active={overlay}
+        onChange={setOverlay}
+        status={overlayData.status}
+        data={overlayData.data}
+        theme={theme}
+      />
 
       {focused && routes ? (
         <RouteLegend
