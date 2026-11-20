@@ -1,49 +1,93 @@
+import { useId } from "react";
 import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
+/**
+ * Terrarium logo: a hexagonal glass cover over soil, moss and a leafy plant.
+ * Drawn on a 120x120 grid; reads at 24px and scales up cleanly for the hero.
+ */
 export function TerrariumMark({ size = 32, className, ...props }: IconProps) {
+  const uid = useId().replace(/:/g, "");
+  const clip = `tm-glass-${uid}`;
+  // pointy-top hexagon, center (60,64), radius 50
+  const hex = "60,14 103.3,39 103.3,89 60,114 16.7,89 16.7,39";
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 120 120"
       fill="none"
       aria-hidden="true"
       className={className}
       {...props}
     >
-      {/* Faceted glass terrarium vessel */}
-      <path
-        d="M11 4H21L27 13L23 27H9L5 13L11 4Z"
-        fill="#DFEAE2"
-        stroke="#16241B"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M5 13H27"
-        stroke="#16241B"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-      {/* Botanical sprout inside */}
-      <path
-        d="M16 24V14"
-        stroke="#2F6B47"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M16 18C12.5 18 11 15.5 11 13C13.8 13 16 14.8 16 18Z"
-        fill="#2F6B47"
-      />
-      <path
-        d="M16 15.5C19.2 15.5 21 13.2 21 10.5C18.1 10.5 16 12.4 16 15.5Z"
-        fill="#2F6B47"
-      />
+      <defs>
+        <clipPath id={clip}>
+          <polygon points={hex} />
+        </clipPath>
+      </defs>
+
+      {/* glass body */}
+      <polygon points={hex} fill="#E9F5F1" />
+
+      <g clipPath={`url(#${clip})`}>
+        <g transform="translate(0 -7)">
+        {/* soil layers */}
+        <rect x="0" y="92" width="120" height="40" fill="#8A5A3C" />
+        <rect x="0" y="100" width="120" height="32" fill="#6B4430" />
+        <g fill="#B9B6A6">
+          <circle cx="30" cy="104" r="3.2" />
+          <circle cx="44" cy="108" r="2.4" />
+          <circle cx="76" cy="105" r="3" />
+          <circle cx="90" cy="102" r="2.2" />
+          <circle cx="60" cy="110" r="2.6" />
+        </g>
+        {/* moss mounds */}
+        <path d="M10 95 C22 84 36 86 46 93 C54 86 70 85 78 92 C88 85 102 86 112 95 V100 H10 Z" fill="#5DAE6A" />
+        <path d="M20 96 C28 91 36 92 42 96 Z M80 96 C88 91 96 92 102 96 Z" fill="#7FC487" />
+
+        {/* tiny mushroom */}
+        <rect x="85.5" y="83" width="3" height="9" rx="1.5" fill="#F1E9DA" />
+        <path d="M80.5 84.5 Q87 75 93.5 84.5 Z" fill="#D9473A" />
+        <circle cx="85" cy="81" r="1" fill="#FCFDFB" />
+
+        {/* small succulent */}
+        <g fill="#7FB89A">
+          <path d="M30 92 C24 86 24 80 27 76 C31 81 32 86 30 92 Z" />
+          <path d="M31 92 C36 86 39 82 39 77 C34 80 31 85 31 92 Z" />
+          <path d="M29 92 C23 90 19 86 18 82 C24 83 28 87 29 92 Z" />
+        </g>
+
+        </g>
+
+        {/* main plant */}
+        <g transform="translate(60 87) scale(1.12) translate(-60 -94)">
+        <path d="M60 94 C60 80 57 68 61 50 C62 44 63 40 62 34" stroke="#2F6B47" strokeWidth="3.4" strokeLinecap="round" />
+        <path d="M60 78 C52 76 45 70 42 60 C52 60 58 67 60 78 Z" fill="#3D8A55" />
+        <path d="M60 78 C55 72 49 66 42 60" stroke="#245538" strokeWidth="1.2" strokeLinecap="round" />
+        <path d="M60.5 68 C68 67 75 61 78 52 C69 51 62 57 60.5 68 Z" fill="#4F9A5E" />
+        <path d="M60.5 68 C66 63 72 57 78 52" stroke="#2F6B47" strokeWidth="1.2" strokeLinecap="round" />
+        <path d="M61.5 52 C55 50 50 45 48.5 37 C56 38 60.5 44 61.5 52 Z" fill="#5DAE6A" />
+        <path d="M61.5 52 C57 47 52 42 48.5 37" stroke="#3D8A55" strokeWidth="1.1" strokeLinecap="round" />
+        <path d="M62 38 C66 36 70 31 70.5 25 C64.5 26 61.5 31 62 38 Z" fill="#7FC487" />
+        <path d="M60.3 86 C66 86 72 82 74 76 C67 75 62 79 60.3 86 Z" fill="#5DAE6A" />
+        <path d="M62 38 C58 35 55 30 55 25 C59.5 27 62 31 62 38 Z" fill="#9AD39F" />
+        </g>
+
+        {/* glass reflections */}
+        <path d="M27 44 L27 74" stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" opacity="0.85" />
+        <path d="M34 36 L42 31" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" opacity="0.7" />
+        <polygon points="60,14 103.3,39 60,39" fill="#FFFFFF" opacity="0.28" />
+      </g>
+
+      {/* facet lines + frame */}
+      <path d="M16.7 39 H103.3 M60 14 V39" stroke="#1C452C" strokeWidth="2" strokeLinecap="round" opacity="0.55" />
+      <polygon points={hex} stroke="#1C452C" strokeWidth="5" strokeLinejoin="round" />
+      {/* cap ring */}
+      <rect x="54" y="5" width="12" height="7" rx="3" fill="#1C452C" />
     </svg>
   );
 }

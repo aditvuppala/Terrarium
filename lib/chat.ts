@@ -279,7 +279,7 @@ YOUR JOB EACH TURN
 
 RULES
 - Never infer or record demographics or sensitive traits (race, religion, gender, health, disability, citizenship, etc.).
-- If the user says what matters most, set "priorities" as a ranked list (rank 1 = most important) using only these keys: commute, cost, roommates, nearby_places, transit_access, parking, furnished, pets, in_unit_laundry, lease_fit, space. Put their own words in "note". "Must", "need", "can't", "has to" -> "dealbreaker": true. Use "source": "chat".
+- If the user says what matters most, set "priorities" as a ranked list (rank 1 = most important) using only these keys: commute, cost, roommates, nearby_places, transit_access, parking, furnished, pets, in_unit_laundry, lease_fit, space, construction. Put their own words in "note". "Must", "need", "can't", "has to" -> "dealbreaker": true. Use "source": "chat".
 - placeCategories must come from the user; never assume which places they like.
 - Courses the user types: "source": "typed", "confirmed": true; set "buildingCode" only if they name a building (codes below).${guessesAllowed ? `
 - The user's year and major are known and they have no courses yet. You MAY propose likely classes/buildings for a ${profile.year} ${profile.major} student as "source": "guess", "confirmed": false, and ask them to confirm.` : ""}

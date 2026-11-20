@@ -58,6 +58,10 @@ const DEST_STOP_WALK_MIN = 5;
 const FAR_STOP_WALK_MIN = 13;
 /** Comfortable floor area per person (assumption). */
 const SQFT_PER_PERSON = 350;
+/** Construction this close counts as on your block (assumption): unmet. */
+const CONSTRUCTION_BLOCK_M = 60;
+/** Construction this close counts as on your street / around the corner (assumption): partial. */
+const CONSTRUCTION_NEAR_M = 200;
 
 const LABELS: Record<PriorityKey, string> = {
   commute: "Commute",
@@ -71,6 +75,7 @@ const LABELS: Record<PriorityKey, string> = {
   in_unit_laundry: "In-unit laundry",
   lease_fit: "Lease fit",
   space: "Space",
+  construction: "No construction nearby",
 };
 export const priorityLabel = (k: PriorityKey) => LABELS[k];
 
@@ -333,6 +338,31 @@ function scoreTransit(e: ListingEnrichment | undefined): Scored {
   };
 }
 
+function scoreConstruction(e: ListingEnrichment | undefined): Scored {
+  const near = (e?.construction ?? []).filter((c) => c.distanceMeters <= CONSTRUCTION_NEAR_M);
+  if (near.length === 0) {
+    const d = `No active city construction within ${CONSTRUCTION_NEAR_M} m.`;
+    return { score: 1, status: "met", detail: d, dataQuality: "estimated", shortfall: "", highlight: "no construction nearby" };
+  }
+  const c = near[0]; // nearest first
+  // the city often gives bare street names in caps ("PACKARD ST")
+  const name = c.name === c.name.toUpperCase() ? c.name.toLowerCase().replace(/\b\w/g, (ch) => ch.toUpperCase()) : c.name;
+  const where = c.distanceMeters === 0 ? "right at this address" : `about ${Math.round(c.distanceMeters)} m away`;
+  const kind = c.projectType.toLowerCase();
+  const more = near.length > 1 ? ` (+${near.length - 1} more nearby)` : "";
+  const when = c.note ? ` ${c.note.replace(/\.?$/, ".")}` : "";
+  const detail = `City ${kind} ${where}: ${name}${more}.${when}`;
+  const onBlock = c.distanceMeters <= CONSTRUCTION_BLOCK_M;
+  return {
+    score: onBlock ? 0 : 0.5,
+    status: onBlock ? "unmet" : "partial",
+    detail,
+    dataQuality: "estimated",
+    shortfall: onBlock ? `Active city ${kind} on this block.` : `City ${kind} about ${Math.round(c.distanceMeters)} m away.`,
+    highlight: "",
+  };
+}
+
 function scoreTriState(l: Listing, value: "yes" | "no" | "unknown", want: boolean, what: { yes: string; no: string; unknown: string; highlight: string }): Scored {
   if (value === "unknown") {
     return { score: 0.5, status: "unknown", detail: `Listing doesn't say ${what.unknown}.`, dataQuality: "missing", shortfall: `Listing doesn't say ${what.unknown}.`, highlight: "" };
@@ -445,6 +475,8 @@ function scoreCriterion(
       return profile.leaseTypePref === null && profile.moveInBy === null ? null : scoreLeaseFit(l, profile);
     case "space":
       return scoreSpace(l, profile);
+    case "construction":
+      return scoreConstruction(e);
   }
 }
 

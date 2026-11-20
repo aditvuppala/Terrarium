@@ -82,6 +82,7 @@ For each active listing, every priority in `profile.priorities` is scored 0–1 
 | parking / furnished / pets / in_unit_laundry | yes → 1, no → 0, unknown → 0.5 ("Listing doesn't say"). Pets only if `hasPet`; furnished only if `wantsFurnished` is set (false prefers unfurnished). |
 | lease_fit | Lease type matches (`either` always matches) and `leaseStart` ≤ `moveInBy`; unknowns → 0.5. Skipped if neither preference is set. |
 | space | Enough bedrooms for everyone, then sq ft per person vs 350 (assumption); missing sq ft → unknown. |
+| construction | Nearest active city project (straight line to its area): ≤ 60 m → unmet ("on this block"), ≤ 200 m → partial (0.5), else met. Distances are `estimated`; projects come from a dated snapshot (see `data/processed/construction-source.json`). |
 
 If no criterion can be scored (e.g. only "pets" with no pet), it falls back to the default commute + cost.
 
@@ -101,6 +102,7 @@ To regenerate `data/processed/` (needs network; uses caches in `data/cache/`), r
 | 4 | `geocode.ts`: US Census Geocoder, falling back to Nominatim (≤ 1 req/s); cached | `geocoded.json` |
 | 5 | `scam-check.ts`: rules R1–R6, then Gemini; final = max(rule, Gemini); high → quarantined (kept, never deleted) | `listings.json` |
 | 6 | `enrich.ts`: GTFS stops/routes/headsigns, Overpass places, building times | `enrichment.json`, `gtfs-stops.json`, `places.json` |
+| 7 | `construction.ts`: City of Ann Arbor active construction projects within 250 m of each listing (cached in `data/cache/construction.geojson`; delete it to refresh) | `enrichment.json` (`construction`), `construction-source.json` |
 
 Steps 2 and 5 call Gemini only when it's configured; without it, normalize leaves fields unknown and scam-check uses rules only. `npm run buildings` regenerates `data/um-buildings.json`.
 
@@ -118,6 +120,7 @@ R1 rent < 60% of the median for the same bedroom count (per-unit equivalent) · 
 
 - **Listings**: U-M Off-Campus Housing (offcampushousing.umich.edu), facts entered by hand, retrieved 2026-11-19. All other listings are **synthetic** (`provenance.isSynthetic: true`, source "Synthetic (Terrarium team)"), with placeholder photos in `public/photos/`.
 - **Transit**: TheRide (AAATA) GTFS, `theride.org/sites/default/files/google/google_transit.zip`. U-M Transit Services GTFS via the Mobility Database (feed `mdb-2072`). Walk/bus times are estimates (straight line × 1.3, 80 m/min walking, 8 min average wait, 20 km/h bus).
+- **Construction**: City of Ann Arbor "Active Construction Projects" layer, the data behind [a2gov.org/A2ConstructionStatus](https://www.a2gov.org/A2ConstructionStatus) (ArcGIS FeatureServer; license not specified in the city's catalog). Retrieved 2026-11-20; projects marked "Project Complete" are dropped. The layer has no start/end dates, only the city's free-text description.
 - **Places and building coordinates**: © OpenStreetMap contributors (ODbL), via the Overpass API.
 - **Geocoding**: U.S. Census Bureau Geocoder; fallback Nominatim (OpenStreetMap).
 

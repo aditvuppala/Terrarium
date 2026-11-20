@@ -234,7 +234,8 @@ async function main() {
       return { buildingCode: b.code, walkMin: round1(walkMin), busMin: busMin === null ? null : round1(busMin), method: "estimate" as const };
     });
 
-    out.push(ListingEnrichment.parse({ listingId: l.id, stops: nearbyStops, places: nearbyPlaces, buildingTimes }));
+    // construction is filled in by the next step (scripts/construction.ts)
+    out.push(ListingEnrichment.parse({ listingId: l.id, stops: nearbyStops, places: nearbyPlaces, buildingTimes, construction: [] }));
   }
 
   writeJson(path.join(PROCESSED, "enrichment.json"), out);

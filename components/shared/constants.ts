@@ -59,6 +59,7 @@ export const PRIORITY_LABELS: Record<PriorityKey, string> = {
   in_unit_laundry: "In-unit laundry",
   lease_fit: "Lease fit",
   space: "Space",
+  construction: "Construction nearby",
 };
 
 export const ALL_PRIORITY_KEYS: PriorityKey[] = PriorityKey.options;
@@ -292,6 +293,7 @@ export function extractMockFallbackPatch(
     ["roommates", /\broommates?\b|\bgroup\b/i],
     ["lease_fit", /\blease\b|\bsublease\b/i],
     ["space", /\bspace\b|\bsq\s*ft\b|\blarge\b/i],
+    ["construction", /\bconstruction\b|\broad ?work\b/i],
   ];
   if (field === "priorities" || /\b(must|dealbreaker|matters most|top priority)\b/i.test(lower)) {
     for (const [key, rx] of keyPatterns) {

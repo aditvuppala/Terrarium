@@ -187,3 +187,61 @@ h4,
   border: 2px dashed #DFEAE2;
   outline: 2px solid #16241B;
 }
+
+/* ---------- Landing page river valley ---------- */
+/* Offset is an exact multiple of the dash period (34 + 170 = 204) so the loop is seamless. */
+.tr-flow {
+  animation: tr-flow 66s linear infinite;
+}
+
+@keyframes tr-flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -2448; }
+}
+
+.tr-drift {
+  animation: tr-drift 22s ease-in-out infinite alternate;
+}
+
+.tr-drift-slow {
+  animation: tr-drift 34s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes tr-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(36px); }
+}
+
+.tr-delay-1 { animation-delay: -2.3s; }
+.tr-delay-2 { animation-delay: -4.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tr-flow,
+  .tr-drift,
+  .tr-drift-slow {
+    animation: none;
+  }
+}
+
+/* Landing question ticker: fades at both edges, loops forever */
+.tr-ticker {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent);
+}
+
+.tr-ticker-track {
+  animation: tr-ticker 80s linear infinite;
+}
+
+.tr-ticker:hover .tr-ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes tr-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tr-ticker-track { animation: none; }
+}

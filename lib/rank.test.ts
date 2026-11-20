@@ -138,6 +138,34 @@ describe("rank", () => {
     }
   });
 
+  it("scores construction by distance to the nearest active city project", () => {
+    const p: UserProfile = { ...csNorth, priorities: [{ key: "construction", rank: 1, dealbreaker: true, source: "chat", note: null }] };
+    const r = run(p);
+    const byId = new Map(enrichment.map((e) => [e.listingId, e]));
+    let sawUnmet = false;
+    for (const x of r.results) {
+      const c = x.criteria[0];
+      const nearest = byId.get(x.listing.id)?.construction[0]?.distanceMeters ?? Infinity;
+      expect(c.dataQuality).toBe("estimated");
+      if (nearest <= 60) {
+        sawUnmet = true;
+        expect(c.status).toBe("unmet");
+        expect(x.passesDealbreakers).toBe(false);
+        expect(x.shortfalls[0]).toMatch(/on this block/);
+      } else if (nearest <= 200) {
+        expect(c.status).toBe("partial");
+        expect(c.score).toBe(0.5);
+      } else {
+        expect(c.status).toBe("met");
+        expect(x.shortfalls).toEqual([]);
+      }
+    }
+    expect(sawUnmet).toBe(true);
+    // dealbreaker: every listing with construction on its block sorts after the rest
+    const firstFail = r.results.findIndex((x) => !x.passesDealbreakers);
+    expect(r.results.slice(firstFail).every((x) => !x.passesDealbreakers)).toBe(true);
+  });
+
   it("falls back to commute + cost for the default profile", () => {
     const r = run(DEFAULT_PROFILE);
     expect(r.results[0].criteria.map((c) => c.key)).toEqual(["commute", "cost"]);

@@ -1,0 +1,7 @@
+{
+  "source": "City of Ann Arbor, Active Construction Projects (https://www.a2gov.org/A2ConstructionStatus)",
+  "layer": "https://utility.arcgis.com/usrsvcs/servers/bac25e1cf14b41b5bf2a62fc9a59f2d4/rest/services/ConstructionProjects/FeatureServer/0",
+  "fetchedOn": "2026-11-20",
+  "activeProjects": 28,
+  "radiusMeters": 250
+}

@@ -2091,6 +2091,16 @@
         "busMin": 19.2,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 97.5
+      }
     ]
   },
   {
@@ -4209,7 +4219,8 @@
         "busMin": 16.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "um-eastwind",
@@ -4942,7 +4953,8 @@
         "busMin": 28.7,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-01",
@@ -6329,7 +6341,8 @@
         "busMin": 15.7,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-02",
@@ -7236,7 +7249,8 @@
         "busMin": 18.1,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-03",
@@ -8680,7 +8694,8 @@
         "busMin": 18,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-04",
@@ -10107,6 +10122,16 @@
         "walkMin": 17,
         "busMin": null,
         "method": "estimate"
+      }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 228.4
       }
     ]
   },
@@ -12234,6 +12259,16 @@
         "busMin": 18.3,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 166.5
+      }
     ]
   },
   {
@@ -13503,6 +13538,16 @@
         "walkMin": 15.1,
         "busMin": null,
         "method": "estimate"
+      }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 185
       }
     ]
   },
@@ -15027,6 +15072,16 @@
         "walkMin": 13.9,
         "busMin": null,
         "method": "estimate"
+      }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 0
       }
     ]
   },
@@ -17081,6 +17136,16 @@
         "busMin": 17.4,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:16",
+        "name": "S FOURTH AVE",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety and transit improvements, streetscape improvements, and street resurfacing",
+        "url": "https://www.a2dda.org/people-friendly-streets/projects/fourth-avenue/",
+        "distanceMeters": 183.6
+      }
     ]
   },
   {
@@ -18931,6 +18996,24 @@
         "busMin": 18.6,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:17",
+        "name": "N INGALLS ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": null,
+        "distanceMeters": 119.5
+      },
+      {
+        "projectId": "a2:20",
+        "name": "S THAYER ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, sanitary sewer improvements, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/northu-thy",
+        "distanceMeters": 248.6
+      }
     ]
   },
   {
@@ -20712,6 +20795,16 @@
         "busMin": null,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 167.6
+      }
     ]
   },
   {
@@ -21350,7 +21443,8 @@
         "busMin": 26.8,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-12",
@@ -21981,7 +22075,8 @@
         "busMin": 30.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-13",
@@ -22725,7 +22820,8 @@
         "busMin": 31.3,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-14",
@@ -23441,7 +23537,8 @@
         "busMin": 29.3,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-15",
@@ -24069,7 +24166,8 @@
         "busMin": 30.6,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-16",
@@ -24684,7 +24782,8 @@
         "busMin": 26.1,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-17",
@@ -25244,7 +25343,8 @@
         "busMin": 24.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-18",
@@ -27021,6 +27121,24 @@
         "walkMin": 34.9,
         "busMin": 19.4,
         "method": "estimate"
+      }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:18",
+        "name": "E KINGSLEY ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": null,
+        "distanceMeters": 67.7
+      },
+      {
+        "projectId": "a2:12",
+        "name": "E ANN ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, sanitary sewer improvements, stormwater improvments, streetscape improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/annstreet-improvements",
+        "distanceMeters": 213.3
       }
     ]
   },
@@ -28828,6 +28946,16 @@
         "walkMin": 36.4,
         "busMin": 22,
         "method": "estimate"
+      }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:18",
+        "name": "E KINGSLEY ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": null,
+        "distanceMeters": 27.6
       }
     ]
   },
@@ -30812,6 +30940,16 @@
         "busMin": null,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:26",
+        "name": "PACKARD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, stormwater improvments, transportation safety improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/packard-improvements",
+        "distanceMeters": 27.8
+      }
     ]
   },
   {
@@ -32659,6 +32797,24 @@
         "busMin": 18.9,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:18",
+        "name": "E KINGSLEY ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": null,
+        "distanceMeters": 174.7
+      },
+      {
+        "projectId": "a2:12",
+        "name": "E ANN ST",
+        "projectType": "Utility Work",
+        "note": "Project includes water main replacement, sanitary sewer improvements, stormwater improvments, streetscape improvements, and street resurfacing",
+        "url": "https://engage.a2gov.org/annstreet-improvements",
+        "distanceMeters": 193
+      }
     ]
   },
   {
@@ -34466,6 +34622,16 @@
         "busMin": 21,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:18",
+        "name": "E KINGSLEY ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": null,
+        "distanceMeters": 0
+      }
     ]
   },
   {
@@ -35356,7 +35522,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-24",
@@ -35941,7 +36108,8 @@
         "busMin": 20.5,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-25",
@@ -36816,7 +36984,8 @@
         "busMin": 19.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-26",
@@ -37679,7 +37848,8 @@
         "busMin": 20,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-27",
@@ -38540,7 +38710,8 @@
         "busMin": 19.7,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-28",
@@ -39154,7 +39325,8 @@
         "busMin": 21.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-29",
@@ -39783,7 +39955,8 @@
         "busMin": 22.3,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-30",
@@ -40327,7 +40500,8 @@
         "busMin": 26.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-31",
@@ -40925,7 +41099,8 @@
         "busMin": 21.1,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-32",
@@ -41600,7 +41775,8 @@
         "busMin": 21.9,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-33",
@@ -42282,7 +42458,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-34",
@@ -42931,7 +43108,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-35",
@@ -43589,7 +43767,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-36",
@@ -44222,7 +44401,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-37",
@@ -44815,7 +44995,8 @@
         "busMin": null,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-38",
@@ -45547,7 +45728,8 @@
         "busMin": 27.5,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-39",
@@ -46082,7 +46264,8 @@
         "busMin": 17.7,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-40",
@@ -46628,7 +46811,8 @@
         "busMin": 28.7,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-41",
@@ -47115,6 +47299,24 @@
         "busMin": 17.7,
         "method": "estimate"
       }
+    ],
+    "construction": [
+      {
+        "projectId": "a2:13",
+        "name": "ARBORDALE ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": "https://engage.a2gov.org/arbordale-sherwood-water-main-and-resurfacing",
+        "distanceMeters": 174.1
+      },
+      {
+        "projectId": "a2:14",
+        "name": "SHERWOOD ST",
+        "projectType": "Utility Work",
+        "note": "Project includes street resurfacing, water main replacement, and stormwater improvements",
+        "url": "https://engage.a2gov.org/arbordale-sherwood-water-main-and-resurfacing",
+        "distanceMeters": 207
+      }
     ]
   },
   {
@@ -47541,7 +47743,8 @@
         "busMin": 24.3,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-43",
@@ -48181,7 +48384,8 @@
         "busMin": 19.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-44",
@@ -48779,7 +48983,8 @@
         "busMin": 28.3,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-45",
@@ -49364,7 +49569,8 @@
         "busMin": 31,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-46",
@@ -49840,7 +50046,8 @@
         "busMin": 26.4,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   },
   {
     "listingId": "syn-47",
@@ -50277,6 +50484,7 @@
         "busMin": 35.2,
         "method": "estimate"
       }
-    ]
+    ],
+    "construction": []
   }
 ]

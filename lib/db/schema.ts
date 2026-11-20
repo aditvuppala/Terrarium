@@ -48,6 +48,7 @@ export const enrichment = sqliteTable("enrichment", {
   stops: text("stops", { mode: "json" }).$type<ListingEnrichment["stops"]>().notNull(),
   places: text("places", { mode: "json" }).$type<ListingEnrichment["places"]>().notNull(),
   buildingTimes: text("building_times", { mode: "json" }).$type<ListingEnrichment["buildingTimes"]>().notNull(),
+  construction: text("construction", { mode: "json" }).$type<ListingEnrichment["construction"]>().notNull(),
 });
 
 export const buildings = sqliteTable("buildings", {
@@ -98,7 +99,8 @@ CREATE TABLE listings (
 );
 CREATE INDEX listings_scam_status ON listings (scam_status);
 CREATE TABLE enrichment (
-  listing_id TEXT PRIMARY KEY REFERENCES listings(id), stops TEXT NOT NULL, places TEXT NOT NULL, building_times TEXT NOT NULL
+  listing_id TEXT PRIMARY KEY REFERENCES listings(id), stops TEXT NOT NULL, places TEXT NOT NULL, building_times TEXT NOT NULL,
+  construction TEXT NOT NULL
 );
 CREATE TABLE buildings (code TEXT PRIMARY KEY, name TEXT NOT NULL, campus TEXT NOT NULL, lat REAL NOT NULL, lng REAL NOT NULL);
 CREATE TABLE gtfs_stops (stop_id TEXT PRIMARY KEY, agency TEXT NOT NULL, stop_name TEXT NOT NULL, lat REAL NOT NULL, lng REAL NOT NULL);

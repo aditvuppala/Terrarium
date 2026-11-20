@@ -131,11 +131,23 @@ export const BuildingTime = z.object({
   method: z.enum(["osrm", "estimate"]), // "estimate" = straight line x 1.3
 });
 
+/** An active City of Ann Arbor construction project near a listing (scripts/construction.ts). */
+export const NearbyConstruction = z.object({
+  projectId: z.string(),                 // "a2:<OBJECTID>"
+  name: z.string(),                      // "S Main St - New Sidewalk Construction"
+  projectType: z.string(),               // city's category: "Sidewalk Construction", "Utility Work", ...
+  note: z.string().nullable(),           // city's own description, e.g. "Project to be completed in spring of 2027"
+  url: z.string().nullable(),            // city project page
+  distanceMeters: z.number(),            // straight line to the project area; 0 = listing is inside it
+});
+export type NearbyConstruction = z.infer<typeof NearbyConstruction>;
+
 export const ListingEnrichment = z.object({
   listingId: z.string(),
   stops: z.array(NearbyStop),            // nearest ~5 within 800 m
   places: z.array(NearbyPlace),          // all categories within 1 km; UI filters
   buildingTimes: z.array(BuildingTime),  // to every building in data/um-buildings.json
+  construction: z.array(NearbyConstruction), // active city projects within 250 m, nearest first
 });
 export type ListingEnrichment = z.infer<typeof ListingEnrichment>;
 
@@ -165,6 +177,7 @@ export const PriorityKey = z.enum([
   "in_unit_laundry",
   "lease_fit",        // lease type + move-in / end dates
   "space",            // beds/baths/sqft
+  "construction",     // active city road/sidewalk/utility projects near the listing
 ]);
 export type PriorityKey = z.infer<typeof PriorityKey>;
 
