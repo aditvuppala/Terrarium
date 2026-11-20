@@ -42,7 +42,9 @@ export default function ChatPanel() {
 
   /* Bootstrap initial deterministic question on first visit to /explore */
   useEffect(() => {
-    if (chatBootstrapped) return;
+    // Read the live store value, not the render-time one: effects can run twice
+    // (React dev double-mount, or two mounted panels) before a re-render.
+    if (chatBootstrapped || useTerrarium.getState().chatBootstrapped) return;
     setChatBootstrapped(true);
 
     const state = useTerrarium.getState();

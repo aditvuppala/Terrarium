@@ -535,7 +535,10 @@ export function rank(
   const results: ScoredListing[] = rows.map((r, i) => {
     const pos = i + 1;
     const lead = r.strongest ? cap(r.strongest.s.highlight) : `Score ${r.score}`;
-    const tail = r.biggest ? `; but ${lowerFirst(r.biggest.s.shortfall.replace(/\.$/, ""))}` : "";
+    // A partially met criterion can be both the strongest point and the biggest
+    // shortfall; don't repeat it ("22 min by bus; but 22 min by bus").
+    const sameCriterion = r.biggest && r.strongest && r.biggest.p.key === r.strongest.p.key;
+    const tail = r.biggest && !sameCriterion ? `; but ${lowerFirst(r.biggest.s.shortfall.replace(/\.$/, ""))}` : "";
     return {
       listing: r.l,
       score: r.score,
