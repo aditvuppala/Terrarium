@@ -14,7 +14,11 @@ export function MoneyInput({
   className = "",
   ariaLabel,
   placeholder = "0",
+  onFocus,
+  onBlur,
 }: {
+  onFocus?: () => void;
+  onBlur?: () => void;
   id: string;
   value: string;
   onChange: (v: string) => void;
@@ -40,6 +44,8 @@ export function MoneyInput({
         aria-invalid={invalid || undefined}
         aria-describedby={describedBy}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={onFocus}
+        onBlur={onBlur}
         className={`min-h-[44px] w-full rounded-xl border bg-[#FCFDFB] py-2 pl-7 pr-3 text-right text-base tabular-nums text-[#16241B] placeholder:text-[#3D5245]/50 ${
           invalid ? "border-[#B5562B] bg-[#FBF1E8]" : "border-[#C8D3C1] hover:border-[#2F6B47]"
         }`}
@@ -100,7 +106,9 @@ export function PersonBidCard({
   onBid,
   onEven,
   headingLevel = 3,
+  onFocusRoom,
 }: {
+  onFocusRoom?: (room: number | null) => void;
   draft: Draft;
   person: number;
   /** Prefix that keeps input ids unique when several layouts exist. */
@@ -139,6 +147,8 @@ export function PersonBidCard({
                 onChange={(v) => onBid(person, r, v)}
                 invalid={cellInvalid(draft.bids[person][r])}
                 describedBy={leftId}
+                onFocus={() => onFocusRoom?.(r)}
+                onBlur={() => onFocusRoom?.(null)}
                 className="w-36 shrink-0"
               />
             </li>
@@ -161,9 +171,11 @@ export function PersonBidCard({
 export function BidTable({
   draft,
   onBid,
+  onFocusRoom,
 }: {
   draft: Draft;
   onBid: (person: number, room: number, value: string) => void;
+  onFocusRoom?: (room: number | null) => void;
 }) {
   const scope = "grid";
   return (
@@ -203,6 +215,8 @@ export function BidTable({
                     onChange={(v) => onBid(i, r, v)}
                     invalid={cellInvalid(draft.bids[i][r])}
                     describedBy={remainingId(scope, i)}
+                    onFocus={() => onFocusRoom?.(r)}
+                    onBlur={() => onFocusRoom?.(null)}
                     className="min-w-[7.5rem]"
                   />
                 </td>

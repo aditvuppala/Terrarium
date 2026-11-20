@@ -4,17 +4,22 @@ import { useEffect, useRef, useState } from "react";
 import { WarningIcon } from "@/components/ui/Icons";
 import { solveSplit, type SplitInput, type SplitIssue, type SplitResult } from "@/lib/split";
 import { BidTable, PersonBidCard } from "./BidInputs";
+import { DemoFloorPlan, PlanUpload, demoDraft, type UploadedPlan } from "./FloorPlan";
 import HouseSetup from "./HouseSetup";
 import { checkDraft, emptyDraft, evenAll, evenRow, rentCents, resizeDraft, type Draft } from "./model";
 import PassThePhone from "./PassThePhone";
 import SplitResults from "./SplitResults";
 
 type Mode = "together" | "private";
+type Start = "choose" | "demo" | "upload" | "manual";
 
 /** The whole rent splitter: house setup, bids, and the result. All client-side. */
 export default function RentSplitter() {
   const [draft, setDraft] = useState<Draft>(() => emptyDraft());
   const [mode, setMode] = useState<Mode>("together");
+  const [start, setStart] = useState<Start>("choose");
+  const [plan, setPlan] = useState<UploadedPlan | null>(null);
+  const [activeRoom, setActiveRoom] = useState<number | null>(null);
   const [issues, setIssues] = useState<SplitIssue[]>([]);
   const [solved, setSolved] = useState<{ input: SplitInput; result: SplitResult } | null>(null);
   const errorRef = useRef<HTMLDivElement>(null);
@@ -57,12 +62,57 @@ export default function RentSplitter() {
     el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
   }, [solved]);
 
+  // After "Try the demo", jump straight to the bids.
+  useEffect(() => {
+    if (start !== "demo") return;
+    bidsRef.current?.focus({ preventScroll: true });
+    bidsRef.current?.scrollIntoView({ block: "start" });
+  }, [start]);
+
   const rentIssue = issues.find((i) => i.code === "rent");
   const n = draft.rooms.length;
   const hasRent = rentCents(draft) !== null;
 
-  return (
-    <div className="space-y-6">
+  if (start === "choose") {
+    const big = "flex min-h-[120px] flex-col items-start justify-center gap-1 rounded-3xl border p-6 text-left";
+    return (
+      <section aria-labelledby="split-start-heading" className="space-y-4">
+        <h2 id="split-start-heading" className="sr-only">
+          How do you want to start?
+        </h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <button
+            type="button"
+            onClick={() => {
+              setDraft(demoDraft());
+              setStart("demo");
+            }}
+            className={`${big} border-[#2F6B47] bg-[#2F6B47] text-white hover:bg-[#245538]`}
+          >
+            <span className="font-heading text-2xl font-bold">Try the demo</span>
+            <span className="text-[#DFEAE2]">A 4-bedroom Ann Arbor house with bids already filled in.</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setStart("upload")}
+            className={`${big} border-[#C8D3C1] bg-[#FCFDFB] text-[#16241B] hover:border-[#2F6B47] hover:bg-[#DFEAE2]`}
+          >
+            <span className="font-heading text-2xl font-bold">Upload a floor plan</span>
+            <span className="text-[#3D5245]">Keep your plan in view while you name rooms and bid. Never uploaded.</span>
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={() => setStart("manual")}
+          className="min-h-[44px] rounded-xl px-3 text-sm font-semibold text-[#3D5245] underline underline-offset-2 hover:bg-[#E6ECE1] hover:text-[#16241B]"
+        >
+          Enter details manually
+        </button>
+      </section>
+    );
+  }
+
+  const houseSetup = (
       <HouseSetup
         draft={draft}
         rentError={rentIssue ? rentIssue.message : null}
@@ -71,6 +121,46 @@ export default function RentSplitter() {
         onRoom={(r, patch) => edit((d) => ({ ...d, rooms: d.rooms.map((x, i) => (i === r ? { ...x, ...patch } : x)) }))}
         onPerson={(i, name) => edit((d) => ({ ...d, people: d.people.map((x, j) => (j === i ? name : x)) }))}
       />
+  );
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className="text-sm text-[#3D5245]">
+          {start === "demo"
+            ? "Demo house loaded. Change anything you like."
+            : start === "upload"
+              ? "Add your floor plan, then name the rooms and bid."
+              : "Entering details manually."}
+        </p>
+        <button
+          type="button"
+          onClick={() => {
+            setStart("choose");
+            setDraft(emptyDraft());
+            setPlan(null);
+            setSolved(null);
+            setIssues([]);
+            setMode("together");
+          }}
+          className="min-h-[44px] rounded-xl px-3 text-sm font-semibold text-[#2F6B47] hover:bg-[#DFEAE2]"
+        >
+          Start over
+        </button>
+      </div>
+
+      {start === "upload" && <PlanUpload plan={plan} onPlan={setPlan} />}
+
+      {start === "demo" ? (
+        <details className="rounded-3xl border border-[#C8D3C1] bg-[#FCFDFB]">
+          <summary className="min-h-[44px] cursor-pointer px-5 py-3 font-semibold text-[#16241B]">
+            House details: rent, rooms and names (edit)
+          </summary>
+          <div className="p-2">{houseSetup}</div>
+        </details>
+      ) : (
+        houseSetup
+      )}
 
       <section aria-labelledby="split-bids-heading" className="rounded-3xl border border-[#C8D3C1] bg-[#FCFDFB] p-5 sm:p-6">
         <h2 id="split-bids-heading" ref={bidsRef} tabIndex={-1} className="font-heading text-xl font-bold text-[#16241B] outline-none">
@@ -120,6 +210,19 @@ export default function RentSplitter() {
           </p>
         </fieldset>
 
+        {start === "demo" && (
+          <div className="mt-5 max-w-2xl">
+            <DemoFloorPlan draft={draft} active={activeRoom} />
+          </div>
+        )}
+        {start === "upload" && plan?.kind === "image" && (
+          <div className="mt-5">
+            {/* eslint-disable-next-line @next/next/no-img-element -- local object URL */}
+            <img src={plan.url} alt="" className="max-h-72 w-full rounded-2xl border border-[#C8D3C1] object-contain" />
+            <p className="mt-1 text-sm text-[#3D5245]">Your floor plan, for reference.</p>
+          </div>
+        )}
+
         <div className="mt-5">
           {mode === "together" ? (
             <>
@@ -137,7 +240,7 @@ export default function RentSplitter() {
                 </span>
               </div>
               <div className="hidden md:block">
-                <BidTable draft={draft} onBid={onBid} />
+                <BidTable draft={draft} onBid={onBid} onFocusRoom={setActiveRoom} />
               </div>
               <div className="space-y-3 md:hidden">
                 {draft.people.map((_, i) => (
@@ -147,6 +250,7 @@ export default function RentSplitter() {
                     person={i}
                     scope="card"
                     onBid={onBid}
+                    onFocusRoom={setActiveRoom}
                     onEven={(p) => edit((d) => evenRow(d, p))}
                   />
                 ))}
