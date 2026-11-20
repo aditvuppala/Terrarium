@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { ChatResponseSchema, type ChatMessage, type ChatRequest } from "@/lib/schemas";
-import { useTerrarium } from "@/lib/store";
+import type { z } from "zod";
+import { ChatResponse, type ChatRequest } from "@/lib/schemas";
+import { useTerrarium, type ChatMessage } from "@/lib/store";
 
 /** STUB chat panel: message list + input that calls /api/chat. */
 export default function ChatPanel() {
@@ -16,14 +17,14 @@ export default function ChatPanel() {
   async function send() {
     const content = draft.trim();
     if (!content || pending) return;
-    const userMsg: ChatMessage = { role: "user", content };
+    const userMsg: ChatMessage = { role: "user", text: content };
     append(userMsg);
     setDraft("");
     setPending(true);
     setError(null);
 
-    const { profile, selectedListingId } = useTerrarium.getState();
-    const body: ChatRequest = { messages: [...messages, userMsg], profile, selectedListingId };
+    const { profile } = useTerrarium.getState();
+    const body: z.infer<typeof ChatRequest> = { messages: [...messages, userMsg], profile };
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -31,9 +32,12 @@ export default function ChatPanel() {
         body: JSON.stringify(body),
       });
       if (!res.ok) throw new Error(`chat ${res.status}`);
-      const reply = ChatResponseSchema.parse(await res.json());
-      append(reply.message);
-      if (reply.profilePatch) patchProfile(reply.profilePatch);
+      const reply = ChatResponse.parse(await res.json());
+      append({ role: "assistant", text: reply.reply });
+      // Show the server's next question as its own assistant bubble (kept in history so
+      // the server knows it was asked). Quick-reply chips are left for the real UI.
+      if (reply.nextQuestion) append({ role: "assistant", text: reply.nextQuestion.text });
+      if (Object.keys(reply.profilePatch).length) patchProfile(reply.profilePatch);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong");
     } finally {
@@ -46,7 +50,7 @@ export default function ChatPanel() {
       <ul className="flex-1 space-y-2 overflow-y-auto p-4">
         {messages.map((m, i) => (
           <li key={i} className={m.role === "user" ? "text-right" : ""}>
-            <span className="inline-block rounded border px-3 py-2">{m.content}</span>
+            <span className="inline-block rounded border px-3 py-2">{m.text}</span>
           </li>
         ))}
         {pending && <li className="text-sm">…</li>}

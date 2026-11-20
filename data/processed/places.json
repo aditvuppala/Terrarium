@@ -1,0 +1,3943 @@
+[
+  {
+    "id": "osm:node/305088494",
+    "name": "Casey's Tavern",
+    "category": "bar",
+    "lat": 42.287845,
+    "lng": -83.744337
+  },
+  {
+    "id": "osm:node/541900696",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.255706,
+    "lng": -83.688081
+  },
+  {
+    "id": "osm:node/560917683",
+    "name": "Good Time Charley's",
+    "category": "bar",
+    "lat": 42.274819,
+    "lng": -83.734845
+  },
+  {
+    "id": "osm:node/695043656",
+    "name": "Real Seafood Company",
+    "category": "restaurant",
+    "lat": 42.278368,
+    "lng": -83.748394
+  },
+  {
+    "id": "osm:node/748964467",
+    "name": "Pita Kabob Grill",
+    "category": "restaurant",
+    "lat": 42.277971,
+    "lng": -83.741119
+  },
+  {
+    "id": "osm:node/748967871",
+    "name": "Paris Bahn Mi",
+    "category": "restaurant",
+    "lat": 42.277968,
+    "lng": -83.741552
+  },
+  {
+    "id": "osm:node/749007070",
+    "name": "Ashley's Ann Arbor",
+    "category": "bar",
+    "lat": 42.278098,
+    "lng": -83.740949
+  },
+  {
+    "id": "osm:node/749007099",
+    "name": "Noodles & Company",
+    "category": "restaurant",
+    "lat": 42.278629,
+    "lng": -83.740939
+  },
+  {
+    "id": "osm:node/1023694336",
+    "name": "Tios Mexican Cafe",
+    "category": "restaurant",
+    "lat": 42.27953,
+    "lng": -83.743381
+  },
+  {
+    "id": "osm:node/1280307458",
+    "name": "Olive Garden",
+    "category": "restaurant",
+    "lat": 42.244572,
+    "lng": -83.741754
+  },
+  {
+    "id": "osm:node/1563352123",
+    "name": "Northside Grill",
+    "category": "restaurant",
+    "lat": 42.289422,
+    "lng": -83.739254
+  },
+  {
+    "id": "osm:node/2035717141",
+    "name": "Qdoba",
+    "category": "fast_food",
+    "lat": 42.257128,
+    "lng": -83.696103
+  },
+  {
+    "id": "osm:node/2040178562",
+    "name": "Gandy Dancer",
+    "category": "restaurant",
+    "lat": 42.287186,
+    "lng": -83.741686
+  },
+  {
+    "id": "osm:node/2040297932",
+    "name": "Chipotle",
+    "category": "fast_food",
+    "lat": 42.255483,
+    "lng": -83.693239
+  },
+  {
+    "id": "osm:node/2040508139",
+    "name": "Trader Joe's",
+    "category": "grocery",
+    "lat": 42.258441,
+    "lng": -83.712903
+  },
+  {
+    "id": "osm:node/2041276586",
+    "name": "Red Lobster",
+    "category": "restaurant",
+    "lat": 42.251475,
+    "lng": -83.681407
+  },
+  {
+    "id": "osm:node/2344584598",
+    "name": "The Earle",
+    "category": "restaurant",
+    "lat": 42.28042,
+    "lng": -83.749425
+  },
+  {
+    "id": "osm:node/2344584607",
+    "name": "The Ravens Club",
+    "category": "restaurant",
+    "lat": 42.280113,
+    "lng": -83.748345
+  },
+  {
+    "id": "osm:node/2344584614",
+    "name": "Taste of India Suvai",
+    "category": "restaurant",
+    "lat": 42.279679,
+    "lng": -83.740664
+  },
+  {
+    "id": "osm:node/2344584615",
+    "name": "Totoro Sushi",
+    "category": "restaurant",
+    "lat": 42.279768,
+    "lng": -83.740663
+  },
+  {
+    "id": "osm:node/2344584616",
+    "name": "Mercy's at the Bell Tower",
+    "category": "restaurant",
+    "lat": 42.2792,
+    "lng": -83.739743
+  },
+  {
+    "id": "osm:node/2352859060",
+    "name": "Kroger",
+    "category": "grocery",
+    "lat": 42.304537,
+    "lng": -83.708924
+  },
+  {
+    "id": "osm:node/2508775052",
+    "name": "Little Caesars",
+    "category": "fast_food",
+    "lat": 42.269961,
+    "lng": -83.772872
+  },
+  {
+    "id": "osm:node/2623064649",
+    "name": "Sweetwaters Coffee & Tea",
+    "category": "cafe",
+    "lat": 42.284453,
+    "lng": -83.746011
+  },
+  {
+    "id": "osm:node/2623065827",
+    "name": "Curious Coffee",
+    "category": "cafe",
+    "lat": 42.282956,
+    "lng": -83.748619
+  },
+  {
+    "id": "osm:node/2742714767",
+    "name": "Chipotle",
+    "category": "fast_food",
+    "lat": 42.27932,
+    "lng": -83.740678
+  },
+  {
+    "id": "osm:node/2742714779",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.279475,
+    "lng": -83.740974
+  },
+  {
+    "id": "osm:node/2742714786",
+    "name": "Sava's",
+    "category": "restaurant",
+    "lat": 42.27967,
+    "lng": -83.741001
+  },
+  {
+    "id": "osm:node/2742714802",
+    "name": "Tomukun Korean BBQ / Noodle Bar",
+    "category": "restaurant",
+    "lat": 42.279528,
+    "lng": -83.742754
+  },
+  {
+    "id": "osm:node/2742714805",
+    "name": "Fat Daddy's",
+    "category": "restaurant",
+    "lat": 42.280479,
+    "lng": -83.743459
+  },
+  {
+    "id": "osm:node/2742714806",
+    "name": "Sweetgreen",
+    "category": "fast_food",
+    "lat": 42.278934,
+    "lng": -83.740653
+  },
+  {
+    "id": "osm:node/2742771145",
+    "name": "Potbelly's Sandwich Shop",
+    "category": "restaurant",
+    "lat": 42.279245,
+    "lng": -83.740952
+  },
+  {
+    "id": "osm:node/2742771151",
+    "name": "Panera Bread",
+    "category": "fast_food",
+    "lat": 42.278741,
+    "lng": -83.739765
+  },
+  {
+    "id": "osm:node/2758425149",
+    "name": "Yotsuba",
+    "category": "restaurant",
+    "lat": 42.255139,
+    "lng": -83.681112
+  },
+  {
+    "id": "osm:node/2758425284",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.237205,
+    "lng": -83.680862
+  },
+  {
+    "id": "osm:node/2758567958",
+    "name": "Grizzly Peak Brewing Company",
+    "category": "restaurant",
+    "lat": 42.280636,
+    "lng": -83.749638
+  },
+  {
+    "id": "osm:node/2758567965",
+    "name": "Old German",
+    "category": "bar",
+    "lat": 42.280816,
+    "lng": -83.749645
+  },
+  {
+    "id": "osm:node/2760098962",
+    "name": "People's Food Co-op",
+    "category": "grocery",
+    "lat": 42.282904,
+    "lng": -83.74692
+  },
+  {
+    "id": "osm:node/2760098965",
+    "name": "Jolly Pumpkin",
+    "category": "bar",
+    "lat": 42.27916,
+    "lng": -83.748455
+  },
+  {
+    "id": "osm:node/2760098967",
+    "name": "Shalimar",
+    "category": "restaurant",
+    "lat": 42.279274,
+    "lng": -83.748456
+  },
+  {
+    "id": "osm:node/2760098968",
+    "name": "Bora Bora Smoothie Cafe",
+    "category": "restaurant",
+    "lat": 42.279378,
+    "lng": -83.748435
+  },
+  {
+    "id": "osm:node/2760098969",
+    "name": "Black Pearl",
+    "category": "restaurant",
+    "lat": 42.279467,
+    "lng": -83.748795
+  },
+  {
+    "id": "osm:node/2760098970",
+    "name": "The Jagged Fork",
+    "category": "restaurant",
+    "lat": 42.27749,
+    "lng": -83.74893
+  },
+  {
+    "id": "osm:node/2760098973",
+    "name": "Palio",
+    "category": "restaurant",
+    "lat": 42.278278,
+    "lng": -83.748444
+  },
+  {
+    "id": "osm:node/2760098974",
+    "name": "The Black Pearl",
+    "category": "restaurant",
+    "lat": 42.27942,
+    "lng": -83.748795
+  },
+  {
+    "id": "osm:node/2760098975",
+    "name": "Azalea",
+    "category": "restaurant",
+    "lat": 42.278997,
+    "lng": -83.748837
+  },
+  {
+    "id": "osm:node/2760098977",
+    "name": "Conor O'Neill's",
+    "category": "bar",
+    "lat": 42.278913,
+    "lng": -83.748838
+  },
+  {
+    "id": "osm:node/2760098978",
+    "name": "Gratzi",
+    "category": "restaurant",
+    "lat": 42.278715,
+    "lng": -83.748831
+  },
+  {
+    "id": "osm:node/2760098981",
+    "name": "Comet Coffee",
+    "category": "cafe",
+    "lat": 42.278443,
+    "lng": -83.741294
+  },
+  {
+    "id": "osm:node/2760098986",
+    "name": "Jamaican Jerk Pit",
+    "category": "restaurant",
+    "lat": 42.279085,
+    "lng": -83.739764
+  },
+  {
+    "id": "osm:node/2832738011",
+    "name": "Whole Foods Market",
+    "category": "grocery",
+    "lat": 42.248364,
+    "lng": -83.758371
+  },
+  {
+    "id": "osm:node/2873352844",
+    "name": "Moe's Southwest Grill",
+    "category": "fast_food",
+    "lat": 42.244781,
+    "lng": -83.757625
+  },
+  {
+    "id": "osm:node/2873352845",
+    "name": "Fueld",
+    "category": "restaurant",
+    "lat": 42.247353,
+    "lng": -83.758591
+  },
+  {
+    "id": "osm:node/2874423480",
+    "name": "Amer's Delicatessen",
+    "category": "cafe",
+    "lat": 42.278823,
+    "lng": -83.740948
+  },
+  {
+    "id": "osm:node/2874423481",
+    "name": "Chicago Reds",
+    "category": "cafe",
+    "lat": 42.278838,
+    "lng": -83.740947
+  },
+  {
+    "id": "osm:node/2874423482",
+    "name": "Yogurt Rush",
+    "category": "cafe",
+    "lat": 42.278806,
+    "lng": -83.740948
+  },
+  {
+    "id": "osm:node/2874423483",
+    "name": "Sharetea",
+    "category": "cafe",
+    "lat": 42.278961,
+    "lng": -83.740958
+  },
+  {
+    "id": "osm:node/2874452533",
+    "name": "Knight's Downtown Steakhouse",
+    "category": "restaurant",
+    "lat": 42.27928,
+    "lng": -83.741842
+  },
+  {
+    "id": "osm:node/2874452534",
+    "name": "Slurping Turtle",
+    "category": "restaurant",
+    "lat": 42.279272,
+    "lng": -83.741601
+  },
+  {
+    "id": "osm:node/2874452535",
+    "name": "Condado Tacos",
+    "category": "restaurant",
+    "lat": 42.279626,
+    "lng": -83.74381
+  },
+  {
+    "id": "osm:node/2887264864",
+    "name": "Tianchu Restaurant",
+    "category": "restaurant",
+    "lat": 42.277983,
+    "lng": -83.741294
+  },
+  {
+    "id": "osm:node/2887795514",
+    "name": "Scorekeepers",
+    "category": "bar",
+    "lat": 42.278916,
+    "lng": -83.742165
+  },
+  {
+    "id": "osm:node/2887795516",
+    "name": "UniTea",
+    "category": "cafe",
+    "lat": 42.277726,
+    "lng": -83.742256
+  },
+  {
+    "id": "osm:node/2906054423",
+    "name": "Anna's House",
+    "category": "restaurant",
+    "lat": 42.244315,
+    "lng": -83.741775
+  },
+  {
+    "id": "osm:node/2912189330",
+    "name": "El Harissa Market Cafe",
+    "category": "restaurant",
+    "lat": 42.295555,
+    "lng": -83.78012
+  },
+  {
+    "id": "osm:node/2989746490",
+    "name": "Jersey Mike's Subs",
+    "category": "fast_food",
+    "lat": 42.237246,
+    "lng": -83.681007
+  },
+  {
+    "id": "osm:node/2989746491",
+    "name": "Coney Island Hotdogs",
+    "category": "restaurant",
+    "lat": 42.237419,
+    "lng": -83.681662
+  },
+  {
+    "id": "osm:node/3014819390",
+    "name": "Cottage Inn Pizza",
+    "category": "restaurant",
+    "lat": 42.276128,
+    "lng": -83.778341
+  },
+  {
+    "id": "osm:node/3033183135",
+    "name": "Earthen Jar",
+    "category": "restaurant",
+    "lat": 42.279116,
+    "lng": -83.745939
+  },
+  {
+    "id": "osm:node/3033183136",
+    "name": "Jerusalem Garden",
+    "category": "restaurant",
+    "lat": 42.279323,
+    "lng": -83.745436
+  },
+  {
+    "id": "osm:node/3040021263",
+    "name": "Afternoon Delight",
+    "category": "cafe",
+    "lat": 42.279615,
+    "lng": -83.74628
+  },
+  {
+    "id": "osm:node/3062442003",
+    "name": "Fireside Roast",
+    "category": "cafe",
+    "lat": 42.290938,
+    "lng": -83.717812
+  },
+  {
+    "id": "osm:node/3062453855",
+    "name": "Nagomi Sushi & Korean BBQ",
+    "category": "restaurant",
+    "lat": 42.297951,
+    "lng": -83.722966
+  },
+  {
+    "id": "osm:node/3064334653",
+    "name": "Sadako",
+    "category": "restaurant",
+    "lat": 42.275155,
+    "lng": -83.732429
+  },
+  {
+    "id": "osm:node/3064374713",
+    "name": "Saica",
+    "category": "restaurant",
+    "lat": 42.298751,
+    "lng": -83.721642
+  },
+  {
+    "id": "osm:node/3065601646",
+    "name": "Blue Apple",
+    "category": "cafe",
+    "lat": 42.293635,
+    "lng": -83.721272
+  },
+  {
+    "id": "osm:node/3065610483",
+    "name": "Bursley Dining Hall",
+    "category": "fast_food",
+    "lat": 42.29383,
+    "lng": -83.721003
+  },
+  {
+    "id": "osm:node/3065610484",
+    "name": "Victors",
+    "category": "cafe",
+    "lat": 42.280223,
+    "lng": -83.731747
+  },
+  {
+    "id": "osm:node/3065616343",
+    "name": "Mosher-Jordan Dining Hall",
+    "category": "fast_food",
+    "lat": 42.280079,
+    "lng": -83.731537
+  },
+  {
+    "id": "osm:node/3068653993",
+    "name": "Bert's Cafe",
+    "category": "cafe",
+    "lat": 42.275883,
+    "lng": -83.737109
+  },
+  {
+    "id": "osm:node/3068937737",
+    "name": "Markley Dining Hall",
+    "category": "fast_food",
+    "lat": 42.280962,
+    "lng": -83.728802
+  },
+  {
+    "id": "osm:node/3072665434",
+    "name": "Maizie's",
+    "category": "restaurant",
+    "lat": 42.279008,
+    "lng": -83.737422
+  },
+  {
+    "id": "osm:node/3072665436",
+    "name": "M-36 Coffee Roasters",
+    "category": "cafe",
+    "lat": 42.275122,
+    "lng": -83.735647
+  },
+  {
+    "id": "osm:node/3072793304",
+    "name": "Jimmy John's",
+    "category": "fast_food",
+    "lat": 42.282346,
+    "lng": -83.737051
+  },
+  {
+    "id": "osm:node/3072793305",
+    "name": "Jimmy John's",
+    "category": "fast_food",
+    "lat": 42.303642,
+    "lng": -83.70934
+  },
+  {
+    "id": "osm:node/3074036038",
+    "name": "Panda Express",
+    "category": "fast_food",
+    "lat": 42.275226,
+    "lng": -83.741611
+  },
+  {
+    "id": "osm:node/3074036040",
+    "name": "Ahmo's",
+    "category": "fast_food",
+    "lat": 42.275216,
+    "lng": -83.741521
+  },
+  {
+    "id": "osm:node/3074088119",
+    "name": "Möge Tee",
+    "category": "cafe",
+    "lat": 42.303095,
+    "lng": -83.709175
+  },
+  {
+    "id": "osm:node/3077164776",
+    "name": "Ginger Deli",
+    "category": "fast_food",
+    "lat": 42.298751,
+    "lng": -83.721776
+  },
+  {
+    "id": "osm:node/3077164777",
+    "name": "Cardamom",
+    "category": "restaurant",
+    "lat": 42.298584,
+    "lng": -83.721454
+  },
+  {
+    "id": "osm:node/3077164778",
+    "name": "No Thai!",
+    "category": "restaurant",
+    "lat": 42.29843,
+    "lng": -83.721452
+  },
+  {
+    "id": "osm:node/3077164780",
+    "name": "Jet's Pizza",
+    "category": "restaurant",
+    "lat": 42.298303,
+    "lng": -83.721454
+  },
+  {
+    "id": "osm:node/3077164792",
+    "name": "Mochinut",
+    "category": "fast_food",
+    "lat": 42.298302,
+    "lng": -83.719745
+  },
+  {
+    "id": "osm:node/3077164793",
+    "name": "Burger One",
+    "category": "fast_food",
+    "lat": 42.298271,
+    "lng": -83.719851
+  },
+  {
+    "id": "osm:node/3094750743",
+    "name": "No Thai!",
+    "category": "restaurant",
+    "lat": 42.274679,
+    "lng": -83.732893
+  },
+  {
+    "id": "osm:node/3129635302",
+    "name": "Juicy Kitchen",
+    "category": "cafe",
+    "lat": 42.295573,
+    "lng": -83.780387
+  },
+  {
+    "id": "osm:node/3129643013",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.294679,
+    "lng": -83.781314
+  },
+  {
+    "id": "osm:node/3196332146",
+    "name": "Kimchi Box",
+    "category": "restaurant",
+    "lat": 42.298493,
+    "lng": -83.719938
+  },
+  {
+    "id": "osm:node/3215037795",
+    "name": "Potbelly",
+    "category": "fast_food",
+    "lat": 42.24724,
+    "lng": -83.758783
+  },
+  {
+    "id": "osm:node/3218362650",
+    "name": "Roos Roast",
+    "category": "cafe",
+    "lat": 42.255241,
+    "lng": -83.734181
+  },
+  {
+    "id": "osm:node/3221989261",
+    "name": "Panera Bread",
+    "category": "fast_food",
+    "lat": 42.245637,
+    "lng": -83.758843
+  },
+  {
+    "id": "osm:node/3268756978",
+    "name": "Anthony's Gourmet Pizza",
+    "category": "restaurant",
+    "lat": 42.295566,
+    "lng": -83.780304
+  },
+  {
+    "id": "osm:node/3356850177",
+    "name": "Way 1 Supermarket",
+    "category": "grocery",
+    "lat": 42.303454,
+    "lng": -83.70518
+  },
+  {
+    "id": "osm:node/3407102034",
+    "name": "Pizza Bob's",
+    "category": "restaurant",
+    "lat": 42.27176,
+    "lng": -83.740799
+  },
+  {
+    "id": "osm:node/3407105678",
+    "name": "Mister Spots",
+    "category": "restaurant",
+    "lat": 42.271611,
+    "lng": -83.740766
+  },
+  {
+    "id": "osm:node/3462220409",
+    "name": "Village Kitchen",
+    "category": "restaurant",
+    "lat": 42.284088,
+    "lng": -83.781368
+  },
+  {
+    "id": "osm:node/3462266105",
+    "name": "Anytime Fitness",
+    "category": "gym",
+    "lat": 42.284705,
+    "lng": -83.783292
+  },
+  {
+    "id": "osm:node/3465693327",
+    "name": "Qahwah House Ann Arbor",
+    "category": "cafe",
+    "lat": 42.283566,
+    "lng": -83.781614
+  },
+  {
+    "id": "osm:node/3465693328",
+    "name": "Panda House",
+    "category": "restaurant",
+    "lat": 42.284467,
+    "lng": -83.783341
+  },
+  {
+    "id": "osm:node/3475907227",
+    "name": "Benny's Family Dining",
+    "category": "restaurant",
+    "lat": 42.258573,
+    "lng": -83.737674
+  },
+  {
+    "id": "osm:node/3509365002",
+    "name": "Potbelly",
+    "category": "fast_food",
+    "lat": 42.256239,
+    "lng": -83.686269
+  },
+  {
+    "id": "osm:node/3780117264",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.302901,
+    "lng": -83.705717
+  },
+  {
+    "id": "osm:node/3810661867",
+    "name": "Lucky Kitchen",
+    "category": "restaurant",
+    "lat": 42.298362,
+    "lng": -83.721167
+  },
+  {
+    "id": "osm:node/3821488749",
+    "name": "King Shing",
+    "category": "restaurant",
+    "lat": 42.246852,
+    "lng": -83.679862
+  },
+  {
+    "id": "osm:node/3825691557",
+    "name": "Graham's Restaurant",
+    "category": "restaurant",
+    "lat": 42.238955,
+    "lng": -83.740724
+  },
+  {
+    "id": "osm:node/3874139685",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.243577,
+    "lng": -83.700383
+  },
+  {
+    "id": "osm:node/3879079110",
+    "name": "Busch's Fresh Food Market",
+    "category": "grocery",
+    "lat": 42.253702,
+    "lng": -83.751364
+  },
+  {
+    "id": "osm:node/3889499302",
+    "name": "Baobao Asian Eatery",
+    "category": "restaurant",
+    "lat": 42.256555,
+    "lng": -83.692257
+  },
+  {
+    "id": "osm:node/3908803747",
+    "name": "Bigalora",
+    "category": "restaurant",
+    "lat": 42.256351,
+    "lng": -83.699034
+  },
+  {
+    "id": "osm:node/3908803756",
+    "name": "Sweetgreen",
+    "category": "fast_food",
+    "lat": 42.256724,
+    "lng": -83.697935
+  },
+  {
+    "id": "osm:node/3908804460",
+    "name": "Zola Bistro",
+    "category": "restaurant",
+    "lat": 42.257072,
+    "lng": -83.699156
+  },
+  {
+    "id": "osm:node/4029305342",
+    "name": "Zingerman's Coffee Company",
+    "category": "cafe",
+    "lat": 42.232426,
+    "lng": -83.748305
+  },
+  {
+    "id": "osm:node/4176670447",
+    "name": "Amadeus",
+    "category": "restaurant",
+    "lat": 42.280353,
+    "lng": -83.74755
+  },
+  {
+    "id": "osm:node/4353344866",
+    "name": "Old Town Tavern",
+    "category": "bar",
+    "lat": 42.27973,
+    "lng": -83.749708
+  },
+  {
+    "id": "osm:node/4395585357",
+    "name": "Seva",
+    "category": "restaurant",
+    "lat": 42.2797,
+    "lng": -83.782701
+  },
+  {
+    "id": "osm:node/4396703020",
+    "name": "Arbor Farms Market",
+    "category": "grocery",
+    "lat": 42.272042,
+    "lng": -83.776486
+  },
+  {
+    "id": "osm:node/4396703021",
+    "name": "Don Juan Mexican Bar & Grill",
+    "category": "restaurant",
+    "lat": 42.272204,
+    "lng": -83.776301
+  },
+  {
+    "id": "osm:node/4396703026",
+    "name": "Papa John's",
+    "category": "fast_food",
+    "lat": 42.272444,
+    "lng": -83.77646
+  },
+  {
+    "id": "osm:node/4399006974",
+    "name": "Bell's Diner",
+    "category": "restaurant",
+    "lat": 42.273322,
+    "lng": -83.776455
+  },
+  {
+    "id": "osm:node/4406258353",
+    "name": "Hungry Howie's",
+    "category": "fast_food",
+    "lat": 42.27095,
+    "lng": -83.773728
+  },
+  {
+    "id": "osm:node/4406265250",
+    "name": "Wolverine State Brewing Co.",
+    "category": "bar",
+    "lat": 42.269432,
+    "lng": -83.774547
+  },
+  {
+    "id": "osm:node/4406283404",
+    "name": "Gordon Food Service",
+    "category": "grocery",
+    "lat": 42.273915,
+    "lng": -83.775413
+  },
+  {
+    "id": "osm:node/4437933858",
+    "name": "Chela's Restaurant & Taqueria",
+    "category": "restaurant",
+    "lat": 42.274051,
+    "lng": -83.779414
+  },
+  {
+    "id": "osm:node/4438417268",
+    "name": "Biggby Coffee",
+    "category": "cafe",
+    "lat": 42.279682,
+    "lng": -83.779804
+  },
+  {
+    "id": "osm:node/4438533904",
+    "name": "Chan's Garden",
+    "category": "restaurant",
+    "lat": 42.273692,
+    "lng": -83.777687
+  },
+  {
+    "id": "osm:node/4438533905",
+    "name": "Hello Faz Pizza",
+    "category": "fast_food",
+    "lat": 42.273745,
+    "lng": -83.777496
+  },
+  {
+    "id": "osm:node/4438533906",
+    "name": "Pilar's Coffeehouse",
+    "category": "cafe",
+    "lat": 42.273741,
+    "lng": -83.777622
+  },
+  {
+    "id": "osm:node/4438533907",
+    "name": "Pilar’s Tamales",
+    "category": "restaurant",
+    "lat": 42.273694,
+    "lng": -83.777555
+  },
+  {
+    "id": "osm:node/4660566134",
+    "name": "Lefty's Cheesesteak",
+    "category": "fast_food",
+    "lat": 42.240186,
+    "lng": -83.769638
+  },
+  {
+    "id": "osm:node/4675478273",
+    "name": "The Jefferson Market",
+    "category": "cafe",
+    "lat": 42.275827,
+    "lng": -83.75533
+  },
+  {
+    "id": "osm:node/4764017793",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.275152,
+    "lng": -83.732554
+  },
+  {
+    "id": "osm:node/4781784135",
+    "name": "Rod's Diner",
+    "category": "restaurant",
+    "lat": 42.271523,
+    "lng": -83.740763
+  },
+  {
+    "id": "osm:node/4781784136",
+    "name": "BTB Burrito",
+    "category": "fast_food",
+    "lat": 42.271567,
+    "lng": -83.740792
+  },
+  {
+    "id": "osm:node/4787322460",
+    "name": "Frita Batidos",
+    "category": "restaurant",
+    "lat": 42.280406,
+    "lng": -83.749361
+  },
+  {
+    "id": "osm:node/4787322461",
+    "name": "Echelon Kitchen & Bar",
+    "category": "restaurant",
+    "lat": 42.280371,
+    "lng": -83.748772
+  },
+  {
+    "id": "osm:node/4787322462",
+    "name": "Cafe Felix",
+    "category": "restaurant",
+    "lat": 42.280249,
+    "lng": -83.748758
+  },
+  {
+    "id": "osm:node/4787322469",
+    "name": "Pretzel Bell",
+    "category": "restaurant",
+    "lat": 42.279729,
+    "lng": -83.748799
+  },
+  {
+    "id": "osm:node/4787322476",
+    "name": "The Hidden King",
+    "category": "cafe",
+    "lat": 42.280119,
+    "lng": -83.748747
+  },
+  {
+    "id": "osm:node/4787322480",
+    "name": "Sweetwaters",
+    "category": "cafe",
+    "lat": 42.280417,
+    "lng": -83.749662
+  },
+  {
+    "id": "osm:node/4787322481",
+    "name": "Alley Bar",
+    "category": "bar",
+    "lat": 42.279718,
+    "lng": -83.749286
+  },
+  {
+    "id": "osm:node/4787322482",
+    "name": "Pacific Rim",
+    "category": "restaurant",
+    "lat": 42.279722,
+    "lng": -83.749385
+  },
+  {
+    "id": "osm:node/4787322483",
+    "name": "Peridot",
+    "category": "restaurant",
+    "lat": 42.279721,
+    "lng": -83.749458
+  },
+  {
+    "id": "osm:node/4787322484",
+    "name": "The West End Grill",
+    "category": "restaurant",
+    "lat": 42.279723,
+    "lng": -83.749517
+  },
+  {
+    "id": "osm:node/4787322486",
+    "name": "Vie Fitness & Spa",
+    "category": "gym",
+    "lat": 42.28006,
+    "lng": -83.749689
+  },
+  {
+    "id": "osm:node/4792172899",
+    "name": "Revive",
+    "category": "restaurant",
+    "lat": 42.274284,
+    "lng": -83.735596
+  },
+  {
+    "id": "osm:node/4792172900",
+    "name": "Kang's",
+    "category": "restaurant",
+    "lat": 42.275151,
+    "lng": -83.732305
+  },
+  {
+    "id": "osm:node/4794244056",
+    "name": "By The Pound",
+    "category": "grocery",
+    "lat": 42.258549,
+    "lng": -83.737861
+  },
+  {
+    "id": "osm:node/4794248902",
+    "name": "Rick's American Cafe",
+    "category": "bar",
+    "lat": 42.274464,
+    "lng": -83.734441
+  },
+  {
+    "id": "osm:node/4802256327",
+    "name": "The Brown Jug",
+    "category": "bar",
+    "lat": 42.274894,
+    "lng": -83.734319
+  },
+  {
+    "id": "osm:node/4802256328",
+    "name": "Pancheros Mexican Grill",
+    "category": "restaurant",
+    "lat": 42.274901,
+    "lng": -83.734263
+  },
+  {
+    "id": "osm:node/4802256330",
+    "name": "Champs Lounge",
+    "category": "bar",
+    "lat": 42.274904,
+    "lng": -83.733596
+  },
+  {
+    "id": "osm:node/4802256331",
+    "name": "Quickly",
+    "category": "cafe",
+    "lat": 42.274914,
+    "lng": -83.733483
+  },
+  {
+    "id": "osm:node/4837688325",
+    "name": "Dunkin'",
+    "category": "restaurant",
+    "lat": 42.279664,
+    "lng": -83.747194
+  },
+  {
+    "id": "osm:node/4842861417",
+    "name": "Stray Hen Cafe",
+    "category": "cafe",
+    "lat": 42.280492,
+    "lng": -83.743737
+  },
+  {
+    "id": "osm:node/4842861418",
+    "name": "Hola Seoul",
+    "category": "restaurant",
+    "lat": 42.278746,
+    "lng": -83.739965
+  },
+  {
+    "id": "osm:node/4848486388",
+    "name": "RoosRoast Coffee",
+    "category": "cafe",
+    "lat": 42.279682,
+    "lng": -83.747729
+  },
+  {
+    "id": "osm:node/4854332770",
+    "name": "Yoga Republic",
+    "category": "gym",
+    "lat": 42.276597,
+    "lng": -83.749064
+  },
+  {
+    "id": "osm:node/4854332819",
+    "name": "The Chop House",
+    "category": "restaurant",
+    "lat": 42.278828,
+    "lng": -83.748847
+  },
+  {
+    "id": "osm:node/4854334139",
+    "name": "Moka and Co",
+    "category": "cafe",
+    "lat": 42.278622,
+    "lng": -83.748473
+  },
+  {
+    "id": "osm:node/4856507602",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.270825,
+    "lng": -83.740789
+  },
+  {
+    "id": "osm:node/4856507603",
+    "name": "Pizza Cat Max",
+    "category": "restaurant",
+    "lat": 42.270914,
+    "lng": -83.740842
+  },
+  {
+    "id": "osm:node/4860420404",
+    "name": "Backroom Pizza",
+    "category": "fast_food",
+    "lat": 42.274731,
+    "lng": -83.734442
+  },
+  {
+    "id": "osm:node/4908016618",
+    "name": "Vertex Coffee Roasters",
+    "category": "cafe",
+    "lat": 42.275176,
+    "lng": -83.731824
+  },
+  {
+    "id": "osm:node/4908018723",
+    "name": "Noori Chicken",
+    "category": "restaurant",
+    "lat": 42.275151,
+    "lng": -83.732492
+  },
+  {
+    "id": "osm:node/4908018724",
+    "name": "Rich J C",
+    "category": "restaurant",
+    "lat": 42.275151,
+    "lng": -83.73262
+  },
+  {
+    "id": "osm:node/4909268196",
+    "name": "Frank's Restaurant",
+    "category": "restaurant",
+    "lat": 42.278256,
+    "lng": -83.742176
+  },
+  {
+    "id": "osm:node/4919630431",
+    "name": "Café Zola",
+    "category": "cafe",
+    "lat": 42.280637,
+    "lng": -83.749314
+  },
+  {
+    "id": "osm:node/4919630435",
+    "name": "Vinology",
+    "category": "restaurant",
+    "lat": 42.281038,
+    "lng": -83.748712
+  },
+  {
+    "id": "osm:node/4923016825",
+    "name": "Hillel Cafe",
+    "category": "cafe",
+    "lat": 42.272703,
+    "lng": -83.73024
+  },
+  {
+    "id": "osm:node/4934264074",
+    "name": "The Little Store",
+    "category": "restaurant",
+    "lat": 42.277726,
+    "lng": -83.749305
+  },
+  {
+    "id": "osm:node/4935570666",
+    "name": "Sottini's Sub Shop",
+    "category": "fast_food",
+    "lat": 42.280238,
+    "lng": -83.747152
+  },
+  {
+    "id": "osm:node/4935570672",
+    "name": "Aventura",
+    "category": "restaurant",
+    "lat": 42.280328,
+    "lng": -83.746578
+  },
+  {
+    "id": "osm:node/4935570686",
+    "name": "Kanbu Sushi Downtown",
+    "category": "restaurant",
+    "lat": 42.279649,
+    "lng": -83.746655
+  },
+  {
+    "id": "osm:node/4938377851",
+    "name": "One Bowl",
+    "category": "restaurant",
+    "lat": 42.274721,
+    "lng": -83.733292
+  },
+  {
+    "id": "osm:node/4942592127",
+    "name": "Jazzercise",
+    "category": "gym",
+    "lat": 42.258631,
+    "lng": -83.736822
+  },
+  {
+    "id": "osm:node/4945806627",
+    "name": "HopCat",
+    "category": "bar",
+    "lat": 42.27893,
+    "lng": -83.741844
+  },
+  {
+    "id": "osm:node/4945806631",
+    "name": "Red Hawk Bar and Grill",
+    "category": "restaurant",
+    "lat": 42.278767,
+    "lng": -83.74095
+  },
+  {
+    "id": "osm:node/4947845980",
+    "name": "Pancheros Mexican Grill",
+    "category": "restaurant",
+    "lat": 42.240584,
+    "lng": -83.769122
+  },
+  {
+    "id": "osm:node/4947845982",
+    "name": "Five Guys",
+    "category": "fast_food",
+    "lat": 42.240413,
+    "lng": -83.769134
+  },
+  {
+    "id": "osm:node/4953893900",
+    "name": "Crazy Wisdom Tearoom",
+    "category": "cafe",
+    "lat": 42.280913,
+    "lng": -83.748718
+  },
+  {
+    "id": "osm:node/4958401109",
+    "name": "Asian Legend",
+    "category": "restaurant",
+    "lat": 42.277732,
+    "lng": -83.742433
+  },
+  {
+    "id": "osm:node/4958401112",
+    "name": "New York Pizza Depot",
+    "category": "restaurant",
+    "lat": 42.277957,
+    "lng": -83.741848
+  },
+  {
+    "id": "osm:node/4958401113",
+    "name": "Ding Tea",
+    "category": "cafe",
+    "lat": 42.277969,
+    "lng": -83.741655
+  },
+  {
+    "id": "osm:node/4964930186",
+    "name": "Lowertown Bar & Cafe",
+    "category": "cafe",
+    "lat": 42.289814,
+    "lng": -83.738707
+  },
+  {
+    "id": "osm:node/4988697340",
+    "name": "Crunch Fitness",
+    "category": "gym",
+    "lat": 42.247232,
+    "lng": -83.769212
+  },
+  {
+    "id": "osm:node/4988697341",
+    "name": "Ann Arbor Running Company",
+    "category": "gym",
+    "lat": 42.246934,
+    "lng": -83.769223
+  },
+  {
+    "id": "osm:node/4988697350",
+    "name": "Alpha Koney Island",
+    "category": "fast_food",
+    "lat": 42.245516,
+    "lng": -83.769201
+  },
+  {
+    "id": "osm:node/4992709780",
+    "name": "Isalita",
+    "category": "restaurant",
+    "lat": 42.279587,
+    "lng": -83.744385
+  },
+  {
+    "id": "osm:node/4992709781",
+    "name": "Mani Osteria and Bar",
+    "category": "restaurant",
+    "lat": 42.279589,
+    "lng": -83.744235
+  },
+  {
+    "id": "osm:node/4995373012",
+    "name": "aMa Bistro",
+    "category": "restaurant",
+    "lat": 42.279805,
+    "lng": -83.74067
+  },
+  {
+    "id": "osm:node/4997286406",
+    "name": "Cafe Verde",
+    "category": "cafe",
+    "lat": 42.282856,
+    "lng": -83.74698
+  },
+  {
+    "id": "osm:node/4997286409",
+    "name": "TeaHaus",
+    "category": "cafe",
+    "lat": 42.282504,
+    "lng": -83.747037
+  },
+  {
+    "id": "osm:node/5000345072",
+    "name": "Mota Thai Yoga",
+    "category": "gym",
+    "lat": 42.282015,
+    "lng": -83.752764
+  },
+  {
+    "id": "osm:node/5000907324",
+    "name": "Two Songs Bakery & Cafe",
+    "category": "cafe",
+    "lat": 42.257936,
+    "lng": -83.737983
+  },
+  {
+    "id": "osm:node/5007708559",
+    "name": "Cantina",
+    "category": "restaurant",
+    "lat": 42.274828,
+    "lng": -83.734823
+  },
+  {
+    "id": "osm:node/5009753001",
+    "name": "Bruegger's Bagels",
+    "category": "fast_food",
+    "lat": 42.278753,
+    "lng": -83.740208
+  },
+  {
+    "id": "osm:node/5018488424",
+    "name": "Godaiko",
+    "category": "restaurant",
+    "lat": 42.242337,
+    "lng": -83.769639
+  },
+  {
+    "id": "osm:node/5018488425",
+    "name": "Tsai Grocery",
+    "category": "grocery",
+    "lat": 42.242235,
+    "lng": -83.769816
+  },
+  {
+    "id": "osm:node/5018488426",
+    "name": "Jet's Pizza",
+    "category": "restaurant",
+    "lat": 42.242123,
+    "lng": -83.769983
+  },
+  {
+    "id": "osm:node/5018488428",
+    "name": "Arirang",
+    "category": "restaurant",
+    "lat": 42.241905,
+    "lng": -83.770185
+  },
+  {
+    "id": "osm:node/5018488429",
+    "name": "Pure Barre",
+    "category": "gym",
+    "lat": 42.241832,
+    "lng": -83.770262
+  },
+  {
+    "id": "osm:node/5018488433",
+    "name": "Outback Steakhouse",
+    "category": "restaurant",
+    "lat": 42.241491,
+    "lng": -83.77044
+  },
+  {
+    "id": "osm:node/5024950005",
+    "name": "Neopapalis",
+    "category": "restaurant",
+    "lat": 42.277718,
+    "lng": -83.742879
+  },
+  {
+    "id": "osm:node/5024950006",
+    "name": "Coratti's Pizzeria",
+    "category": "restaurant",
+    "lat": 42.277726,
+    "lng": -83.742657
+  },
+  {
+    "id": "osm:node/5033174444",
+    "name": "Societe Indoor Cycling",
+    "category": "gym",
+    "lat": 42.25461,
+    "lng": -83.778495
+  },
+  {
+    "id": "osm:node/5173655311",
+    "name": "Madras Masala Express",
+    "category": "restaurant",
+    "lat": 42.290789,
+    "lng": -83.736951
+  },
+  {
+    "id": "osm:node/5173655312",
+    "name": "Miny's Mexican Restaurant",
+    "category": "restaurant",
+    "lat": 42.290745,
+    "lng": -83.737036
+  },
+  {
+    "id": "osm:node/5173655313",
+    "name": "Broadway Cafe",
+    "category": "restaurant",
+    "lat": 42.29071,
+    "lng": -83.737107
+  },
+  {
+    "id": "osm:node/5173655315",
+    "name": "Plate Sushi & Chicken",
+    "category": "restaurant",
+    "lat": 42.290596,
+    "lng": -83.737354
+  },
+  {
+    "id": "osm:node/5258062833",
+    "name": "Domino's",
+    "category": "fast_food",
+    "lat": 42.302919,
+    "lng": -83.709328
+  },
+  {
+    "id": "osm:node/5260245716",
+    "name": "Sweetwaters Coffee & Tea",
+    "category": "cafe",
+    "lat": 42.304952,
+    "lng": -83.694649
+  },
+  {
+    "id": "osm:node/5260245717",
+    "name": "Umi Sushi",
+    "category": "restaurant",
+    "lat": 42.305029,
+    "lng": -83.69472
+  },
+  {
+    "id": "osm:node/5260245718",
+    "name": "Anytime Fitness",
+    "category": "gym",
+    "lat": 42.305139,
+    "lng": -83.694726
+  },
+  {
+    "id": "osm:node/5262813316",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.305442,
+    "lng": -83.694385
+  },
+  {
+    "id": "osm:node/5293901739",
+    "name": "Playa Bowls",
+    "category": "fast_food",
+    "lat": 42.274881,
+    "lng": -83.734431
+  },
+  {
+    "id": "osm:node/5323881250",
+    "name": "Ahmo's Gyros & Grill",
+    "category": "fast_food",
+    "lat": 42.229202,
+    "lng": -83.718811
+  },
+  {
+    "id": "osm:node/5323881251",
+    "name": "Thai Spoon",
+    "category": "restaurant",
+    "lat": 42.228313,
+    "lng": -83.718814
+  },
+  {
+    "id": "osm:node/5323881252",
+    "name": "Mark's Midtown Coney Island",
+    "category": "fast_food",
+    "lat": 42.233568,
+    "lng": -83.739482
+  },
+  {
+    "id": "osm:node/5323881253",
+    "name": "Pizza Pazza",
+    "category": "restaurant",
+    "lat": 42.284545,
+    "lng": -83.746403
+  },
+  {
+    "id": "osm:node/5348311740",
+    "name": "Simply Vegan Foods",
+    "category": "grocery",
+    "lat": 42.258159,
+    "lng": -83.680395
+  },
+  {
+    "id": "osm:node/5367233598",
+    "name": "Zamaan Cafe",
+    "category": "restaurant",
+    "lat": 42.304299,
+    "lng": -83.691195
+  },
+  {
+    "id": "osm:node/5367233599",
+    "name": "Bewon",
+    "category": "restaurant",
+    "lat": 42.304254,
+    "lng": -83.691359
+  },
+  {
+    "id": "osm:node/5446624862",
+    "name": "The Grotto - Watering Hole",
+    "category": "bar",
+    "lat": 42.279484,
+    "lng": -83.749679
+  },
+  {
+    "id": "osm:node/5446624865",
+    "name": "Sweetwaters",
+    "category": "cafe",
+    "lat": 42.279276,
+    "lng": -83.741753
+  },
+  {
+    "id": "osm:node/5446624868",
+    "name": "Tropical Smoothie Cafe",
+    "category": "fast_food",
+    "lat": 42.279486,
+    "lng": -83.741655
+  },
+  {
+    "id": "osm:node/5446624870",
+    "name": "Pure Barre",
+    "category": "gym",
+    "lat": 42.2795,
+    "lng": -83.741951
+  },
+  {
+    "id": "osm:node/5446624871",
+    "name": "Tea Ninja",
+    "category": "cafe",
+    "lat": 42.279503,
+    "lng": -83.742026
+  },
+  {
+    "id": "osm:node/5788925521",
+    "name": "Satchel's BBQ",
+    "category": "restaurant",
+    "lat": 42.257889,
+    "lng": -83.699121
+  },
+  {
+    "id": "osm:node/5788925536",
+    "name": "Panera Bread",
+    "category": "fast_food",
+    "lat": 42.258072,
+    "lng": -83.697245
+  },
+  {
+    "id": "osm:node/5810085885",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.234846,
+    "lng": -83.739773
+  },
+  {
+    "id": "osm:node/5876689815",
+    "name": "Weber's Restaurant",
+    "category": "restaurant",
+    "lat": 42.284456,
+    "lng": -83.791915
+  },
+  {
+    "id": "osm:node/5884219888",
+    "name": "Tmaz Taqueria Dexter",
+    "category": "fast_food",
+    "lat": 42.2855,
+    "lng": -83.78169
+  },
+  {
+    "id": "osm:node/5895038767",
+    "name": "aUM Yoga",
+    "category": "gym",
+    "lat": 42.274918,
+    "lng": -83.733368
+  },
+  {
+    "id": "osm:node/5895172487",
+    "name": "Kenville Studios",
+    "category": "gym",
+    "lat": 42.269661,
+    "lng": -83.746296
+  },
+  {
+    "id": "osm:node/5919368087",
+    "name": "Kosmo's BopShop",
+    "category": "restaurant",
+    "lat": 42.279337,
+    "lng": -83.750022
+  },
+  {
+    "id": "osm:node/5939844875",
+    "name": "Biggby Coffee",
+    "category": "cafe",
+    "lat": 42.23058,
+    "lng": -83.700389
+  },
+  {
+    "id": "osm:node/6001436187",
+    "name": "The Drip House",
+    "category": "cafe",
+    "lat": 42.264573,
+    "lng": -83.750547
+  },
+  {
+    "id": "osm:node/6190446525",
+    "name": "Slows Bar BQ",
+    "category": "restaurant",
+    "lat": 42.280546,
+    "lng": -83.746934
+  },
+  {
+    "id": "osm:node/6190446526",
+    "name": "mash",
+    "category": "bar",
+    "lat": 42.280547,
+    "lng": -83.746731
+  },
+  {
+    "id": "osm:node/6221144287",
+    "name": "TK WU",
+    "category": "restaurant",
+    "lat": 42.279291,
+    "lng": -83.74258
+  },
+  {
+    "id": "osm:node/6238073299",
+    "name": "Haifa Falafel",
+    "category": "fast_food",
+    "lat": 42.252289,
+    "lng": -83.66904
+  },
+  {
+    "id": "osm:node/6240298887",
+    "name": "DiBella's Subs",
+    "category": "fast_food",
+    "lat": 42.247249,
+    "lng": -83.757372
+  },
+  {
+    "id": "osm:node/6240298889",
+    "name": "Chopsticks",
+    "category": "restaurant",
+    "lat": 42.246794,
+    "lng": -83.756974
+  },
+  {
+    "id": "osm:node/6364697989",
+    "name": "Lab Cafe",
+    "category": "cafe",
+    "lat": 42.279515,
+    "lng": -83.742617
+  },
+  {
+    "id": "osm:node/6388005293",
+    "name": "Noodles & Company",
+    "category": "restaurant",
+    "lat": 42.255994,
+    "lng": -83.688039
+  },
+  {
+    "id": "osm:node/6388005294",
+    "name": "Five Guys",
+    "category": "fast_food",
+    "lat": 42.256115,
+    "lng": -83.688043
+  },
+  {
+    "id": "osm:node/6388005295",
+    "name": "Bangkok Chinatown Cuisine",
+    "category": "restaurant",
+    "lat": 42.229973,
+    "lng": -83.678662
+  },
+  {
+    "id": "osm:node/6392687559",
+    "name": "Black Diesel Coffee",
+    "category": "cafe",
+    "lat": 42.260984,
+    "lng": -83.730594
+  },
+  {
+    "id": "osm:node/6474160485",
+    "name": "Get Some Burritos",
+    "category": "fast_food",
+    "lat": 42.270776,
+    "lng": -83.740255
+  },
+  {
+    "id": "osm:node/6691143885",
+    "name": "The Aviary",
+    "category": "gym",
+    "lat": 42.245897,
+    "lng": -83.73312
+  },
+  {
+    "id": "osm:node/6799621107",
+    "name": "Desi Ruchulu",
+    "category": "restaurant",
+    "lat": 42.244701,
+    "lng": -83.699248
+  },
+  {
+    "id": "osm:node/6799621779",
+    "name": "First Bite",
+    "category": "restaurant",
+    "lat": 42.281155,
+    "lng": -83.748696
+  },
+  {
+    "id": "osm:node/6882065681",
+    "name": "Lefty's Cheesesteak",
+    "category": "restaurant",
+    "lat": 42.230417,
+    "lng": -83.678585
+  },
+  {
+    "id": "osm:node/6882065682",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.230253,
+    "lng": -83.678591
+  },
+  {
+    "id": "osm:node/6882065683",
+    "name": "Sushi Dabu",
+    "category": "restaurant",
+    "lat": 42.229893,
+    "lng": -83.679146
+  },
+  {
+    "id": "osm:node/6926929570",
+    "name": "BetterHealth Market & Café",
+    "category": "grocery",
+    "lat": 42.254782,
+    "lng": -83.688991
+  },
+  {
+    "id": "osm:node/6946237529",
+    "name": "Momo",
+    "category": "restaurant",
+    "lat": 42.245342,
+    "lng": -83.758942
+  },
+  {
+    "id": "osm:node/6988552360",
+    "name": "The Lunch Room Bakery & Cafe",
+    "category": "restaurant",
+    "lat": 42.285564,
+    "lng": -83.717667
+  },
+  {
+    "id": "osm:node/7009807552",
+    "name": "Star’s Cafe",
+    "category": "restaurant",
+    "lat": 42.279856,
+    "lng": -83.782709
+  },
+  {
+    "id": "osm:node/7015913462",
+    "name": "The Last Word",
+    "category": "bar",
+    "lat": 42.281366,
+    "lng": -83.751439
+  },
+  {
+    "id": "osm:node/7041626486",
+    "name": "Ahmo’s Gyros & Deli",
+    "category": "fast_food",
+    "lat": 42.281672,
+    "lng": -83.744215
+  },
+  {
+    "id": "osm:node/7041639787",
+    "name": "Aladdin’s Market (Halal Grocer)",
+    "category": "grocery",
+    "lat": 42.244773,
+    "lng": -83.696075
+  },
+  {
+    "id": "osm:node/7048529185",
+    "name": "19 Drips",
+    "category": "cafe",
+    "lat": 42.273744,
+    "lng": -83.777618
+  },
+  {
+    "id": "osm:node/7837151918",
+    "name": "MODU MART",
+    "category": "grocery",
+    "lat": 42.230907,
+    "lng": -83.698612
+  },
+  {
+    "id": "osm:node/8024121406",
+    "name": "Mediterranean Market",
+    "category": "grocery",
+    "lat": 42.229179,
+    "lng": -83.718559
+  },
+  {
+    "id": "osm:node/8058162855",
+    "name": "Miss Kim",
+    "category": "restaurant",
+    "lat": 42.284698,
+    "lng": -83.746399
+  },
+  {
+    "id": "osm:node/8090462308",
+    "name": "Dagu Rice Noodle",
+    "category": "restaurant",
+    "lat": 42.235011,
+    "lng": -83.677168
+  },
+  {
+    "id": "osm:node/8350684368",
+    "name": "Sweetwater's Coffee & Tea",
+    "category": "cafe",
+    "lat": 42.278734,
+    "lng": -83.78293
+  },
+  {
+    "id": "osm:node/8441975838",
+    "name": "Tim Hortons",
+    "category": "cafe",
+    "lat": 42.247923,
+    "lng": -83.759547
+  },
+  {
+    "id": "osm:node/8645692319",
+    "name": "3N1 Fitness Revolution",
+    "category": "gym",
+    "lat": 42.25856,
+    "lng": -83.738284
+  },
+  {
+    "id": "osm:node/8662328602",
+    "name": "Honey Baked Ham",
+    "category": "fast_food",
+    "lat": 42.255416,
+    "lng": -83.691201
+  },
+  {
+    "id": "osm:node/8774928524",
+    "name": "Kasoa Africa Market",
+    "category": "grocery",
+    "lat": 42.23084,
+    "lng": -83.700395
+  },
+  {
+    "id": "osm:node/8774928527",
+    "name": "MI Juice Garden",
+    "category": "fast_food",
+    "lat": 42.230794,
+    "lng": -83.700394
+  },
+  {
+    "id": "osm:node/8775045378",
+    "name": "JJ Crab House",
+    "category": "restaurant",
+    "lat": 42.246795,
+    "lng": -83.679863
+  },
+  {
+    "id": "osm:node/8775094989",
+    "name": "Cosa Sabrosa",
+    "category": "fast_food",
+    "lat": 42.272047,
+    "lng": -83.774785
+  },
+  {
+    "id": "osm:node/8777944621",
+    "name": "Tmaz Taqueria",
+    "category": "fast_food",
+    "lat": 42.244768,
+    "lng": -83.696324
+  },
+  {
+    "id": "osm:node/8779519246",
+    "name": "Levana Restaurant",
+    "category": "restaurant",
+    "lat": 42.244728,
+    "lng": -83.697323
+  },
+  {
+    "id": "osm:node/8779519247",
+    "name": "Monty's Public House",
+    "category": "bar",
+    "lat": 42.244724,
+    "lng": -83.697484
+  },
+  {
+    "id": "osm:node/8779519248",
+    "name": "Socotra Coffee House",
+    "category": "cafe",
+    "lat": 42.244732,
+    "lng": -83.697565
+  },
+  {
+    "id": "osm:node/8779519251",
+    "name": "Euro Market",
+    "category": "grocery",
+    "lat": 42.244731,
+    "lng": -83.697801
+  },
+  {
+    "id": "osm:node/8779519253",
+    "name": "Better Living Fitness",
+    "category": "gym",
+    "lat": 42.244739,
+    "lng": -83.698902
+  },
+  {
+    "id": "osm:node/8779519257",
+    "name": "Panda Korean & Chinese Foods",
+    "category": "restaurant",
+    "lat": 42.244745,
+    "lng": -83.699304
+  },
+  {
+    "id": "osm:node/8910644462",
+    "name": "Shake Shack",
+    "category": "fast_food",
+    "lat": 42.25699,
+    "lng": -83.698786
+  },
+  {
+    "id": "osm:node/9014708210",
+    "name": "Side Biscuit",
+    "category": "restaurant",
+    "lat": 42.265253,
+    "lng": -83.734747
+  },
+  {
+    "id": "osm:node/9018638843",
+    "name": "TAQ Taqueria Restaurant & Bar",
+    "category": "restaurant",
+    "lat": 42.279433,
+    "lng": -83.747581
+  },
+  {
+    "id": "osm:node/9061192936",
+    "name": "Jasmine",
+    "category": "cafe",
+    "lat": 42.278037,
+    "lng": -83.742191
+  },
+  {
+    "id": "osm:node/9092417186",
+    "name": "Saigon Kitchen & Bar",
+    "category": "restaurant",
+    "lat": 42.279514,
+    "lng": -83.742312
+  },
+  {
+    "id": "osm:node/9092417188",
+    "name": "Iggy's Eggies",
+    "category": "restaurant",
+    "lat": 42.279475,
+    "lng": -83.74148
+  },
+  {
+    "id": "osm:node/9099007295",
+    "name": "Mama Satto",
+    "category": "restaurant",
+    "lat": 42.278745,
+    "lng": -83.740055
+  },
+  {
+    "id": "osm:node/9099124100",
+    "name": "Poke Poke Sushi Unrolled",
+    "category": "restaurant",
+    "lat": 42.278883,
+    "lng": -83.740947
+  },
+  {
+    "id": "osm:node/9282163773",
+    "name": "Domino's",
+    "category": "fast_food",
+    "lat": 42.270412,
+    "lng": -83.740362
+  },
+  {
+    "id": "osm:node/9403993528",
+    "name": "Lan City Noodle Bar",
+    "category": "restaurant",
+    "lat": 42.275167,
+    "lng": -83.733324
+  },
+  {
+    "id": "osm:node/9403993529",
+    "name": "Beyond Juicery + Eatery",
+    "category": "restaurant",
+    "lat": 42.274849,
+    "lng": -83.73292
+  },
+  {
+    "id": "osm:node/9403993530",
+    "name": "Joe's Pizza",
+    "category": "restaurant",
+    "lat": 42.275207,
+    "lng": -83.735668
+  },
+  {
+    "id": "osm:node/9547980222",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.24365,
+    "lng": -83.76967
+  },
+  {
+    "id": "osm:node/9654398264",
+    "name": "The Blind Pig / 8 Ball Saloon",
+    "category": "bar",
+    "lat": 42.280206,
+    "lng": -83.751217
+  },
+  {
+    "id": "osm:node/9730722536",
+    "name": "Tropical Smoothie Cafe",
+    "category": "fast_food",
+    "lat": 42.255586,
+    "lng": -83.692171
+  },
+  {
+    "id": "osm:node/9905975063",
+    "name": "Blue Nile Ethiopian",
+    "category": "restaurant",
+    "lat": 42.280551,
+    "lng": -83.746349
+  },
+  {
+    "id": "osm:node/9915460327",
+    "name": "Hyperion Coffee Co",
+    "category": "cafe",
+    "lat": 42.279501,
+    "lng": -83.749177
+  },
+  {
+    "id": "osm:node/10268450829",
+    "name": "Union Rec",
+    "category": "restaurant",
+    "lat": 42.274573,
+    "lng": -83.748217
+  },
+  {
+    "id": "osm:node/10293854683",
+    "name": "Curry On",
+    "category": "restaurant",
+    "lat": 42.303898,
+    "lng": -83.706895
+  },
+  {
+    "id": "osm:node/10293854684",
+    "name": "El Limón",
+    "category": "restaurant",
+    "lat": 42.3038,
+    "lng": -83.706891
+  },
+  {
+    "id": "osm:node/10537632228",
+    "name": "Cottage Inn Pizza",
+    "category": "fast_food",
+    "lat": 42.304091,
+    "lng": -83.706896
+  },
+  {
+    "id": "osm:node/10537871410",
+    "name": "Bao Space",
+    "category": "restaurant",
+    "lat": 42.282602,
+    "lng": -83.748624
+  },
+  {
+    "id": "osm:node/10542046199",
+    "name": "Ginger Deli",
+    "category": "restaurant",
+    "lat": 42.279651,
+    "lng": -83.747088
+  },
+  {
+    "id": "osm:node/10542046201",
+    "name": "Kanbu Asian Mart",
+    "category": "grocery",
+    "lat": 42.27962,
+    "lng": -83.746354
+  },
+  {
+    "id": "osm:node/10566051523",
+    "name": "Marco's Pizza",
+    "category": "fast_food",
+    "lat": 42.245003,
+    "lng": -83.67901
+  },
+  {
+    "id": "osm:node/10798127691",
+    "name": "First Watch",
+    "category": "restaurant",
+    "lat": 42.242351,
+    "lng": -83.768956
+  },
+  {
+    "id": "osm:node/10820196757",
+    "name": "Anthony's Pizza",
+    "category": "restaurant",
+    "lat": 42.257825,
+    "lng": -83.72811
+  },
+  {
+    "id": "osm:node/10942330076",
+    "name": "Sweetwaters Coffee & Tea",
+    "category": "cafe",
+    "lat": 42.275166,
+    "lng": -83.741442
+  },
+  {
+    "id": "osm:node/11061643005",
+    "name": "The Garage Bar",
+    "category": "bar",
+    "lat": 42.27409,
+    "lng": -83.734798
+  },
+  {
+    "id": "osm:node/11061643006",
+    "name": "Pizza House",
+    "category": "restaurant",
+    "lat": 42.274185,
+    "lng": -83.734794
+  },
+  {
+    "id": "osm:node/11101910991",
+    "name": "Sweetwaters",
+    "category": "cafe",
+    "lat": 42.244772,
+    "lng": -83.737528
+  },
+  {
+    "id": "osm:node/11101910992",
+    "name": "Kanbu Sushi",
+    "category": "restaurant",
+    "lat": 42.244682,
+    "lng": -83.737535
+  },
+  {
+    "id": "osm:node/11139240503",
+    "name": "Mediterrano",
+    "category": "restaurant",
+    "lat": 42.245369,
+    "lng": -83.740912
+  },
+  {
+    "id": "osm:node/11619324038",
+    "name": "Ricewood",
+    "category": "restaurant",
+    "lat": 42.257798,
+    "lng": -83.72806
+  },
+  {
+    "id": "osm:node/11816965075",
+    "name": "YORK Food & Drink",
+    "category": "cafe",
+    "lat": 42.257698,
+    "lng": -83.728046
+  },
+  {
+    "id": "osm:node/11816994969",
+    "name": "Bao Boys",
+    "category": "fast_food",
+    "lat": 42.257607,
+    "lng": -83.728411
+  },
+  {
+    "id": "osm:node/11881265130",
+    "name": "Eat Thai",
+    "category": "restaurant",
+    "lat": 42.278483,
+    "lng": -83.748846
+  },
+  {
+    "id": "osm:node/11890324558",
+    "name": "SoulCycle",
+    "category": "gym",
+    "lat": 42.27514,
+    "lng": -83.735156
+  },
+  {
+    "id": "osm:node/11940249833",
+    "name": "Latte Factory",
+    "category": "cafe",
+    "lat": 42.240541,
+    "lng": -83.746521
+  },
+  {
+    "id": "osm:node/11940249838",
+    "name": "Totally Tea",
+    "category": "cafe",
+    "lat": 42.240484,
+    "lng": -83.746686
+  },
+  {
+    "id": "osm:node/11945514673",
+    "name": "Palace Tang",
+    "category": "restaurant",
+    "lat": 42.298355,
+    "lng": -83.719594
+  },
+  {
+    "id": "osm:node/11945639757",
+    "name": "Bandito's",
+    "category": "restaurant",
+    "lat": 42.30544,
+    "lng": -83.694647
+  },
+  {
+    "id": "osm:node/11945643440",
+    "name": "Evergreen",
+    "category": "restaurant",
+    "lat": 42.303764,
+    "lng": -83.705816
+  },
+  {
+    "id": "osm:node/11982473187",
+    "name": "Bodega Bros",
+    "category": "restaurant",
+    "lat": 42.278839,
+    "lng": -83.740014
+  },
+  {
+    "id": "osm:node/11982476362",
+    "name": "East Quad Dining Hall",
+    "category": "restaurant",
+    "lat": 42.273091,
+    "lng": -83.735117
+  },
+  {
+    "id": "osm:node/11982486335",
+    "name": "North Quad Dining Hall",
+    "category": "restaurant",
+    "lat": 42.280553,
+    "lng": -83.739901
+  },
+  {
+    "id": "osm:node/11982505591",
+    "name": "South Quad Dining Hall",
+    "category": "restaurant",
+    "lat": 42.273841,
+    "lng": -83.742264
+  },
+  {
+    "id": "osm:node/12070720131",
+    "name": "Bambu",
+    "category": "cafe",
+    "lat": 42.25551,
+    "lng": -83.693423
+  },
+  {
+    "id": "osm:node/12092597881",
+    "name": "Happy Wok",
+    "category": "restaurant",
+    "lat": 42.269582,
+    "lng": -83.772341
+  },
+  {
+    "id": "osm:node/12152012391",
+    "name": "Get Away N’ Play Café",
+    "category": "fast_food",
+    "lat": 42.282105,
+    "lng": -83.727082
+  },
+  {
+    "id": "osm:node/12152091521",
+    "name": "Grand Grounds",
+    "category": "cafe",
+    "lat": 42.281979,
+    "lng": -83.727464
+  },
+  {
+    "id": "osm:node/12152091522",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.282162,
+    "lng": -83.727052
+  },
+  {
+    "id": "osm:node/12329410630",
+    "name": "Firehouse Subs",
+    "category": "restaurant",
+    "lat": 42.254867,
+    "lng": -83.689526
+  },
+  {
+    "id": "osm:node/12545051768",
+    "name": "Spencer",
+    "category": "restaurant",
+    "lat": 42.279687,
+    "lng": -83.747888
+  },
+  {
+    "id": "osm:node/12552300476",
+    "name": "Zingerman's Deli",
+    "category": "restaurant",
+    "lat": 42.284698,
+    "lng": -83.745151
+  },
+  {
+    "id": "osm:node/12552300477",
+    "name": "Zingerman's Next Door Café",
+    "category": "cafe",
+    "lat": 42.28455,
+    "lng": -83.745271
+  },
+  {
+    "id": "osm:node/12552394003",
+    "name": "Cupsnchai",
+    "category": "cafe",
+    "lat": 42.279835,
+    "lng": -83.74746
+  },
+  {
+    "id": "osm:node/12552399846",
+    "name": "Whitney Johnson Pilates",
+    "category": "gym",
+    "lat": 42.280119,
+    "lng": -83.747456
+  },
+  {
+    "id": "osm:node/12588581871",
+    "name": "Tropical Smoothie Cafe",
+    "category": "fast_food",
+    "lat": 42.244978,
+    "lng": -83.75891
+  },
+  {
+    "id": "osm:node/12588648031",
+    "name": "SPENGA",
+    "category": "gym",
+    "lat": 42.244663,
+    "lng": -83.757834
+  },
+  {
+    "id": "osm:node/12588650443",
+    "name": "Hummus Express",
+    "category": "restaurant",
+    "lat": 42.244641,
+    "lng": -83.758212
+  },
+  {
+    "id": "osm:node/12588668163",
+    "name": "Reach Bodywork Studio",
+    "category": "gym",
+    "lat": 42.244679,
+    "lng": -83.758482
+  },
+  {
+    "id": "osm:node/12588785338",
+    "name": "Siam Square",
+    "category": "restaurant",
+    "lat": 42.244882,
+    "lng": -83.758858
+  },
+  {
+    "id": "osm:node/12636388315",
+    "name": "Songbird Café",
+    "category": "cafe",
+    "lat": 42.303684,
+    "lng": -83.706835
+  },
+  {
+    "id": "osm:node/12710836927",
+    "name": "Domino's",
+    "category": "fast_food",
+    "lat": 42.253612,
+    "lng": -83.75235
+  },
+  {
+    "id": "osm:node/12710836928",
+    "name": "Orange Theory",
+    "category": "gym",
+    "lat": 42.253991,
+    "lng": -83.751862
+  },
+  {
+    "id": "osm:node/12710853121",
+    "name": "Qdoba",
+    "category": "restaurant",
+    "lat": 42.253861,
+    "lng": -83.75207
+  },
+  {
+    "id": "osm:node/12710859075",
+    "name": "Pangong Tea",
+    "category": "restaurant",
+    "lat": 42.253836,
+    "lng": -83.752103
+  },
+  {
+    "id": "osm:node/12710861334",
+    "name": "No Thai!",
+    "category": "restaurant",
+    "lat": 42.253681,
+    "lng": -83.752281
+  },
+  {
+    "id": "osm:node/12710863588",
+    "name": "Bonchon",
+    "category": "restaurant",
+    "lat": 42.253742,
+    "lng": -83.75221
+  },
+  {
+    "id": "osm:node/12769399401",
+    "name": "L.A. Fitness",
+    "category": "gym",
+    "lat": 42.284001,
+    "lng": -83.780438
+  },
+  {
+    "id": "osm:node/12806656093",
+    "name": "No Thai! Delivery",
+    "category": "restaurant",
+    "lat": 42.258575,
+    "lng": -83.73801
+  },
+  {
+    "id": "osm:node/12842602123",
+    "name": "Bløm Mead + Cider",
+    "category": "bar",
+    "lat": 42.281056,
+    "lng": -83.747541
+  },
+  {
+    "id": "osm:node/12842602124",
+    "name": "Curious Coffee",
+    "category": "cafe",
+    "lat": 42.281051,
+    "lng": -83.747435
+  },
+  {
+    "id": "osm:node/12896029117",
+    "name": "Chapala Mexican Restaurant",
+    "category": "restaurant",
+    "lat": 42.282792,
+    "lng": -83.748637
+  },
+  {
+    "id": "osm:node/12896035327",
+    "name": "Heidelberg Restaurant",
+    "category": "restaurant",
+    "lat": 42.282894,
+    "lng": -83.748648
+  },
+  {
+    "id": "osm:node/12955269101",
+    "name": "North Star Lounge",
+    "category": "bar",
+    "lat": 42.283326,
+    "lng": -83.746111
+  },
+  {
+    "id": "osm:node/12975359201",
+    "name": "Mothfire Brewing Co.",
+    "category": "bar",
+    "lat": 42.228908,
+    "lng": -83.741729
+  },
+  {
+    "id": "osm:node/13123598952",
+    "name": "Dunkin'",
+    "category": "fast_food",
+    "lat": 42.277978,
+    "lng": -83.740961
+  },
+  {
+    "id": "osm:node/13147598564",
+    "name": "Raising Cane's",
+    "category": "fast_food",
+    "lat": 42.27489,
+    "lng": -83.735603
+  },
+  {
+    "id": "osm:node/13167771297",
+    "name": "Mark's Midtown Coney Island",
+    "category": "restaurant",
+    "lat": 42.304258,
+    "lng": -83.691051
+  },
+  {
+    "id": "osm:node/13168066618",
+    "name": "Orangetheory Fitness",
+    "category": "gym",
+    "lat": 42.30473,
+    "lng": -83.708478
+  },
+  {
+    "id": "osm:node/13228399614",
+    "name": "Haifa Falafel",
+    "category": "restaurant",
+    "lat": 42.298814,
+    "lng": -83.721081
+  },
+  {
+    "id": "osm:node/13276607054",
+    "name": "Rappourt",
+    "category": "bar",
+    "lat": 42.304175,
+    "lng": -83.706709
+  },
+  {
+    "id": "osm:node/13278314715",
+    "name": "RamenYa",
+    "category": "restaurant",
+    "lat": 42.240422,
+    "lng": -83.746436
+  },
+  {
+    "id": "osm:node/13279065344",
+    "name": "Izzy's Hoagie Shop",
+    "category": "fast_food",
+    "lat": 42.269673,
+    "lng": -83.772612
+  },
+  {
+    "id": "osm:node/13287878030",
+    "name": "UMMA Cafe",
+    "category": "cafe",
+    "lat": 42.275849,
+    "lng": -83.739515
+  },
+  {
+    "id": "osm:node/13294975523",
+    "name": "Hazel Coffee Co.",
+    "category": "cafe",
+    "lat": 42.256104,
+    "lng": -83.726325
+  },
+  {
+    "id": "osm:node/13298141033",
+    "name": "Recess Work & Play Cafe",
+    "category": "cafe",
+    "lat": 42.280223,
+    "lng": -83.750109
+  },
+  {
+    "id": "osm:node/13298659861",
+    "name": "Target Grocery",
+    "category": "grocery",
+    "lat": 42.279518,
+    "lng": -83.740454
+  },
+  {
+    "id": "osm:node/13298659984",
+    "name": "Q Bakehouse & Market",
+    "category": "cafe",
+    "lat": 42.282141,
+    "lng": -83.767121
+  },
+  {
+    "id": "osm:node/13340511601",
+    "name": "Misfit Society Coffee Club",
+    "category": "cafe",
+    "lat": 42.27452,
+    "lng": -83.735553
+  },
+  {
+    "id": "osm:node/13428810201",
+    "name": "Mr. Yun's Tower Deli",
+    "category": "restaurant",
+    "lat": 42.285665,
+    "lng": -83.717664
+  },
+  {
+    "id": "osm:node/13463287901",
+    "name": "Blazin Coop’s Nashville Hot Chicken",
+    "category": "fast_food",
+    "lat": 42.29779,
+    "lng": -83.721652
+  },
+  {
+    "id": "osm:node/13551069049",
+    "name": "La Serre",
+    "category": "restaurant",
+    "lat": 42.282858,
+    "lng": -83.735842
+  },
+  {
+    "id": "osm:node/13691648880",
+    "name": "Auntie Anne's",
+    "category": "fast_food",
+    "lat": 42.234071,
+    "lng": -83.677228
+  },
+  {
+    "id": "osm:node/13756159220",
+    "name": "K-Pot Korean BBQ & Hot Pot",
+    "category": "restaurant",
+    "lat": 42.234935,
+    "lng": -83.677167
+  },
+  {
+    "id": "osm:node/13766745801",
+    "name": "Uplift",
+    "category": "bar",
+    "lat": 42.280034,
+    "lng": -83.751189
+  },
+  {
+    "id": "osm:node/13829268510",
+    "name": "Patel Brothers",
+    "category": "grocery",
+    "lat": 42.255445,
+    "lng": -83.691514
+  },
+  {
+    "id": "osm:node/13877580401",
+    "name": "Ricewood",
+    "category": "restaurant",
+    "lat": 42.284067,
+    "lng": -83.781637
+  },
+  {
+    "id": "osm:node/13899768716",
+    "name": "Pita King",
+    "category": "restaurant",
+    "lat": 42.258894,
+    "lng": -83.712451
+  },
+  {
+    "id": "osm:node/13899986076",
+    "name": "MD Bagel Fragel",
+    "category": "restaurant",
+    "lat": 42.254846,
+    "lng": -83.68937
+  },
+  {
+    "id": "osm:node/13900013387",
+    "name": "Wingstop",
+    "category": "fast_food",
+    "lat": 42.254886,
+    "lng": -83.689678
+  },
+  {
+    "id": "osm:node/13900128953",
+    "name": "Nothing Bundt Cakes",
+    "category": "restaurant",
+    "lat": 42.254945,
+    "lng": -83.690168
+  },
+  {
+    "id": "osm:node/13900140967",
+    "name": "POKE FISH",
+    "category": "restaurant",
+    "lat": 42.25489,
+    "lng": -83.689742
+  },
+  {
+    "id": "osm:node/13900141067",
+    "name": "Beyond Juicery + Eatery",
+    "category": "restaurant",
+    "lat": 42.254929,
+    "lng": -83.690078
+  },
+  {
+    "id": "osm:node/13900175460",
+    "name": "Zion Well",
+    "category": "gym",
+    "lat": 42.255611,
+    "lng": -83.692354
+  },
+  {
+    "id": "osm:node/13900193371",
+    "name": "Club Pilates",
+    "category": "gym",
+    "lat": 42.255617,
+    "lng": -83.692868
+  },
+  {
+    "id": "osm:node/13905599964",
+    "name": "Barre3",
+    "category": "gym",
+    "lat": 42.302771,
+    "lng": -83.705912
+  },
+  {
+    "id": "osm:node/13952024761",
+    "name": "Vertical Media Solutions",
+    "category": "grocery",
+    "lat": 42.247577,
+    "lng": -83.738592
+  },
+  {
+    "id": "osm:node/13958861405",
+    "name": "Culantro",
+    "category": "restaurant",
+    "lat": 42.283151,
+    "lng": -83.748637
+  },
+  {
+    "id": "osm:node/13958912941",
+    "name": "Everest Sherpa",
+    "category": "restaurant",
+    "lat": 42.24602,
+    "lng": -83.769247
+  },
+  {
+    "id": "osm:node/13959029774",
+    "name": "Strider Coffee Stop",
+    "category": "cafe",
+    "lat": 42.282142,
+    "lng": -83.767176
+  },
+  {
+    "id": "osm:node/13959108537",
+    "name": "Ayse's Turkish Cafe",
+    "category": "cafe",
+    "lat": 42.298976,
+    "lng": -83.721636
+  },
+  {
+    "id": "osm:node/13963446833",
+    "name": "Jimmy John's",
+    "category": "fast_food",
+    "lat": 42.256454,
+    "lng": -83.692162
+  },
+  {
+    "id": "osm:node/13970658549",
+    "name": "MilkShake Factory",
+    "category": "restaurant",
+    "lat": 42.278525,
+    "lng": -83.780947
+  },
+  {
+    "id": "osm:node/13970667747",
+    "name": "bb.q Chicken",
+    "category": "restaurant",
+    "lat": 42.278529,
+    "lng": -83.780765
+  },
+  {
+    "id": "osm:node/14007201651",
+    "name": "African & Caribbean Food Market",
+    "category": "grocery",
+    "lat": 42.246562,
+    "lng": -83.679856
+  },
+  {
+    "id": "osm:node/14007215442",
+    "name": "Macino's Pizza & Grinders",
+    "category": "restaurant",
+    "lat": 42.246676,
+    "lng": -83.679857
+  },
+  {
+    "id": "osm:node/14042736798",
+    "name": "Taystee's Burger",
+    "category": "fast_food",
+    "lat": 42.247645,
+    "lng": -83.759554
+  },
+  {
+    "id": "osm:node/14045913845",
+    "name": "BO's Bagels",
+    "category": "fast_food",
+    "lat": 42.274862,
+    "lng": -83.735128
+  },
+  {
+    "id": "osm:node/14062204309",
+    "name": "Monahan's Seafood Market",
+    "category": "restaurant",
+    "lat": 42.284384,
+    "lng": -83.746396
+  },
+  {
+    "id": "osm:node/14078875803",
+    "name": "CoreLife Eatery",
+    "category": "restaurant",
+    "lat": 42.283575,
+    "lng": -83.781334
+  },
+  {
+    "id": "osm:node/14100073670",
+    "name": "Wolverine Village Dining Hall",
+    "category": "fast_food",
+    "lat": 42.271107,
+    "lng": -83.745726
+  },
+  {
+    "id": "osm:node/14106105506",
+    "name": "Red Yoga",
+    "category": "gym",
+    "lat": 42.279583,
+    "lng": -83.743114
+  },
+  {
+    "id": "osm:node/14106120636",
+    "name": "The Stubborn Brother",
+    "category": "restaurant",
+    "lat": 42.277758,
+    "lng": -83.748439
+  },
+  {
+    "id": "osm:node/14165309782",
+    "name": "Hungry Howie's",
+    "category": "fast_food",
+    "lat": 42.256845,
+    "lng": -83.692271
+  },
+  {
+    "id": "osm:node/14227225831",
+    "name": "The Common Cup",
+    "category": "cafe",
+    "lat": 42.273764,
+    "lng": -83.728731
+  },
+  {
+    "id": "osm:node/14227495037",
+    "name": "Dalat",
+    "category": "restaurant",
+    "lat": 42.252803,
+    "lng": -83.750659
+  },
+  {
+    "id": "osm:node/14228005501",
+    "name": "Le Dog La Soup",
+    "category": "restaurant",
+    "lat": 42.279261,
+    "lng": -83.748809
+  },
+  {
+    "id": "osm:node/14240572314",
+    "name": "Counter Punch Boxing & Fitness",
+    "category": "gym",
+    "lat": 42.231211,
+    "lng": -83.746841
+  },
+  {
+    "id": "osm:node/14244085404",
+    "name": "Tacos El Panda",
+    "category": "restaurant",
+    "lat": 42.254286,
+    "lng": -83.680542
+  },
+  {
+    "id": "osm:node/14244120497",
+    "name": "Hotworx",
+    "category": "gym",
+    "lat": 42.256502,
+    "lng": -83.686242
+  },
+  {
+    "id": "osm:node/14256081702",
+    "name": "Korner Kitchen",
+    "category": "restaurant",
+    "lat": 42.24552,
+    "lng": -83.697836
+  },
+  {
+    "id": "osm:node/14288075641",
+    "name": "Goodlyfe",
+    "category": "restaurant",
+    "lat": 42.230365,
+    "lng": -83.678588
+  },
+  {
+    "id": "osm:node/14301230301",
+    "name": "Final Round Training Center",
+    "category": "gym",
+    "lat": 42.231149,
+    "lng": -83.748668
+  },
+  {
+    "id": "osm:node/14310643357",
+    "name": "Moe'z Famous Cheesesteaks",
+    "category": "fast_food",
+    "lat": 42.230898,
+    "lng": -83.698826
+  },
+  {
+    "id": "osm:node/14353063701",
+    "name": "Cottage Inn Pizza",
+    "category": "restaurant",
+    "lat": 42.24521,
+    "lng": -83.741067
+  },
+  {
+    "id": "osm:node/14363815078",
+    "name": "BTB Buritto",
+    "category": "restaurant",
+    "lat": 42.27478,
+    "lng": -83.734814
+  },
+  {
+    "id": "osm:node/14363818775",
+    "name": "The Seoul",
+    "category": "restaurant",
+    "lat": 42.279249,
+    "lng": -83.741008
+  },
+  {
+    "id": "osm:node/14363863116",
+    "name": "Slurping Turtle",
+    "category": "restaurant",
+    "lat": 42.279254,
+    "lng": -83.741101
+  },
+  {
+    "id": "osm:node/14363987898",
+    "name": "Alloush Grill",
+    "category": "restaurant",
+    "lat": 42.279461,
+    "lng": -83.748081
+  },
+  {
+    "id": "osm:node/14371689753",
+    "name": "Smoothie King",
+    "category": "fast_food",
+    "lat": 42.280864,
+    "lng": -83.782956
+  },
+  {
+    "id": "osm:node/14371697472",
+    "name": "Blue Cafe and Market",
+    "category": "cafe",
+    "lat": 42.27151,
+    "lng": -83.745518
+  },
+  {
+    "id": "osm:node/14374208064",
+    "name": "Izzy's Hoagie Shop",
+    "category": "restaurant",
+    "lat": 42.269737,
+    "lng": -83.772507
+  },
+  {
+    "id": "osm:way/93681657",
+    "name": "Ichiban",
+    "category": "restaurant",
+    "lat": 42.252213,
+    "lng": -83.668059
+  },
+  {
+    "id": "osm:way/93681661",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.252292,
+    "lng": -83.669154
+  },
+  {
+    "id": "osm:way/93830831",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.251611,
+    "lng": -83.665663
+  },
+  {
+    "id": "osm:way/97172331",
+    "name": "Meijer",
+    "category": "grocery",
+    "lat": 42.233668,
+    "lng": -83.676508
+  },
+  {
+    "id": "osm:way/191023314",
+    "name": "Chili's",
+    "category": "restaurant",
+    "lat": 42.255935,
+    "lng": -83.68675
+  },
+  {
+    "id": "osm:way/192986057",
+    "name": "Kroger",
+    "category": "grocery",
+    "lat": 42.258298,
+    "lng": -83.688816
+  },
+  {
+    "id": "osm:way/193042057",
+    "name": "Whole Foods Market",
+    "category": "grocery",
+    "lat": 42.25801,
+    "lng": -83.698228
+  },
+  {
+    "id": "osm:way/205989915",
+    "name": "Kroger",
+    "category": "grocery",
+    "lat": 42.277569,
+    "lng": -83.782177
+  },
+  {
+    "id": "osm:way/215582326",
+    "name": "Plum Market",
+    "category": "grocery",
+    "lat": 42.28486,
+    "lng": -83.781552
+  },
+  {
+    "id": "osm:way/222493005",
+    "name": "Applebee's",
+    "category": "restaurant",
+    "lat": 42.233975,
+    "lng": -83.679429
+  },
+  {
+    "id": "osm:way/256667358",
+    "name": "Cottage Inn Pizza",
+    "category": "restaurant",
+    "lat": 42.271992,
+    "lng": -83.742129
+  },
+  {
+    "id": "osm:way/277368089",
+    "name": "Jimmy John's",
+    "category": "fast_food",
+    "lat": 42.271605,
+    "lng": -83.741701
+  },
+  {
+    "id": "osm:way/277376052",
+    "name": "Baba Dari",
+    "category": "restaurant",
+    "lat": 42.271707,
+    "lng": -83.741054
+  },
+  {
+    "id": "osm:way/288233309",
+    "name": "Red Robin",
+    "category": "restaurant",
+    "lat": 42.241662,
+    "lng": -83.740288
+  },
+  {
+    "id": "osm:way/295271241",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.234788,
+    "lng": -83.679439
+  },
+  {
+    "id": "osm:way/295271242",
+    "name": "Red Robin",
+    "category": "restaurant",
+    "lat": 42.235745,
+    "lng": -83.679675
+  },
+  {
+    "id": "osm:way/295271245",
+    "name": "Gordon Food Service",
+    "category": "grocery",
+    "lat": 42.233264,
+    "lng": -83.681346
+  },
+  {
+    "id": "osm:way/298602520",
+    "name": "Taco Bell",
+    "category": "fast_food",
+    "lat": 42.298981,
+    "lng": -83.722435
+  },
+  {
+    "id": "osm:way/298602522",
+    "name": "A+ Wagyu BBQ",
+    "category": "restaurant",
+    "lat": 42.298331,
+    "lng": -83.720848
+  },
+  {
+    "id": "osm:way/298913031",
+    "name": "Plum Market",
+    "category": "grocery",
+    "lat": 42.306008,
+    "lng": -83.691134
+  },
+  {
+    "id": "osm:way/299044531",
+    "name": "Casey’s Tavern East",
+    "category": "restaurant",
+    "lat": 42.304622,
+    "lng": -83.695808
+  },
+  {
+    "id": "osm:way/300834361",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.303075,
+    "lng": -83.707907
+  },
+  {
+    "id": "osm:way/303682819",
+    "name": "Meijer",
+    "category": "grocery",
+    "lat": 42.239395,
+    "lng": -83.766109
+  },
+  {
+    "id": "osm:way/314324596",
+    "name": "Steak 'n Shake",
+    "category": "fast_food",
+    "lat": 42.230313,
+    "lng": -83.677835
+  },
+  {
+    "id": "osm:way/319352939",
+    "name": "Madras Masala",
+    "category": "restaurant",
+    "lat": 42.257166,
+    "lng": -83.727753
+  },
+  {
+    "id": "osm:way/328499868",
+    "name": "Venue by 4M",
+    "category": "restaurant",
+    "lat": 42.259748,
+    "lng": -83.736575
+  },
+  {
+    "id": "osm:way/329397130",
+    "name": "The Hen on the Fly",
+    "category": "restaurant",
+    "lat": 42.258593,
+    "lng": -83.728656
+  },
+  {
+    "id": "osm:way/329462347",
+    "name": "Fraser's Pub",
+    "category": "bar",
+    "lat": 42.257184,
+    "lng": -83.72689
+  },
+  {
+    "id": "osm:way/330177946",
+    "name": "Detroit Street Filling Station",
+    "category": "restaurant",
+    "lat": 42.283366,
+    "lng": -83.746316
+  },
+  {
+    "id": "osm:way/330657889",
+    "name": "Dairy Queen",
+    "category": "fast_food",
+    "lat": 42.26026,
+    "lng": -83.729234
+  },
+  {
+    "id": "osm:way/339360600",
+    "name": "LA Fitness",
+    "category": "gym",
+    "lat": 42.240377,
+    "lng": -83.74015
+  },
+  {
+    "id": "osm:way/339360601",
+    "name": "Los Amigos",
+    "category": "restaurant",
+    "lat": 42.240066,
+    "lng": -83.740357
+  },
+  {
+    "id": "osm:way/339688811",
+    "name": "Seoul Garden",
+    "category": "restaurant",
+    "lat": 42.242204,
+    "lng": -83.733998
+  },
+  {
+    "id": "osm:way/339695055",
+    "name": "Wendy's",
+    "category": "fast_food",
+    "lat": 42.24181,
+    "lng": -83.735221
+  },
+  {
+    "id": "osm:way/339695056",
+    "name": "Buffalo Wild Wings",
+    "category": "restaurant",
+    "lat": 42.241779,
+    "lng": -83.736199
+  },
+  {
+    "id": "osm:way/339994751",
+    "name": "Knight's Steakhouse",
+    "category": "restaurant",
+    "lat": 42.285049,
+    "lng": -83.778123
+  },
+  {
+    "id": "osm:way/340028219",
+    "name": "Texas de Brazil",
+    "category": "restaurant",
+    "lat": 42.241041,
+    "lng": -83.745374
+  },
+  {
+    "id": "osm:way/340028220",
+    "name": "P.F. Chang's",
+    "category": "restaurant",
+    "lat": 42.241457,
+    "lng": -83.745171
+  },
+  {
+    "id": "osm:way/345330837",
+    "name": "Chick-fil-A",
+    "category": "fast_food",
+    "lat": 42.255875,
+    "lng": -83.694835
+  },
+  {
+    "id": "osm:way/345330851",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.25678,
+    "lng": -83.693797
+  },
+  {
+    "id": "osm:way/348030727",
+    "name": "White Castle",
+    "category": "fast_food",
+    "lat": 42.245844,
+    "lng": -83.681577
+  },
+  {
+    "id": "osm:way/367316356",
+    "name": "Taco Bell",
+    "category": "fast_food",
+    "lat": 42.276048,
+    "lng": -83.777512
+  },
+  {
+    "id": "osm:way/367317108",
+    "name": "Planet Fitness",
+    "category": "gym",
+    "lat": 42.277282,
+    "lng": -83.778011
+  },
+  {
+    "id": "osm:way/368014065",
+    "name": "Fleetwood Diner",
+    "category": "restaurant",
+    "lat": 42.279507,
+    "lng": -83.750051
+  },
+  {
+    "id": "osm:way/381532658",
+    "name": "Achilles Coney Restaurant",
+    "category": "restaurant",
+    "lat": 42.245415,
+    "lng": -83.698614
+  },
+  {
+    "id": "osm:way/381532675",
+    "name": "Galleria Asian Market",
+    "category": "grocery",
+    "lat": 42.245512,
+    "lng": -83.698045
+  },
+  {
+    "id": "osm:way/381532676",
+    "name": "Little Caesars",
+    "category": "fast_food",
+    "lat": 42.244594,
+    "lng": -83.699921
+  },
+  {
+    "id": "osm:way/383453099",
+    "name": "Chick N' Seafood Spot",
+    "category": "restaurant",
+    "lat": 42.244805,
+    "lng": -83.695737
+  },
+  {
+    "id": "osm:way/385619019",
+    "name": "Paesano Restaurant - Wine Bar",
+    "category": "restaurant",
+    "lat": 42.256303,
+    "lng": -83.691208
+  },
+  {
+    "id": "osm:way/391308326",
+    "name": "CoachMeFit",
+    "category": "gym",
+    "lat": 42.260088,
+    "lng": -83.715657
+  },
+  {
+    "id": "osm:way/393535455",
+    "name": "IHOP",
+    "category": "restaurant",
+    "lat": 42.2317,
+    "lng": -83.676857
+  },
+  {
+    "id": "osm:way/400424305",
+    "name": "Taco Bell",
+    "category": "fast_food",
+    "lat": 42.230922,
+    "lng": -83.739823
+  },
+  {
+    "id": "osm:way/403512303",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.242045,
+    "lng": -83.765691
+  },
+  {
+    "id": "osm:way/403512341",
+    "name": "Culver's",
+    "category": "fast_food",
+    "lat": 42.242024,
+    "lng": -83.764495
+  },
+  {
+    "id": "osm:way/403512344",
+    "name": "Nick's Original House of Pancakes",
+    "category": "restaurant",
+    "lat": 42.242678,
+    "lng": -83.765186
+  },
+  {
+    "id": "osm:way/404172516",
+    "name": "Tim Hortons",
+    "category": "cafe",
+    "lat": 42.229667,
+    "lng": -83.738067
+  },
+  {
+    "id": "osm:way/404248478",
+    "name": "ALDI",
+    "category": "grocery",
+    "lat": 42.28543,
+    "lng": -83.778843
+  },
+  {
+    "id": "osm:way/404262092",
+    "name": "Zingerman's Roadhouse",
+    "category": "restaurant",
+    "lat": 42.280009,
+    "lng": -83.78103
+  },
+  {
+    "id": "osm:way/407590396",
+    "name": "Olga's Kitchen",
+    "category": "restaurant",
+    "lat": 42.25458,
+    "lng": -83.688213
+  },
+  {
+    "id": "osm:way/441287578",
+    "name": "Holiday's Restaurant",
+    "category": "restaurant",
+    "lat": 42.272466,
+    "lng": -83.77516
+  },
+  {
+    "id": "osm:way/441287594",
+    "name": "Taco King",
+    "category": "restaurant",
+    "lat": 42.273731,
+    "lng": -83.777157
+  },
+  {
+    "id": "osm:way/441361324",
+    "name": "Hot Pot Chen",
+    "category": "restaurant",
+    "lat": 42.275,
+    "lng": -83.777872
+  },
+  {
+    "id": "osm:way/441361329",
+    "name": "Blue Lion Fitness",
+    "category": "gym",
+    "lat": 42.278027,
+    "lng": -83.779728
+  },
+  {
+    "id": "osm:way/441361335",
+    "name": "Chipotle",
+    "category": "fast_food",
+    "lat": 42.275795,
+    "lng": -83.77837
+  },
+  {
+    "id": "osm:way/441361344",
+    "name": "Noodles & Company",
+    "category": "restaurant",
+    "lat": 42.274834,
+    "lng": -83.777649
+  },
+  {
+    "id": "osm:way/441362662",
+    "name": "McDonald's",
+    "category": "fast_food",
+    "lat": 42.276616,
+    "lng": -83.777773
+  },
+  {
+    "id": "osm:way/441362666",
+    "name": "Dairy Queen",
+    "category": "fast_food",
+    "lat": 42.27859,
+    "lng": -83.779244
+  },
+  {
+    "id": "osm:way/441362667",
+    "name": "Subway",
+    "category": "fast_food",
+    "lat": 42.278151,
+    "lng": -83.779049
+  },
+  {
+    "id": "osm:way/441445542",
+    "name": "Homes Brewery",
+    "category": "bar",
+    "lat": 42.28027,
+    "lng": -83.778452
+  },
+  {
+    "id": "osm:way/441966479",
+    "name": "Aroma Indian Cuisine",
+    "category": "restaurant",
+    "lat": 42.27939,
+    "lng": -83.750838
+  },
+  {
+    "id": "osm:way/442870406",
+    "name": "Liberty Athletic Club",
+    "category": "gym",
+    "lat": 42.271893,
+    "lng": -83.789281
+  },
+  {
+    "id": "osm:way/442872450",
+    "name": "Bearclaw Coffee Co.",
+    "category": "cafe",
+    "lat": 42.259642,
+    "lng": -83.712069
+  },
+  {
+    "id": "osm:way/442876121",
+    "name": "Applebee's",
+    "category": "restaurant",
+    "lat": 42.246876,
+    "lng": -83.760572
+  },
+  {
+    "id": "osm:way/443277780",
+    "name": "Ann Arbor School of Yoga",
+    "category": "gym",
+    "lat": 42.281818,
+    "lng": -83.753142
+  },
+  {
+    "id": "osm:way/453625321",
+    "name": "Spiedo",
+    "category": "restaurant",
+    "lat": 42.279195,
+    "lng": -83.745901
+  },
+  {
+    "id": "osm:way/457106335",
+    "name": "Applebee's",
+    "category": "restaurant",
+    "lat": 42.307507,
+    "lng": -83.691529
+  },
+  {
+    "id": "osm:way/457786034",
+    "name": "Bob Evans",
+    "category": "restaurant",
+    "lat": 42.252619,
+    "lng": -83.680045
+  },
+  {
+    "id": "osm:way/457786053",
+    "name": "Palm Palace",
+    "category": "restaurant",
+    "lat": 42.253266,
+    "lng": -83.681309
+  },
+  {
+    "id": "osm:way/459913211",
+    "name": "Jimmy John's",
+    "category": "fast_food",
+    "lat": 42.230267,
+    "lng": -83.738609
+  },
+  {
+    "id": "osm:way/459979570",
+    "name": "Crossfit Treetown",
+    "category": "gym",
+    "lat": 42.289425,
+    "lng": -83.748848
+  },
+  {
+    "id": "osm:way/460460311",
+    "name": "Rawaq Cafe",
+    "category": "cafe",
+    "lat": 42.282377,
+    "lng": -83.787821
+  },
+  {
+    "id": "osm:way/460494756",
+    "name": "Concessions",
+    "category": "fast_food",
+    "lat": 42.26755,
+    "lng": -83.748318
+  },
+  {
+    "id": "osm:way/465344323",
+    "name": "Jabal Coffee House",
+    "category": "cafe",
+    "lat": 42.281656,
+    "lng": -83.744221
+  },
+  {
+    "id": "osm:way/466601186",
+    "name": "No Thai!",
+    "category": "restaurant",
+    "lat": 42.283027,
+    "lng": -83.746734
+  },
+  {
+    "id": "osm:way/468004162",
+    "name": "Evergreen Downtown",
+    "category": "restaurant",
+    "lat": 42.279826,
+    "lng": -83.750348
+  },
+  {
+    "id": "osm:way/468944450",
+    "name": "Ray's Red Hots",
+    "category": "restaurant",
+    "lat": 42.273979,
+    "lng": -83.735547
+  },
+  {
+    "id": "osm:way/482764060",
+    "name": "Namaste Flavours",
+    "category": "restaurant",
+    "lat": 42.277645,
+    "lng": -83.744372
+  },
+  {
+    "id": "osm:way/485228245",
+    "name": "Casa Dominick's",
+    "category": "restaurant",
+    "lat": 42.27315,
+    "lng": -83.738712
+  },
+  {
+    "id": "osm:way/485521104",
+    "name": "Z Z's Produce",
+    "category": "grocery",
+    "lat": 42.244984,
+    "lng": -83.678019
+  },
+  {
+    "id": "osm:way/485521110",
+    "name": "El Tapatio Taqueria",
+    "category": "restaurant",
+    "lat": 42.244735,
+    "lng": -83.679963
+  },
+  {
+    "id": "osm:way/495081617",
+    "name": "Krazy Jim's Blimpy Burger",
+    "category": "fast_food",
+    "lat": 42.279402,
+    "lng": -83.750118
+  },
+  {
+    "id": "osm:way/496169358",
+    "name": "Espy Cafe",
+    "category": "cafe",
+    "lat": 42.282634,
+    "lng": -83.752522
+  },
+  {
+    "id": "osm:way/502195824",
+    "name": "Toarmina's Pizza",
+    "category": "fast_food",
+    "lat": 42.265795,
+    "lng": -83.735655
+  },
+  {
+    "id": "osm:way/502195831",
+    "name": "Argus Farm Stop - Packard Cafe",
+    "category": "cafe",
+    "lat": 42.265775,
+    "lng": -83.73541
+  },
+  {
+    "id": "osm:way/512590252",
+    "name": "Valor Boxing",
+    "category": "gym",
+    "lat": 42.234581,
+    "lng": -83.740621
+  },
+  {
+    "id": "osm:way/549854176",
+    "name": "Starbucks",
+    "category": "cafe",
+    "lat": 42.241405,
+    "lng": -83.768015
+  },
+  {
+    "id": "osm:way/549989960",
+    "name": "Buddy's Pizza",
+    "category": "fast_food",
+    "lat": 42.240758,
+    "lng": -83.768766
+  },
+  {
+    "id": "osm:way/549989961",
+    "name": "Texas Roadhouse",
+    "category": "restaurant",
+    "lat": 42.241656,
+    "lng": -83.76761
+  },
+  {
+    "id": "osm:way/612103759",
+    "name": "Concessions",
+    "category": "fast_food",
+    "lat": 42.267557,
+    "lng": -83.74906
+  },
+  {
+    "id": "osm:way/617817210",
+    "name": "Wendy's",
+    "category": "fast_food",
+    "lat": 42.23017,
+    "lng": -83.680664
+  },
+  {
+    "id": "osm:way/621734158",
+    "name": "Ahmo's Gyros & Deli",
+    "category": "restaurant",
+    "lat": 42.285389,
+    "lng": -83.781017
+  },
+  {
+    "id": "osm:way/639118285",
+    "name": "Casey's Tavern",
+    "category": "restaurant",
+    "lat": 42.287826,
+    "lng": -83.744357
+  },
+  {
+    "id": "osm:way/707351595",
+    "name": "Black Rock Grill",
+    "category": "restaurant",
+    "lat": 42.232513,
+    "lng": -83.739747
+  },
+  {
+    "id": "osm:way/805301137",
+    "name": "LA Fitness",
+    "category": "gym",
+    "lat": 42.28165,
+    "lng": -83.78093
+  },
+  {
+    "id": "osm:way/938230662",
+    "name": "ALDI",
+    "category": "grocery",
+    "lat": 42.242535,
+    "lng": -83.679881
+  },
+  {
+    "id": "osm:way/977467874",
+    "name": "Twigs",
+    "category": "fast_food",
+    "lat": 42.274816,
+    "lng": -83.725697
+  },
+  {
+    "id": "osm:way/1024432940",
+    "name": "KFC",
+    "category": "fast_food",
+    "lat": 42.253441,
+    "lng": -83.679775
+  },
+  {
+    "id": "osm:way/1192583810",
+    "name": "Panera Bread",
+    "category": "fast_food",
+    "lat": 42.306621,
+    "lng": -83.690095
+  },
+  {
+    "id": "osm:way/1278920633",
+    "name": "Auntie Anne's",
+    "category": "fast_food",
+    "lat": 42.240152,
+    "lng": -83.746559
+  },
+  {
+    "id": "osm:way/1278920644",
+    "name": "Sip Coffee Cafe",
+    "category": "cafe",
+    "lat": 42.239652,
+    "lng": -83.747192
+  },
+  {
+    "id": "osm:way/1278920662",
+    "name": "Cinnabon",
+    "category": "fast_food",
+    "lat": 42.24067,
+    "lng": -83.747947
+  },
+  {
+    "id": "osm:way/1278920663",
+    "name": "Pita Express",
+    "category": "restaurant",
+    "lat": 42.240499,
+    "lng": -83.747986
+  },
+  {
+    "id": "osm:way/1278920666",
+    "name": "Planet Fitness",
+    "category": "gym",
+    "lat": 42.240205,
+    "lng": -83.747828
+  },
+  {
+    "id": "osm:way/1278920679",
+    "name": "Panda Express",
+    "category": "fast_food",
+    "lat": 42.241207,
+    "lng": -83.747484
+  },
+  {
+    "id": "osm:way/1278920703",
+    "name": "Chipotle",
+    "category": "fast_food",
+    "lat": 42.240688,
+    "lng": -83.745264
+  },
+  {
+    "id": "osm:way/1278920705",
+    "name": "SweetING",
+    "category": "cafe",
+    "lat": 42.2405,
+    "lng": -83.745277
+  },
+  {
+    "id": "osm:way/1278920713",
+    "name": "California Pizza Kitchen",
+    "category": "restaurant",
+    "lat": 42.24054,
+    "lng": -83.744941
+  },
+  {
+    "id": "osm:way/1287761527",
+    "name": "Mujo Cafe",
+    "category": "cafe",
+    "lat": 42.291501,
+    "lng": -83.715866
+  },
+  {
+    "id": "osm:way/1288443647",
+    "name": "Sweetwaters Coffee & Tea UM Pierpont",
+    "category": "cafe",
+    "lat": 42.290997,
+    "lng": -83.717695
+  },
+  {
+    "id": "osm:way/1288443649",
+    "name": "Panda Express",
+    "category": "fast_food",
+    "lat": 42.290783,
+    "lng": -83.717632
+  },
+  {
+    "id": "osm:way/1288443651",
+    "name": "The Great Greek",
+    "category": "fast_food",
+    "lat": 42.291052,
+    "lng": -83.717881
+  },
+  {
+    "id": "osm:way/1288443668",
+    "name": "Fireside Café",
+    "category": "restaurant",
+    "lat": 42.290922,
+    "lng": -83.717688
+  },
+  {
+    "id": "osm:way/1447240055",
+    "name": "Kroger",
+    "category": "grocery",
+    "lat": 42.242737,
+    "lng": -83.682294
+  },
+  {
+    "id": "osm:way/1450441451",
+    "name": "Harvest Market",
+    "category": "grocery",
+    "lat": 42.240173,
+    "lng": -83.743948
+  },
+  {
+    "id": "osm:way/1534650077",
+    "name": "Busch's Fresh Food Market",
+    "category": "grocery",
+    "lat": 42.303751,
+    "lng": -83.691203
+  },
+  {
+    "id": "osm:way/1544903521",
+    "name": "Pat's Tavern",
+    "category": "bar",
+    "lat": 42.243619,
+    "lng": -83.679399
+  }
+]

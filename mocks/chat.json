@@ -1,8 +1,3 @@
 {
-  "message": {
-    "role": "assistant",
-    "content": "(Mock reply) Thanks! To narrow things down: what's the most you'd pay per month for your share of rent, and do you have most of your classes on North or Central Campus?"
-  },
-  "profilePatch": null,
-  "suggestions": ["Under $1,200", "Mostly North Campus", "Mostly Central Campus"]
+  "reply": "(Mock reply: Gemini is off.) Thanks, got it."
 }

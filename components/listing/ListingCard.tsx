@@ -18,7 +18,7 @@ export default function ListingCard() {
       </button>
       <h2 className="font-semibold">{listing.name}</h2>
       <p>Score: {Math.round(score)}</p>
-      <p className="text-sm">{listing.isSynthetic ? "Mock listing" : "Real listing"}</p>
+      <p className="text-sm">{listing.provenance.isSynthetic ? "Mock listing" : "Real listing"}</p>
     </div>
   );
 }

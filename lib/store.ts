@@ -1,12 +1,10 @@
 "use client";
 
 import { create } from "zustand";
-import {
-  DEFAULT_PROFILE,
-  type ChatMessage,
-  type RankResponse,
-  type UserProfile,
-} from "@/lib/schemas";
+import type { z } from "zod";
+import { DEFAULT_PROFILE, type ChatMessage as ChatMessageSchema, type RankResponse, type UserProfile } from "@/lib/schemas";
+
+export type ChatMessage = z.infer<typeof ChatMessageSchema>;
 
 interface TerrariumState {
   profile: UserProfile;

@@ -1,0 +1,8 @@
+{
+  "courses": [
+    { "code": "EECS 281", "term": "current", "buildingCode": "BBB", "source": "backpack_screenshot", "confirmed": false },
+    { "code": "MATH 214", "term": "current", "buildingCode": "EH", "source": "guess", "confirmed": false },
+    { "code": "STATS 250", "term": "next", "buildingCode": "WH", "source": "guess", "confirmed": false }
+  ],
+  "warnings": ["(Mock data: Gemini is off.)", "Couldn't read a building for MATH 214 or STATS 250; we guessed from the subject."]
+}

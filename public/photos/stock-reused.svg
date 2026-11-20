@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Placeholder image used by two mock scam listings">
+  <rect width="640" height="400" fill="#EFE7DA"/>
+  <rect x="200" y="140" width="240" height="160" rx="8" fill="none" stroke="#8A6D3B" stroke-width="10"/>
+  <line x1="320" y1="140" x2="320" y2="300" stroke="#8A6D3B" stroke-width="6"/>
+  <text x="320" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#8A6D3B">Placeholder image (reused on purpose by mock scams)</text>
+</svg>

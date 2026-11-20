@@ -1,6 +1,11 @@
 /** Small helpers shared by route handlers. Server-only. */
 import type { z } from "zod";
-import type { ApiError } from "@/lib/schemas";
+
+/** Error body for every non-2xx response. (Not part of lib/schemas.ts; frontend should just read `error`.) */
+export interface ApiError {
+  error: string;
+  details?: unknown;
+}
 
 export function jsonError(status: number, error: string, details?: unknown): Response {
   const body: ApiError = details === undefined ? { error } : { error, details };
@@ -23,4 +28,11 @@ export async function readJson(req: Request): Promise<unknown> {
   } catch {
     return undefined;
   }
+}
+
+/** Turn a thrown error into a 500 with a readable message (e.g. "run npm run db:build"). */
+export function serverError(err: unknown): Response {
+  const message = err instanceof Error ? err.message : String(err);
+  console.error(err);
+  return jsonError(500, message);
 }

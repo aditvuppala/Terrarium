@@ -3,11 +3,11 @@
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import type { RankedListing } from "@/lib/schemas";
+import type { ScoredListing } from "@/lib/schemas";
 import { useTerrarium } from "@/lib/store";
 
 // Stable reference: a fresh `[]` inside a zustand selector causes an infinite render loop.
-const NO_RESULTS: RankedListing[] = [];
+const NO_RESULTS: ScoredListing[] = [];
 const ANN_ARBOR: [number, number] = [42.2808, -83.743];
 
 // divIcon avoids Leaflet's default PNG marker, which breaks under bundlers.
@@ -34,7 +34,7 @@ export default function RankMap() {
       {results.map(({ listing, score }) => (
         <Marker
           key={listing.id}
-          position={[listing.location.lat, listing.location.lng]}
+          position={[listing.lat, listing.lng]}
           icon={scoreIcon(score, listing.id === selectedId)}
           eventHandlers={{ click: () => select(listing.id) }}
         />

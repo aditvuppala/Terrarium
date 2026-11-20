@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import ChatPanel from "@/components/chat/ChatPanel";
 import ListingCard from "@/components/listing/ListingCard";
 import MapPanel from "@/components/map/MapPanel";
-import { RankResponseSchema, type RankRequest } from "@/lib/schemas";
+import type { z } from "zod";
+import { RankResponse, type RankRequest } from "@/lib/schemas";
 import { useTerrarium } from "@/lib/store";
 
 export default function Explore() {
@@ -14,7 +15,7 @@ export default function Explore() {
   // Re-rank whenever the profile changes.
   useEffect(() => {
     const controller = new AbortController();
-    const body: RankRequest = { profile };
+    const body: z.infer<typeof RankRequest> = { profile };
     fetch("/api/rank", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,7 +23,7 @@ export default function Explore() {
       signal: controller.signal,
     })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`rank ${r.status}`))))
-      .then((json) => setRankResponse(RankResponseSchema.parse(json)))
+      .then((json) => setRankResponse(RankResponse.parse(json)))
       .catch((err) => {
         if (!controller.signal.aborted) console.error(err);
       });

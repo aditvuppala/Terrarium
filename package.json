@@ -6,9 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:build": "tsx scripts/build-db.ts",
+    "pipeline": "npm run pipeline:scrape && npm run pipeline:normalize && npm run pipeline:synthetic && npm run pipeline:geocode && npm run pipeline:scam && npm run pipeline:enrich && npm run db:build",
+    "pipeline:scrape": "tsx scripts/scrape-um.ts",
+    "pipeline:normalize": "node --env-file-if-exists=.env.local --import tsx scripts/normalize.ts",
+    "pipeline:synthetic": "tsx scripts/synthetic.ts",
+    "pipeline:geocode": "tsx scripts/geocode.ts",
+    "pipeline:scam": "node --env-file-if-exists=.env.local --import tsx scripts/scam-check.ts",
+    "pipeline:enrich": "tsx scripts/enrich.ts",
+    "buildings": "tsx scripts/buildings-osm.ts",
+    "test": "vitest run",
+    "predev": "node -e \"process.exit(require('fs').existsSync('data/terrarium.db')?0:1)\" || npm run db:build"
   },
   "dependencies": {
+    "@google/genai": "^3.6.1",
+    "better-sqlite3": "^13.2.0",
+    "drizzle-orm": "^0.45.4",
     "leaflet": "^1.9.4",
     "next": "16.4.6",
     "react": "19.3.0",
@@ -19,13 +33,21 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
+    "@types/adm-zip": "^0.5.8",
+    "@types/better-sqlite3": "^9.6.0",
     "@types/leaflet": "^1.9.22",
-    "@types/node": "^20",
+    "@types/node": "^24.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "adm-zip": "^0.6.1",
+    "csv-parse": "^7.0.3",
+    "drizzle-kit": "^0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "playwright": "^1.65.1",
     "tailwindcss": "4.3.3",
-    "typescript": "^5"
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.1.1"
   }
 }

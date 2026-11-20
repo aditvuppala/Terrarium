@@ -4,7 +4,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import majors from "@/data/majors.json";
 import { useTerrarium } from "@/lib/store";
-import { YearSchema, type Year } from "@/lib/schemas";
+import { Year } from "@/lib/schemas";
+
+const CAMPUS_BY_MAJOR = new Map(majors.map((m) => [m.name, m.campus as "north" | "central"]));
 
 /** STUB: 2-step stepper (year, then major). Real UI lives in components/onboarding/. */
 export default function Onboarding() {
@@ -22,13 +24,13 @@ export default function Onboarding() {
         <>
           <h1 className="text-xl font-semibold">What year are you?</h1>
           <div className="flex flex-wrap gap-2">
-            {YearSchema.options.map((y) => (
+            {Year.options.map((y) => (
               <button
-                key={y}
+                key={y.replace("_", " ")}
                 onClick={() => setYear(y)}
                 className={`rounded border px-3 py-1 ${year === y ? "font-bold underline" : ""}`}
               >
-                {y}
+                {y.replace("_", " ")}
               </button>
             ))}
           </div>
@@ -54,7 +56,7 @@ export default function Onboarding() {
             <button
               disabled={!major}
               onClick={() => {
-                patchProfile({ year, major });
+                patchProfile({ year, major, majorCampus: CAMPUS_BY_MAJOR.get(major) ?? null });
                 router.push("/explore");
               }}
               className="rounded border px-4 py-2 disabled:opacity-40"

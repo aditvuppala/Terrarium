@@ -1,0 +1,380 @@
+[
+  {
+    "code": "AH",
+    "name": "Angell Hall",
+    "campus": "central",
+    "lat": 42.276766,
+    "lng": -83.739754
+  },
+  {
+    "code": "MH",
+    "name": "Mason Hall",
+    "campus": "central",
+    "lat": 42.27709,
+    "lng": -83.73952
+  },
+  {
+    "code": "HH",
+    "name": "Haven Hall",
+    "campus": "central",
+    "lat": 42.276465,
+    "lng": -83.739225
+  },
+  {
+    "code": "TISCH",
+    "name": "Tisch Hall",
+    "campus": "central",
+    "lat": 42.27628,
+    "lng": -83.739585
+  },
+  {
+    "code": "MLB",
+    "name": "Modern Languages Building",
+    "campus": "central",
+    "lat": 42.279879,
+    "lng": -83.739079
+  },
+  {
+    "code": "LSA",
+    "name": "LSA Building",
+    "campus": "central",
+    "lat": 42.276201,
+    "lng": -83.74135
+  },
+  {
+    "code": "CHEM",
+    "name": "Chemistry Building",
+    "campus": "central",
+    "lat": 42.278031,
+    "lng": -83.737024
+  },
+  {
+    "code": "DENN",
+    "name": "Dennison Building",
+    "campus": "central",
+    "lat": 42.2779,
+    "lng": -83.7363
+  },
+  {
+    "code": "WEIS",
+    "name": "Weiser Hall",
+    "campus": "central",
+    "lat": 42.276488,
+    "lng": -83.735017
+  },
+  {
+    "code": "RAND",
+    "name": "Randall Laboratory",
+    "campus": "central",
+    "lat": 42.276799,
+    "lng": -83.736401
+  },
+  {
+    "code": "WH",
+    "name": "West Hall",
+    "campus": "central",
+    "lat": 42.275934,
+    "lng": -83.736429
+  },
+  {
+    "code": "EH",
+    "name": "East Hall",
+    "campus": "central",
+    "lat": 42.275746,
+    "lng": -83.735202
+  },
+  {
+    "code": "LORCH",
+    "name": "Lorch Hall",
+    "campus": "central",
+    "lat": 42.273695,
+    "lng": -83.7376
+  },
+  {
+    "code": "USB",
+    "name": "Undergraduate Science Building",
+    "campus": "central",
+    "lat": 42.279829,
+    "lng": -83.734908
+  },
+  {
+    "code": "BSB",
+    "name": "Biological Sciences Building",
+    "campus": "central",
+    "lat": 42.279021,
+    "lng": -83.734488
+  },
+  {
+    "code": "SHAP",
+    "name": "Shapiro Undergraduate Library",
+    "campus": "central",
+    "lat": 42.275633,
+    "lng": -83.737181
+  },
+  {
+    "code": "HATCH",
+    "name": "Hatcher Graduate Library",
+    "campus": "central",
+    "lat": 42.276219,
+    "lng": -83.738192
+  },
+  {
+    "code": "UNION",
+    "name": "Michigan Union",
+    "campus": "central",
+    "lat": 42.275174,
+    "lng": -83.741549
+  },
+  {
+    "code": "LEAGUE",
+    "name": "Michigan League",
+    "campus": "central",
+    "lat": 42.279319,
+    "lng": -83.73756
+  },
+  {
+    "code": "RACK",
+    "name": "Rackham Building",
+    "campus": "central",
+    "lat": 42.280824,
+    "lng": -83.738283
+  },
+  {
+    "code": "HUTCH",
+    "name": "Hutchins Hall (Law)",
+    "campus": "central",
+    "lat": 42.273709,
+    "lng": -83.740115
+  },
+  {
+    "code": "ROSS",
+    "name": "Ross School of Business",
+    "campus": "central",
+    "lat": 42.272691,
+    "lng": -83.737585
+  },
+  {
+    "code": "WEILL",
+    "name": "Weill Hall (Ford School)",
+    "campus": "central",
+    "lat": 42.272393,
+    "lng": -83.740287
+  },
+  {
+    "code": "SEB",
+    "name": "School of Education Building",
+    "campus": "central",
+    "lat": 42.27387,
+    "lng": -83.736413
+  },
+  {
+    "code": "TAP",
+    "name": "Tappan Hall",
+    "campus": "central",
+    "lat": 42.27549,
+    "lng": -83.739278
+  },
+  {
+    "code": "NQ",
+    "name": "North Quad",
+    "campus": "central",
+    "lat": 42.280748,
+    "lng": -83.740112
+  },
+  {
+    "code": "EQ",
+    "name": "East Quad",
+    "campus": "central",
+    "lat": 42.272924,
+    "lng": -83.735128
+  },
+  {
+    "code": "SQ",
+    "name": "South Quad",
+    "campus": "central",
+    "lat": 42.273719,
+    "lng": -83.742145
+  },
+  {
+    "code": "PALM",
+    "name": "Palmer Commons",
+    "campus": "central",
+    "lat": 42.280714,
+    "lng": -83.733871
+  },
+  {
+    "code": "SPH",
+    "name": "School of Public Health",
+    "campus": "central",
+    "lat": 42.28024,
+    "lng": -83.73001
+  },
+  {
+    "code": "IMSB",
+    "name": "Intramural Sports Building",
+    "campus": "central",
+    "lat": 42.269391,
+    "lng": -83.742238
+  },
+  {
+    "code": "UH",
+    "name": "University Hospital",
+    "campus": "medical",
+    "lat": 42.284688,
+    "lng": -83.729391
+  },
+  {
+    "code": "THL",
+    "name": "Taubman Health Sciences Library",
+    "campus": "medical",
+    "lat": 42.283588,
+    "lng": -83.73451
+  },
+  {
+    "code": "NUR",
+    "name": "School of Nursing",
+    "campus": "medical",
+    "lat": 42.284024,
+    "lng": -83.737724
+  },
+  {
+    "code": "DENT",
+    "name": "School of Dentistry",
+    "campus": "central",
+    "lat": 42.2804,
+    "lng": -83.7348
+  },
+  {
+    "code": "PHARM",
+    "name": "College of Pharmacy",
+    "campus": "central",
+    "lat": 42.28158,
+    "lng": -83.736305
+  },
+  {
+    "code": "BBB",
+    "name": "Bob and Betty Beyster Building",
+    "campus": "north",
+    "lat": 42.293014,
+    "lng": -83.716173
+  },
+  {
+    "code": "EECS",
+    "name": "EECS Building",
+    "campus": "north",
+    "lat": 42.292395,
+    "lng": -83.713906
+  },
+  {
+    "code": "DOW",
+    "name": "Dow Building",
+    "campus": "north",
+    "lat": 42.293012,
+    "lng": -83.715427
+  },
+  {
+    "code": "GGBL",
+    "name": "G.G. Brown Laboratory",
+    "campus": "north",
+    "lat": 42.2933,
+    "lng": -83.713992
+  },
+  {
+    "code": "FXB",
+    "name": "François-Xavier Bagnoud Building",
+    "campus": "north",
+    "lat": 42.293448,
+    "lng": -83.71189
+  },
+  {
+    "code": "LEC",
+    "name": "Lurie Engineering Center",
+    "campus": "north",
+    "lat": 42.291487,
+    "lng": -83.713831
+  },
+  {
+    "code": "IOE",
+    "name": "Industrial and Operations Engineering Building",
+    "campus": "north",
+    "lat": 42.291112,
+    "lng": -83.713719
+  },
+  {
+    "code": "CHRYS",
+    "name": "Chrysler Center",
+    "campus": "north",
+    "lat": 42.290917,
+    "lng": -83.716712
+  },
+  {
+    "code": "DUDE",
+    "name": "Duderstadt Center",
+    "campus": "north",
+    "lat": 42.291161,
+    "lng": -83.715767
+  },
+  {
+    "code": "PIER",
+    "name": "Pierpont Commons",
+    "campus": "north",
+    "lat": 42.291142,
+    "lng": -83.717528
+  },
+  {
+    "code": "FMCRB",
+    "name": "Ford Motor Company Robotics Building",
+    "campus": "north",
+    "lat": 42.294604,
+    "lng": -83.709349
+  },
+  {
+    "code": "GFL",
+    "name": "Gorguze Family Laboratory",
+    "campus": "north",
+    "lat": 42.293287,
+    "lng": -83.710781
+  },
+  {
+    "code": "ARCH",
+    "name": "Art and Architecture Building",
+    "campus": "north",
+    "lat": 42.289561,
+    "lng": -83.717134
+  },
+  {
+    "code": "MOORE",
+    "name": "Earl V. Moore Building (Music)",
+    "campus": "north",
+    "lat": 42.290311,
+    "lng": -83.721159
+  },
+  {
+    "code": "WALG",
+    "name": "Walgreen Drama Center",
+    "campus": "north",
+    "lat": 42.291905,
+    "lng": -83.717445
+  },
+  {
+    "code": "NCRB",
+    "name": "North Campus Recreation Building",
+    "campus": "north",
+    "lat": 42.295489,
+    "lng": -83.720169
+  },
+  {
+    "code": "BURS",
+    "name": "Bursley Hall",
+    "campus": "north",
+    "lat": 42.293757,
+    "lng": -83.719962
+  },
+  {
+    "code": "CRISLER",
+    "name": "Crisler Center",
+    "campus": "south",
+    "lat": 42.265039,
+    "lng": -83.746714
+  }
+]

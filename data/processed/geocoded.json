@@ -1,0 +1,2496 @@
+[
+  {
+    "id": "um-324-e-jefferson",
+    "name": "324 E Jefferson St",
+    "address": "324 E Jefferson St, Ann Arbor, MI 48104",
+    "rentMin": 1100,
+    "rentMax": 1799,
+    "priceBasis": "unknown",
+    "rentNegotiable": "unknown",
+    "bedsMin": 0,
+    "bedsMax": 2,
+    "bathsMin": null,
+    "bathsMax": null,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "unknown",
+    "leaseStart": null,
+    "leaseEnd": null,
+    "leaseMonths": null,
+    "furnished": "unknown",
+    "parking": "unknown",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [],
+    "description": "",
+    "photos": [],
+    "provenance": {
+      "sourceName": "U-M Off-Campus Housing",
+      "sourceUrl": "https://offcampushousing.umich.edu/listing",
+      "retrievedAt": "2026-11-19",
+      "isSynthetic": false
+    },
+    "lat": 42.276168,
+    "lng": -83.74515,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "324 E JEFFERSON ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "um-414-s-division",
+    "name": "414 S Division St",
+    "address": "414 S Division St, Ann Arbor, MI 48104",
+    "rentMin": 1350,
+    "rentMax": 2200,
+    "priceBasis": "unknown",
+    "rentNegotiable": "unknown",
+    "bedsMin": 0,
+    "bedsMax": 2,
+    "bathsMin": null,
+    "bathsMax": null,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "unknown",
+    "leaseStart": null,
+    "leaseEnd": null,
+    "leaseMonths": null,
+    "furnished": "unknown",
+    "parking": "unknown",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [],
+    "description": "",
+    "photos": [],
+    "provenance": {
+      "sourceName": "U-M Off-Campus Housing",
+      "sourceUrl": "https://offcampushousing.umich.edu/listing",
+      "retrievedAt": "2026-11-19",
+      "isSynthetic": false
+    },
+    "lat": 42.277554,
+    "lng": -83.744199,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "414 S DIVISION ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "um-eastwind",
+    "name": "Eastwind Apartments",
+    "address": "2025 S Huron Pkwy, Ann Arbor, MI 48104",
+    "rentMin": 1575,
+    "rentMax": 1940,
+    "priceBasis": "unknown",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 2,
+    "bathsMin": null,
+    "bathsMax": null,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "unknown",
+    "leaseStart": null,
+    "leaseEnd": null,
+    "leaseMonths": null,
+    "furnished": "unknown",
+    "parking": "unknown",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [],
+    "description": "",
+    "photos": [],
+    "provenance": {
+      "sourceName": "U-M Off-Campus Housing",
+      "sourceUrl": "https://offcampushousing.umich.edu/listing",
+      "retrievedAt": "2026-11-19",
+      "isSynthetic": false
+    },
+    "lat": 42.258232,
+    "lng": -83.695374,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2025 S HURON PKWY, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-01",
+    "name": "Church St 4BR Duplex",
+    "address": "721 Church St, Ann Arbor, MI",
+    "rentMin": 875,
+    "rentMax": 950,
+    "priceBasis": "per_bed",
+    "rentNegotiable": "no",
+    "bedsMin": 4,
+    "bedsMax": 4,
+    "bathsMin": 2,
+    "bathsMax": 2.5,
+    "sqftMin": 2142,
+    "sqftMax": 2142,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "internet"
+    ],
+    "description": "4BR home a short walk to the Diag and State Street. Unfurnished. Shared laundry in the building. No parking; street permit only. Cats and small dogs OK with deposit. Rent includes internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.273385,
+    "lng": -83.734463,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "721 CHURCH ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-02",
+    "name": "S Forest Ave 3BR Duplex",
+    "address": "917 S Forest Ave, Ann Arbor, MI",
+    "rentMin": 2575,
+    "rentMax": 2800,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1419,
+    "sqftMax": 1419,
+    "leaseType": "sublease",
+    "leaseStart": "2027-01-01",
+    "leaseEnd": "2027-04-30",
+    "leaseMonths": 4,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "sewer"
+    ],
+    "description": "Sublease available: 3BR home a short walk to the Diag and State Street. Comes furnished. One off-street parking spot included. No pets. Rent includes sewer. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.271102,
+    "lng": -83.73307,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "917 S FOREST AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-03",
+    "name": "S University Ave 4BR Duplex",
+    "address": "1103 S University Ave, Ann Arbor, MI",
+    "rentMin": 3075,
+    "rentMax": 3075,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 4,
+    "bedsMax": 4,
+    "bathsMin": 2,
+    "bathsMax": 2.5,
+    "sqftMin": 2153,
+    "sqftMax": 2153,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "unknown",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [],
+    "description": "4BR home a short walk to the Diag and State Street. Unfurnished. Washer and dryer in unit. Cats and small dogs OK with deposit. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.275044,
+    "lng": -83.73567,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1103 S UNIVERSITY AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-04",
+    "name": "Hill St 2BR Apartment",
+    "address": "830 Hill St, Ann Arbor, MI",
+    "rentMin": 700,
+    "rentMax": 700,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "electric",
+      "internet"
+    ],
+    "description": "Spacious 2BR right by campus, utilities included. I am currently abroad for work so I cannot show the apartment in person, but I will mail you the keys once the deposit is received by wire transfer. Serious students only.",
+    "photos": [
+      {
+        "url": "/photos/stock-reused.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.271918,
+    "lng": -83.738075,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "830 HILL ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-05",
+    "name": "Thompson St 1BR Flat",
+    "address": "520 Thompson St, Ann Arbor, MI",
+    "rentMin": 1775,
+    "rentMax": 1975,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 544,
+    "sqftMax": 544,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "heat",
+      "trash"
+    ],
+    "description": "1BR unit a short walk to the Diag and State Street. Unfurnished. Shared laundry in the building. No parking; street permit only. Cats and small dogs OK with deposit. Rent includes heat, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.275872,
+    "lng": -83.743238,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "520 THOMPSON ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-06",
+    "name": "Oakland Ave 2BR Apartment",
+    "address": "913 Oakland Ave, Ann Arbor, MI",
+    "rentMin": 2000,
+    "rentMax": 2175,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1152,
+    "sqftMax": 1152,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "no",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "internet"
+    ],
+    "description": "2BR unit a short walk to the Diag and State Street. Comes furnished. Shared laundry in the building. No parking; street permit only. Cats and small dogs OK with deposit. Rent includes internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.270684,
+    "lng": -83.738398,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "913 OAKLAND AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-07",
+    "name": "Packard St 3BR House",
+    "address": "615 Packard St, Ann Arbor, MI",
+    "rentMin": 2425,
+    "rentMax": 2425,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1427,
+    "sqftMax": 1427,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [],
+    "description": "3BR home a short walk to the Diag and State Street. Unfurnished. Shared laundry in the building. One off-street parking spot included. Cats and small dogs OK with deposit. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.271543,
+    "lng": -83.741182,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "615 PACKARD ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-08",
+    "name": "E William St 3BR House",
+    "address": "336 E William St, Ann Arbor, MI",
+    "rentMin": 825,
+    "rentMax": 875,
+    "priceBasis": "per_bed",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1548,
+    "sqftMax": 1548,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "trash",
+      "sewer"
+    ],
+    "description": "3BR home a short walk to the Diag and State Street. Unfurnished. Washer and dryer in unit. No parking; street permit only. Cats and small dogs OK with deposit. Rent includes trash, sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.277788,
+    "lng": -83.745043,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "336 E WILLIAM ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-09",
+    "name": "E Huron St 3BR Duplex",
+    "address": "1015 E Huron St, Ann Arbor, MI",
+    "rentMin": 925,
+    "rentMax": 1000,
+    "priceBasis": "per_bed",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1528,
+    "sqftMax": 1528,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "unknown",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "trash",
+      "internet"
+    ],
+    "description": "3BR home a short walk to the Diag and State Street. Unfurnished. Washer and dryer in unit. Cats and small dogs OK with deposit. Rent includes trash, internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.281367,
+    "lng": -83.736839,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1015 E HURON ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-10",
+    "name": "Monroe St 3BR Duplex",
+    "address": "711 Monroe St, Ann Arbor, MI",
+    "rentMin": 950,
+    "rentMax": 1025,
+    "priceBasis": "per_bed",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "water",
+      "trash"
+    ],
+    "description": "3BR home a short walk to the Diag and State Street. Unfurnished. Washer and dryer in unit. No parking; street permit only. No pets. Rent includes water, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.273362,
+    "lng": -83.740455,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "711 MONROE ST, ANN ARBOR, MI, 48109"
+    }
+  },
+  {
+    "id": "syn-11",
+    "name": "Plymouth Rd 3BR Duplex",
+    "address": "2120 Plymouth Rd, Ann Arbor, MI",
+    "rentMin": 2225,
+    "rentMax": 2325,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "sewer"
+    ],
+    "description": "3BR home near North Campus and the Bursley-Baits bus line. Comes furnished. Washer and dryer in unit. One off-street parking spot included. No pets. Rent includes sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.297947,
+    "lng": -83.721486,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2120 PLYMOUTH RD, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-12",
+    "name": "Broadway St 3BR Townhouse",
+    "address": "1717 Broadway St, Ann Arbor, MI",
+    "rentMin": 2275,
+    "rentMax": 2400,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1562,
+    "sqftMax": 1562,
+    "leaseType": "sublease",
+    "leaseStart": "2027-05-01",
+    "leaseEnd": "2027-08-15",
+    "leaseMonths": 3.5,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "internet",
+      "sewer"
+    ],
+    "description": "Sublease available: 3BR home near North Campus and the Bursley-Baits bus line. Unfurnished. Shared laundry in the building. One off-street parking spot included. Cats and small dogs OK with deposit. Rent includes internet, sewer. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.296765,
+    "lng": -83.723761,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1717 BROADWAY ST, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-13",
+    "name": "Hubbard St 3BR Townhouse",
+    "address": "2335 Hubbard St, Ann Arbor, MI",
+    "rentMin": 2250,
+    "rentMax": 2350,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1644,
+    "sqftMax": 1644,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "unknown",
+    "parking": "unknown",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat"
+    ],
+    "description": "3BR home near North Campus and the Bursley-Baits bus line. Washer and dryer in unit. Cats and small dogs OK with deposit. Rent includes heat. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.296045,
+    "lng": -83.711604,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2335 HUBBARD ST, ANN ARBOR, MI, 48109"
+    }
+  },
+  {
+    "id": "syn-14",
+    "name": "Lake Lila Ln 1BR Flat",
+    "address": "1800 Lake Lila Ln, Ann Arbor, MI",
+    "rentMin": 1375,
+    "rentMax": 1450,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 642,
+    "sqftMax": 642,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [],
+    "description": "1BR unit near North Campus and the Bursley-Baits bus line. Unfurnished. Shared laundry in the building. One off-street parking spot included. No pets. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.300027,
+    "lng": -83.71773,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1800 LAKE LILA LN, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-15",
+    "name": "Plymouth Rd 3BR Apartment",
+    "address": "2600 Plymouth Rd, Ann Arbor, MI",
+    "rentMin": 900,
+    "rentMax": 900,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "electric",
+      "internet"
+    ],
+    "description": "Beautiful home, fully furnished, all utilities included. Our family is away on a missionary trip overseas so we can't show the house, but once your deposit is received we will have the keys mailed to you. Deposit must be paid with gift cards (Target or Amazon) to save on bank fees.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.302433,
+    "lng": -83.709416,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2600 PLYMOUTH RD, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-16",
+    "name": "Murfin Ave 2BR Apartment",
+    "address": "1500 Murfin Ave, Ann Arbor, MI",
+    "rentMin": 1550,
+    "rentMax": 1625,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "trash"
+    ],
+    "description": "2BR unit near North Campus and the Bursley-Baits bus line. Unfurnished. Shared laundry in the building. No parking; street permit only. No pets. Rent includes trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.294923,
+    "lng": -83.719131,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1500 MURFIN AVE, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-17",
+    "name": "Fuller Ct 1BR Apartment",
+    "address": "2100 Fuller Ct, Ann Arbor, MI",
+    "rentMin": 1225,
+    "rentMax": 1225,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 453,
+    "sqftMax": 453,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "sewer"
+    ],
+    "description": "1BR unit near North Campus and the Bursley-Baits bus line. Comes furnished. Washer and dryer in unit. One off-street parking spot included. No pets. Rent includes heat, water, sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.287326,
+    "lng": -83.718708,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2100 FULLER RD, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-18",
+    "name": "N Fifth Ave Studio Apartment",
+    "address": "418 N Fifth Ave, Ann Arbor, MI",
+    "rentMin": 1175,
+    "rentMax": 1275,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 0,
+    "bedsMax": 0,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 505,
+    "sqftMax": 505,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "trash",
+      "internet",
+      "sewer"
+    ],
+    "description": "Studio unit steps from the Kerrytown market and shops. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Cats and small dogs OK with deposit. Rent includes heat, trash, internet, sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.28432,
+    "lng": -83.745802,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "418 N 5TH AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-19",
+    "name": "Detroit St 1BR Apartment",
+    "address": "520 Detroit St, Ann Arbor, MI",
+    "rentMin": 1725,
+    "rentMax": 1825,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "unknown",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "heat",
+      "internet"
+    ],
+    "description": "1BR unit steps from the Kerrytown market and shops. Unfurnished. Cats and small dogs OK with deposit. Rent includes heat, internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.285154,
+    "lng": -83.744754,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "520 DETROIT ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-20",
+    "name": "N Division St 1BR Flat",
+    "address": "615 N Division St, Ann Arbor, MI",
+    "rentMin": 1125,
+    "rentMax": 1125,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "sublease",
+    "leaseStart": "2027-01-01",
+    "leaseEnd": "2027-04-30",
+    "leaseMonths": 4,
+    "furnished": "yes",
+    "parking": "unknown",
+    "petsAllowed": "no",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "water",
+      "trash"
+    ],
+    "description": "Sublease available: 1BR unit steps from the Kerrytown market and shops. Comes furnished. No pets. Rent includes water, trash. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.273691,
+    "lng": -83.744255,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "615 S DIVISION ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-21",
+    "name": "Catherine St 1BR Apartment",
+    "address": "412 Catherine St, Ann Arbor, MI",
+    "rentMin": 550,
+    "rentMax": 550,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 609,
+    "sqftMax": 609,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "electric",
+      "internet"
+    ],
+    "description": "Cute 1BR in Kerrytown, all utilities included!! First come first served, lots of interest. Text me at (734) 555-0142 and send the deposit today via Zelle to hold it before someone else does.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.283074,
+    "lng": -83.743821,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "412 CATHERINE ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-22",
+    "name": "E Kingsley St 1BR Apartment",
+    "address": "507 E Kingsley St, Ann Arbor, MI",
+    "rentMin": 1725,
+    "rentMax": 1725,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 506,
+    "sqftMax": 506,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "trash",
+      "internet"
+    ],
+    "description": "1BR unit steps from the Kerrytown market and shops. Comes furnished. Shared laundry in the building. One off-street parking spot included. No pets. Rent includes trash, internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.284775,
+    "lng": -83.742604,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "507 E KINGSLEY ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-23",
+    "name": "Wells St 3BR House",
+    "address": "1220 Wells St, Ann Arbor, MI",
+    "rentMin": 2325,
+    "rentMax": 2325,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1590,
+    "sqftMax": 1590,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [],
+    "description": "3BR home on a quiet tree-lined street in Burns Park. Comes furnished. Shared laundry in the building. No parking; street permit only. No pets. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.266405,
+    "lng": -83.733782,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1220 WELLS ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-24",
+    "name": "Granger Ave 2BR Apartment",
+    "address": "1508 Granger Ave, Ann Arbor, MI",
+    "rentMin": 1625,
+    "rentMax": 1725,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "trash"
+    ],
+    "description": "2BR unit on a quiet tree-lined street in Burns Park. Unfurnished. Shared laundry in the building. No parking; street permit only. Cats and small dogs OK with deposit. Rent includes heat, water, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.26445,
+    "lng": -83.729478,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1508 GRANGER AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-25",
+    "name": "Cambridge Rd 4BR Townhouse",
+    "address": "1405 Cambridge Rd, Ann Arbor, MI",
+    "rentMin": 3150,
+    "rentMax": 3375,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 4,
+    "bedsMax": 4,
+    "bathsMin": 2,
+    "bathsMax": 2.5,
+    "sqftMin": 1881,
+    "sqftMax": 1881,
+    "leaseType": "sublease",
+    "leaseStart": "2027-05-01",
+    "leaseEnd": "2027-08-15",
+    "leaseMonths": 3.5,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [],
+    "description": "Sublease available: 4BR home on a quiet tree-lined street in Burns Park. Comes furnished. Washer and dryer in unit. One off-street parking spot included. No pets. Tenant pays utilities. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.270061,
+    "lng": -83.731318,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1405 CAMBRIDGE RD, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-26",
+    "name": "Olivia Ave 3BR Apartment",
+    "address": "1100 Olivia Ave, Ann Arbor, MI",
+    "rentMin": 950,
+    "rentMax": 950,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1346,
+    "sqftMax": 1346,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "electric",
+      "internet"
+    ],
+    "description": "Beautiful home, fully furnished, all utilities included. Our family is away on a missionary trip overseas so we can't show the house, but once your deposit is received we will have the keys mailed to you. Deposit must be paid with gift cards (Target or Amazon) to save on bank fees.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.268111,
+    "lng": -83.731498,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1100 OLIVIA AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-27",
+    "name": "Lincoln Ave 5BR House",
+    "address": "905 Lincoln Ave, Ann Arbor, MI",
+    "rentMin": 3250,
+    "rentMax": 3250,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 5,
+    "bedsMax": 5,
+    "bathsMin": 2,
+    "bathsMax": 2.5,
+    "sqftMin": 2540,
+    "sqftMax": 2540,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "unknown",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "trash"
+    ],
+    "description": "5BR home on a quiet tree-lined street in Burns Park. Washer and dryer in unit. One off-street parking spot included. No pets. Rent includes heat, water, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.27141,
+    "lng": -83.729744,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "905 LINCOLN AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-28",
+    "name": "Wall St 1BR Apartment",
+    "address": "1000 Wall St, Ann Arbor, MI",
+    "rentMin": 1450,
+    "rentMax": 1550,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 642,
+    "sqftMax": 642,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "water"
+    ],
+    "description": "1BR unit in Lower Town, close to the Broadway bridge. Comes furnished. Washer and dryer in unit. One off-street parking spot included. No pets. Rent includes water. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.287299,
+    "lng": -83.73371,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1000 WALL ST, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-29",
+    "name": "Broadway St 2BR Apartment",
+    "address": "1104 Broadway St, Ann Arbor, MI",
+    "rentMin": 1950,
+    "rentMax": 1950,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1273,
+    "sqftMax": 1273,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "water"
+    ],
+    "description": "2BR unit in Lower Town, close to the Broadway bridge. Unfurnished. Shared laundry in the building. One off-street parking spot included. Cats and small dogs OK with deposit. Rent includes water. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.28976,
+    "lng": -83.738214,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1104 BROADWAY ST, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-30",
+    "name": "Broadway St 3BR Townhouse",
+    "address": "1300 Broadway St, Ann Arbor, MI",
+    "rentMin": 2625,
+    "rentMax": 2750,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1461,
+    "sqftMax": 1461,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [],
+    "description": "3BR home in Lower Town, close to the Broadway bridge. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.291485,
+    "lng": -83.734668,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1300 BROADWAY ST, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-31",
+    "name": "Maiden Ln 2BR Apartment",
+    "address": "1220 Maiden Ln, Ann Arbor, MI",
+    "rentMin": 2150,
+    "rentMax": 2250,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1078,
+    "sqftMax": 1078,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "internet"
+    ],
+    "description": "2BR unit in Lower Town, close to the Broadway bridge. Unfurnished. Shared laundry in the building. One off-street parking spot included. No pets. Rent includes internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.286872,
+    "lng": -83.732752,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1220 MAIDEN LN, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-32",
+    "name": "Pontiac Trl 2BR Apartment",
+    "address": "1010 Pontiac Trl, Ann Arbor, MI",
+    "rentMin": 2150,
+    "rentMax": 2150,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 925,
+    "sqftMax": 925,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat"
+    ],
+    "description": "2BR unit in Lower Town, close to the Broadway bridge. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Cats and small dogs OK with deposit. Rent includes heat. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.289631,
+    "lng": -83.739829,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1010 PONTIAC TRL, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-33",
+    "name": "Packard St 2BR Apartment",
+    "address": "1300 Packard St, Ann Arbor, MI",
+    "rentMin": 1625,
+    "rentMax": 1800,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1032,
+    "sqftMax": 1032,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [],
+    "description": "2BR unit along the Packard corridor with quick bus access to campus. Unfurnished. Washer and dryer in unit. One off-street parking spot included. No pets. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.265101,
+    "lng": -83.73442,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1300 PACKARD ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-34",
+    "name": "Brooklyn Ave 2BR Apartment",
+    "address": "1100 Brooklyn Ave, Ann Arbor, MI",
+    "rentMin": 1400,
+    "rentMax": 1450,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 984,
+    "sqftMax": 984,
+    "leaseType": "sublease",
+    "leaseStart": "2027-01-01",
+    "leaseEnd": "2027-04-30",
+    "leaseMonths": 4,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "internet",
+      "sewer"
+    ],
+    "description": "Sublease available: 2BR unit along the Packard corridor with quick bus access to campus. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Cats and small dogs OK with deposit. Rent includes heat, internet, sewer. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.263517,
+    "lng": -83.736087,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1100 BROOKLYN AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-35",
+    "name": "Woodlawn Ave 3BR Duplex",
+    "address": "1012 Woodlawn Ave, Ann Arbor, MI",
+    "rentMin": 2450,
+    "rentMax": 2725,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "unknown",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "water",
+      "internet"
+    ],
+    "description": "3BR home along the Packard corridor with quick bus access to campus. Washer and dryer in unit. One off-street parking spot included. Rent includes water, internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.265053,
+    "lng": -83.735961,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1012 WOODLAWN AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-36",
+    "name": "Packard St 1BR Apartment",
+    "address": "1400 Packard St, Ann Arbor, MI",
+    "rentMin": 1200,
+    "rentMax": 1200,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 704,
+    "sqftMax": 704,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "yes",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "electric",
+      "internet"
+    ],
+    "description": "Quiet 1BR on Packard. I'm on military deployment right now and can't show the unit. Deposit today via Western Union and I'll send the lease and keys. Text me at (734) 555-0199, first come first served.",
+    "photos": [
+      {
+        "url": "/photos/stock-reused.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.264299,
+    "lng": -83.73357,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1400 PACKARD ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-37",
+    "name": "Packard St 4BR House",
+    "address": "1520 Packard St, Ann Arbor, MI",
+    "rentMin": 3525,
+    "rentMax": 3525,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 4,
+    "bedsMax": 4,
+    "bathsMin": 2,
+    "bathsMax": 2.5,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "trash",
+      "sewer"
+    ],
+    "description": "4BR home along the Packard corridor with quick bus access to campus. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Rent includes heat, water, trash, sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.263276,
+    "lng": -83.732469,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1520 PACKARD ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-38",
+    "name": "Washtenaw Ave 3BR Townhouse",
+    "address": "3200 Washtenaw Ave, Ann Arbor, MI",
+    "rentMin": 2000,
+    "rentMax": 2000,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": 1483,
+    "sqftMax": 1483,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [],
+    "description": "3BR home in a quieter area with more space for the money. Unfurnished. Shared laundry in the building. One off-street parking spot included. Cats and small dogs OK with deposit. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.256846,
+    "lng": -83.696553,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "3200 WASHTENAW AVE, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-39",
+    "name": "S Main St 1BR Flat",
+    "address": "2200 S Main St, Ann Arbor, MI",
+    "rentMin": 1025,
+    "rentMax": 1025,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 635,
+    "sqftMax": 635,
+    "leaseType": "sublease",
+    "leaseStart": "2027-05-01",
+    "leaseEnd": "2027-08-15",
+    "leaseMonths": 3.5,
+    "furnished": "yes",
+    "parking": "unknown",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "trash",
+      "sewer"
+    ],
+    "description": "Sublease available: 1BR unit in a quieter area with more space for the money. Comes furnished. Washer and dryer in unit. Cats and small dogs OK with deposit. Rent includes trash, sewer. Tour available by appointment through the leasing office.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.253152,
+    "lng": -83.749895,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2200 S MAIN ST, ANN ARBOR, MI, 48103"
+    }
+  },
+  {
+    "id": "syn-40",
+    "name": "Packard St 1BR Apartment",
+    "address": "3000 Packard St, Ann Arbor, MI",
+    "rentMin": 1100,
+    "rentMax": 1100,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 602,
+    "sqftMax": 602,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "internet"
+    ],
+    "description": "1BR unit in a quieter area with more space for the money. Unfurnished. One off-street parking spot included. No pets. Rent includes internet. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-3.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.245028,
+    "lng": -83.70001,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "3000 PACKARD ST, ANN ARBOR, MI, 48108"
+    }
+  },
+  {
+    "id": "syn-41",
+    "name": "Pauline Blvd 1BR Apartment",
+    "address": "1450 Pauline Blvd, Ann Arbor, MI",
+    "rentMin": 1075,
+    "rentMax": 1075,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 1,
+    "bedsMax": 1,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "trash"
+    ],
+    "description": "1BR unit in a quieter area with more space for the money. Unfurnished. Shared laundry in the building. No parking; street permit only. No pets. Rent includes trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.26828,
+    "lng": -83.764749,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1450 PAULINE BLVD, ANN ARBOR, MI, 48103"
+    }
+  },
+  {
+    "id": "syn-42",
+    "name": "Stone School Rd 3BR House",
+    "address": "3000 Stone School Rd, Ann Arbor, MI",
+    "rentMin": 1875,
+    "rentMax": 1875,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 3,
+    "bedsMax": 3,
+    "bathsMin": 2,
+    "bathsMax": 2,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-09-01",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "no",
+    "petsAllowed": "no",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "water"
+    ],
+    "description": "3BR home in a quieter area with more space for the money. Unfurnished. Washer and dryer in unit. No parking; street permit only. No pets. Rent includes water. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.244845,
+    "lng": -83.719906,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "3000 STONE SCHOOL RD, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-43",
+    "name": "S State St 2BR Apartment",
+    "address": "2800 S State St, Ann Arbor, MI",
+    "rentMin": 1725,
+    "rentMax": 1825,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "heat",
+      "trash"
+    ],
+    "description": "2BR unit in a quieter area with more space for the money. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Rent includes heat, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.246975,
+    "lng": -83.739405,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2800 S STATE ST, ANN ARBOR, MI, 48104"
+    }
+  },
+  {
+    "id": "syn-44",
+    "name": "Barton Dr 2BR Apartment",
+    "address": "1000 Barton Dr, Ann Arbor, MI",
+    "rentMin": 1800,
+    "rentMax": 1800,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "yes",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": null,
+    "sqftMax": null,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "unknown",
+    "parking": "yes",
+    "petsAllowed": "yes",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [],
+    "description": "2BR unit in a quieter area with more space for the money. Washer and dryer in unit. One off-street parking spot included. Cats and small dogs OK with deposit. Tenant pays utilities. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-5.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.298063,
+    "lng": -83.732082,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1000 BARTON DR, ANN ARBOR, MI, 48105"
+    }
+  },
+  {
+    "id": "syn-45",
+    "name": "Platt Rd 2BR Apartment",
+    "address": "3500 Platt Rd, Ann Arbor, MI",
+    "rentMin": 1550,
+    "rentMax": 1675,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1146,
+    "sqftMax": 1146,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "no",
+    "utilitiesIncluded": [
+      "heat",
+      "water",
+      "trash"
+    ],
+    "description": "2BR unit in a quieter area with more space for the money. Unfurnished. Shared laundry in the building. One off-street parking spot included. Rent includes heat, water, trash. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.237622,
+    "lng": -83.700048,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "3500 PLATT RD, ANN ARBOR, MI, 48108"
+    }
+  },
+  {
+    "id": "syn-46",
+    "name": "Packard St 2BR Apartment",
+    "address": "2700 Packard St, Ann Arbor, MI",
+    "rentMin": 1500,
+    "rentMax": 1625,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "unknown",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 951,
+    "sqftMax": 951,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "unknown",
+    "parking": "yes",
+    "petsAllowed": "no",
+    "inUnitLaundry": "unknown",
+    "utilitiesIncluded": [
+      "trash",
+      "sewer"
+    ],
+    "description": "2BR unit in a quieter area with more space for the money. One off-street parking spot included. No pets. Rent includes trash, sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-2.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-6.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.244713,
+    "lng": -83.710264,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "2700 PACKARD ST, ANN ARBOR, MI, 48108"
+    }
+  },
+  {
+    "id": "syn-47",
+    "name": "Dhu Varren Rd 2BR Flat",
+    "address": "1600 Dhu Varren Rd, Ann Arbor, MI",
+    "rentMin": 1750,
+    "rentMax": 1900,
+    "priceBasis": "per_unit",
+    "rentNegotiable": "no",
+    "bedsMin": 2,
+    "bedsMax": 2,
+    "bathsMin": 1,
+    "bathsMax": 1,
+    "sqftMin": 1051,
+    "sqftMax": 1051,
+    "leaseType": "main",
+    "leaseStart": "2027-08-25",
+    "leaseEnd": "2028-08-15",
+    "leaseMonths": 12,
+    "furnished": "no",
+    "parking": "yes",
+    "petsAllowed": "unknown",
+    "inUnitLaundry": "yes",
+    "utilitiesIncluded": [
+      "sewer"
+    ],
+    "description": "2BR unit in a quieter area with more space for the money. Unfurnished. Washer and dryer in unit. One off-street parking spot included. Rent includes sewer. Showings available weekdays; apply online through the management company.",
+    "photos": [
+      {
+        "url": "/photos/placeholder-4.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      },
+      {
+        "url": "/photos/placeholder-1.svg",
+        "credit": "Placeholder image (not the actual unit)"
+      }
+    ],
+    "provenance": {
+      "sourceName": "Synthetic (Terrarium team)",
+      "sourceUrl": null,
+      "retrievedAt": "2026-11-20",
+      "isSynthetic": true
+    },
+    "lat": 42.316315,
+    "lng": -83.730409,
+    "geocode": {
+      "ok": true,
+      "inAnnArbor": true,
+      "source": "census",
+      "matchedAddress": "1600 DHU VARREN RD, ANN ARBOR, MI, 48105"
+    }
+  }
+]

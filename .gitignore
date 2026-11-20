@@ -45,3 +45,5 @@ next-env.d.ts
 # terrarium local data
 data/terrarium.db
 data/cache/
+# GTFS zips are re-downloaded by scripts/enrich.ts when missing
+data/gtfs/*.zip
