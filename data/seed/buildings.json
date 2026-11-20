@@ -1,0 +1,7 @@
+[
+  { "id": "bbb", "name": "Bob and Betty Beyster Building (BBB)", "campus": "north", "location": { "lat": 42.2929, "lng": -83.7163 } },
+  { "id": "duderstadt", "name": "Duderstadt Center", "campus": "north", "location": { "lat": 42.2912, "lng": -83.7171 } },
+  { "id": "mason-hall", "name": "Mason Hall", "campus": "central", "location": { "lat": 42.2772, "lng": -83.7392 } },
+  { "id": "angell-hall", "name": "Angell Hall", "campus": "central", "location": { "lat": 42.2765, "lng": -83.7398 } },
+  { "id": "ross", "name": "Ross School of Business", "campus": "central", "location": { "lat": 42.2729, "lng": -83.7377 } }
+]
