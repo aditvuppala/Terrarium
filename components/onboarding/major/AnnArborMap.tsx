@@ -253,11 +253,49 @@ export default function AnnArborMap({
             ))}
           </g>
 
-          {/* the stadium bowl */}
-          <g stroke={INK} strokeWidth="1.8">
-            <ellipse cx="84" cy="574" rx="56" ry="28" fill={CREAM} />
-            <ellipse cx="84" cy="576" rx="40" ry="17" fill="#6E9A6B" />
-            <path d="M 56 576 H 112 M 84 562 V 590" stroke="#F7F3EC" strokeWidth="1.2" opacity="0.8" />
+          {/* the stadium bowl, seen at a slight 3/4 angle */}
+          <g strokeLinejoin="round">
+            {/* light poles at the ends */}
+            <g stroke={INK} strokeWidth="1.6">
+              <path d="M 30 584 V 552 M 138 584 V 552" />
+              <rect x="25" y="548" width="10" height="5" rx="1" fill={CREAM} />
+              <rect x="133" y="548" width="10" height="5" rx="1" fill={CREAM} />
+            </g>
+            <g fill="#FFF6D8" opacity="0.9">
+              <circle cx="28" cy="550.5" r="1" />
+              <circle cx="32" cy="550.5" r="1" />
+              <circle cx="136" cy="550.5" r="1" />
+              <circle cx="140" cy="550.5" r="1" />
+            </g>
+            {/* ground shadow + outer wall (the bowl's depth) */}
+            <ellipse cx="86" cy="589" rx="60" ry="22" fill="#1E3B37" opacity="0.5" />
+            <path d="M 28 574 A 56 25 0 0 0 140 574 V 582 A 56 25 0 0 1 28 582 Z" fill="#C9B596" stroke={INK} strokeWidth="1.6" />
+            <g fill={INK} opacity="0.55">
+              <rect x="50" y="597" width="4" height="5" rx="2" />
+              <rect x="70" y="601" width="4" height="5" rx="2" />
+              <rect x="94" y="601" width="4" height="5" rx="2" />
+              <rect x="114" y="597" width="4" height="5" rx="2" />
+            </g>
+            {/* rim and seating tiers */}
+            <ellipse cx="84" cy="574" rx="56" ry="25" fill={CREAM} stroke={INK} strokeWidth="1.6" />
+            <ellipse cx="84" cy="575" rx="48" ry="20.5" fill={PEACH} stroke={INK} strokeWidth="0.8" />
+            <ellipse cx="84" cy="576" rx="41" ry="16.5" fill="#F3D9BF" stroke={INK} strokeWidth="0.8" />
+            <ellipse cx="84" cy="577" rx="35" ry="13.5" fill={RUST} opacity="0.85" stroke={INK} strokeWidth="0.8" />
+            {/* field with end zones and yard lines */}
+            <ellipse cx="84" cy="578" rx="30" ry="11" fill="#5E8C5C" stroke={INK} strokeWidth="1" />
+            <rect x="62" y="572.5" width="44" height="11" rx="1" fill="#7FAE78" stroke="#F7F3EC" strokeWidth="0.8" />
+            <rect x="62" y="572.5" width="5" height="11" fill="#5E8C5C" />
+            <rect x="101" y="572.5" width="5" height="11" fill="#5E8C5C" />
+            <path
+              d="M 72 572.5 V 583.5 M 78 572.5 V 583.5 M 84 572.5 V 583.5 M 90 572.5 V 583.5 M 96 572.5 V 583.5"
+              stroke="#F7F3EC"
+              strokeWidth="0.7"
+              opacity="0.85"
+            />
+            {/* press box on the far rim */}
+            <rect x="68" y="541" width="32" height="9" fill="#ECE1CD" stroke={INK} strokeWidth="1.3" />
+            <rect x="70" y="543.5" width="28" height="3.5" fill="#3E6E6B" />
+            <rect x="66.5" y="539.5" width="35" height="2.5" rx="1.2" fill="#F7F3EC" />
           </g>
 
           {/* hand-lettered labels */}
@@ -270,7 +308,7 @@ export default function AnnArborMap({
             <text x="138" y="290" fontSize="15" textAnchor="middle">Downtown</text>
             <text x="452" y="302" fontSize="14" textAnchor="end">Medical Campus</text>
             <text x="548" y="618" fontSize="15">Central Campus</text>
-            <text x="84" y="534" fontSize="14" textAnchor="middle">Stadium</text>
+            <text x="84" y="532" fontSize="14" textAnchor="middle">Stadium</text>
             <text x="736" y="322" fontSize="12" textAnchor="middle" opacity="0.9">the Arb</text>
             <g fontSize="11" opacity="0.85">
               <text transform="translate(134 520) rotate(-89)">Main St</text>

@@ -7,6 +7,7 @@
  *   3. always validates with Zod; on a validation failure retries once;
  *   4. returns null if it still fails, so callers fall back deterministically.
  */
+import Anthropic from "@anthropic-ai/sdk";
 import { GoogleGenAI, type Content, type Part } from "@google/genai";
 import { z } from "zod";
 
@@ -23,9 +24,70 @@ export function getGeminiConfig(): GeminiConfig | null {
   return { apiKey, model };
 }
 
-/** Mocks are used when explicitly requested or when Gemini isn't configured. */
+/**
+ * Claude (Anthropic) as an alternative provider. When ANTHROPIC_API_KEY is set it
+ * takes precedence over Gemini. ANTHROPIC_MODEL is optional (default below).
+ */
+const DEFAULT_CLAUDE_MODEL = "claude-opus-5-5";
+export function getClaudeConfig(): { model: string } | null {
+  if (!process.env.ANTHROPIC_API_KEY) return null;
+  return { model: process.env.ANTHROPIC_MODEL || DEFAULT_CLAUDE_MODEL };
+}
+
+/** Mocks are used when explicitly requested or when no model provider is configured. */
 export function shouldUseMocks(): boolean {
-  return process.env.NEXT_PUBLIC_USE_MOCKS === "true" || getGeminiConfig() === null;
+  return process.env.NEXT_PUBLIC_USE_MOCKS === "true" || (getGeminiConfig() === null && getClaudeConfig() === null);
+}
+
+let anthropic: Anthropic | null = null;
+
+/** Gemini-style parts -> Claude content blocks (text, images, PDFs). */
+function toClaudeContent(parts: Part[]): Anthropic.ContentBlockParam[] {
+  const out: Anthropic.ContentBlockParam[] = [];
+  for (const p of parts) {
+    if (p.inlineData?.data && p.inlineData.mimeType) {
+      const { mimeType, data } = p.inlineData;
+      if (mimeType === "application/pdf") {
+        out.push({ type: "document", source: { type: "base64", media_type: "application/pdf", data } });
+      } else {
+        out.push({
+          type: "image",
+          source: { type: "base64", media_type: mimeType as "image/png" | "image/jpeg" | "image/gif" | "image/webp", data },
+        });
+      }
+    } else if (p.text) {
+      out.push({ type: "text", text: p.text });
+    }
+  }
+  return out;
+}
+
+/** One Claude call; returns the response text (JSON is requested via the system prompt). */
+async function callClaude(
+  model: string,
+  system: string,
+  history: { role: "user" | "model"; text: string }[],
+  parts: Part[],
+): Promise<string> {
+  anthropic ??= new Anthropic();
+  const messages: Anthropic.MessageParam[] = history.map((h) => ({
+    role: h.role === "model" ? "assistant" : "user",
+    content: h.text,
+  }));
+  if (messages[0]?.role === "assistant") messages.unshift({ role: "user", content: "(start of conversation)" });
+  messages.push({ role: "user", content: toClaudeContent(parts) });
+  // Streaming avoids HTTP timeouts on long outputs (e.g. a full lease transcription).
+  const msg = await anthropic.messages
+    .stream({
+      model,
+      max_tokens: 32000,
+      system,
+      output_config: { effort: "low" },
+      messages,
+    })
+    .finalMessage();
+  if (msg.stop_reason === "refusal") throw new Error("model declined the request");
+  return msg.content.map((b) => (b.type === "text" ? b.text : "")).join("");
 }
 
 let client: { key: string; ai: GoogleGenAI } | null = null;
@@ -73,10 +135,21 @@ function isSchemaRejection(err: unknown): boolean {
 let schemaUnsupported = false;
 
 export async function generateJson<T extends z.ZodType>(opts: GenerateJsonOptions<T>): Promise<z.infer<T> | null> {
+  const claude = getClaudeConfig();
   const cfg = getGeminiConfig();
-  if (!cfg) return null;
-  const ai = getClient(cfg);
+  if (!claude && !cfg) return null;
   const jsonSchema = z.toJSONSchema(opts.schema, { target: "draft-7", unrepresentable: "any" });
+
+  if (claude) {
+    const system = `${opts.system}
+
+Respond with ONLY a JSON value (no prose, no code fences) matching this JSON Schema:
+${JSON.stringify(jsonSchema)}`;
+    return retryValidate(opts, (extraNote) =>
+      callClaude(claude.model, system, opts.history ?? [], extraNote ? [...opts.parts, { text: extraNote }] : opts.parts),
+    );
+  }
+  const ai = getClient(cfg!);
 
   const call = async (withSchema: boolean, extraNote?: string): Promise<string> => {
     const system = withSchema
@@ -84,7 +157,7 @@ export async function generateJson<T extends z.ZodType>(opts: GenerateJsonOption
       : `${opts.system}\n\nRespond with ONLY a JSON value matching this JSON Schema:\n${JSON.stringify(jsonSchema)}`;
     const parts = extraNote ? [...opts.parts, { text: extraNote }] : opts.parts;
     const res = await ai.models.generateContent({
-      model: cfg.model,
+      model: cfg!.model,
       contents: [...toContents(opts.history ?? []), { role: "user", parts }],
       config: {
         systemInstruction: system,
@@ -109,6 +182,14 @@ export async function generateJson<T extends z.ZodType>(opts: GenerateJsonOption
     return call(false, extraNote);
   };
 
+  return retryValidate(opts, attempt);
+}
+
+/** Call, parse JSON, validate with Zod; retry once with the validation error; null on failure. */
+async function retryValidate<T extends z.ZodType>(
+  opts: GenerateJsonOptions<T>,
+  attempt: (extraNote?: string) => Promise<string>,
+): Promise<z.infer<T> | null> {
   let lastError = "";
   for (let i = 0; i < 2; i++) {
     try {
@@ -120,7 +201,7 @@ export async function generateJson<T extends z.ZodType>(opts: GenerateJsonOption
       // JSON parse errors can quote the model's output (e.g. lease text): never log that.
       lastError = err instanceof SyntaxError ? "invalid JSON" : err instanceof Error ? err.message : String(err);
     }
-    console.warn(`[gemini${opts.label ? `:${opts.label}` : ""}] attempt ${i + 1} failed: ${lastError}`);
+    console.warn(`[llm${opts.label ? `:${opts.label}` : ""}] attempt ${i + 1} failed: ${lastError}`);
   }
   return null;
 }
