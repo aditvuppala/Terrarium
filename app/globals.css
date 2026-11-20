@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-sage: #F3F5EF;
+  --bg-card: #FCFDFB;
+  --bg-subtle: #E6ECE1;
+  --bg-subtle-hover: #DCE5D5;
+  --border-sage: #C8D3C1;
+  --border-strong: #9FB095;
+  --ink: #16241B;
+  --ink-muted: #3D5245;
+  --moss: #2F6B47;
+  --moss-hover: #245538;
+  --moss-tint: #DFEAE2;
+  --moss-ink: #1C452C;
+  --warn-bg: #FBF1E8;
+  --warn-border: #DFB391;
+  --warn-ink: #7A3415;
+  --unmet-bg: #FBECEB;
+  --unmet-border: #E2B4B1;
+  --unmet-ink: #84231F;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-sage);
+  --color-foreground: var(--ink);
+  --color-card: var(--bg-card);
+  --color-subtle: var(--bg-subtle);
+  --color-border-sage: var(--border-sage);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-moss: var(--moss);
+  --color-moss-hover: var(--moss-hover);
+  --color-moss-tint: var(--moss-tint);
+  --color-moss-ink: var(--moss-ink);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-bricolage), ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F3F5EF;
+  color: #16241B;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+}
+
+:focus-visible {
+  outline: 2px solid #2F6B47;
+  outline-offset: 2px;
+}
+
+/* Leaflet overrides to match Terrarium calm sage & deep ink theme */
+.leaflet-container {
+  background-color: #E6ECE1;
+  font-family: var(--font-sans);
+  color: #16241B;
+}
+
+.leaflet-control-zoom {
+  border: 1px solid #C8D3C1 !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(22, 36, 27, 0.08) !important;
+}
+
+.leaflet-control-zoom a {
+  width: 44px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  background-color: #FCFDFB !important;
+  color: #16241B !important;
+  border-bottom: 1px solid #C8D3C1 !important;
+  font-weight: 600 !important;
+}
+
+.leaflet-control-zoom a:last-child {
+  border-bottom: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #E6ECE1 !important;
+  color: #2F6B47 !important;
+}
+
+.leaflet-tooltip.terrarium-tooltip {
+  background-color: #FCFDFB;
+  color: #16241B;
+  border: 1px solid #C8D3C1;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 4px 12px rgba(22, 36, 27, 0.12);
+}
+
+.leaflet-tooltip.terrarium-tooltip::before {
+  display: none;
+}
+
+/* Terrarium custom map score markers */
+.terrarium-pin-wrapper {
+  background: transparent !important;
+  border: none !important;
+}
+
+.terrarium-pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 44px;
+  min-height: 32px;
+  padding: 4px 10px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease, color 140ms ease;
+  box-shadow: 0 2px 6px rgba(22, 36, 27, 0.18);
+}
+
+.terrarium-pin:hover {
+  transform: translateY(-1px) scale(1.06);
+}
+
+.terrarium-pin--real {
+  border-radius: 9999px;
+  border: 2px solid #16241B;
+}
+
+.terrarium-pin--mock {
+  border-radius: 8px;
+  border: 2px dashed #3D5245;
+}
+
+.terrarium-pin--default {
+  background-color: #FCFDFB;
+  color: #16241B;
+}
+
+.terrarium-pin--top {
+  background-color: #2F6B47;
+  color: #FFFFFF;
+  border-color: #16241B;
+}
+
+.terrarium-pin--top.terrarium-pin--mock {
+  border-color: #FCFDFB;
+  outline: 1.5px solid #16241B;
+}
+
+.terrarium-pin--selected {
+  background-color: #16241B;
+  color: #F3F5EF;
+  min-width: 52px;
+  min-height: 38px;
+  padding: 6px 13px;
+  font-size: 14px;
+  transform: scale(1.12);
+  box-shadow: 0 6px 16px rgba(22, 36, 27, 0.28);
+}
+
+.terrarium-pin--selected.terrarium-pin--real {
+  border: 2.5px solid #FCFDFB;
+  outline: 2px solid #16241B;
+}
+
+.terrarium-pin--selected.terrarium-pin--mock {
+  border: 2px dashed #DFEAE2;
+  outline: 2px solid #16241B;
 }
