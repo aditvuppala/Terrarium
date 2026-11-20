@@ -8,7 +8,7 @@ The LLM extracts and explains; deterministic code ranks (`lib/rank.ts`), so ever
 ```bash
 cp .env.example .env.local   # mocks are on by default; no API key needed
 npm install
-npm run db:build             # builds data/terrarium.db from data/ (offline, ~1 s; `npm run dev` does this if it's missing)
+npm run db:build             # builds data/terrarium.db from data/ (offline, ~1 s; `npm run dev` rebuilds it on every start)
 npm run dev                  # http://localhost:3000
 npm test                     # ranking + chat unit tests (vitest)
 npm run build                # type-check + production build; must pass before merging
