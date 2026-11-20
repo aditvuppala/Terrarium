@@ -25,13 +25,20 @@ export function getGeminiConfig(): GeminiConfig | null {
 }
 
 /**
- * Claude (Anthropic) as an alternative provider. When ANTHROPIC_API_KEY is set it
- * takes precedence over Gemini. ANTHROPIC_MODEL is optional (default below).
+ * Claude (Anthropic) as an alternative provider; takes precedence over Gemini.
+ * Enabled by any of:
+ *   - ANTHROPIC_API_KEY (a Console API key), or ANTHROPIC_AUTH_TOKEN;
+ *   - LLM_PROVIDER=claude after running `ant auth login` once (browser sign-in,
+ *     no key to copy: the SDK reads the saved login profile automatically);
+ *   - ANTHROPIC_PROFILE=<name> to pick a specific saved login profile.
+ * ANTHROPIC_MODEL is optional (default below).
  */
 const DEFAULT_CLAUDE_MODEL = "claude-opus-5-5";
 export function getClaudeConfig(): { model: string } | null {
-  if (!process.env.ANTHROPIC_API_KEY) return null;
-  return { model: process.env.ANTHROPIC_MODEL || DEFAULT_CLAUDE_MODEL };
+  const e = process.env;
+  const enabled = !!(e.ANTHROPIC_API_KEY || e.ANTHROPIC_AUTH_TOKEN || e.ANTHROPIC_PROFILE || e.LLM_PROVIDER === "claude");
+  if (!enabled) return null;
+  return { model: e.ANTHROPIC_MODEL || DEFAULT_CLAUDE_MODEL };
 }
 
 /** Mocks are used when explicitly requested or when no model provider is configured. */
