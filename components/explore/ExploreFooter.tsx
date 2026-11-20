@@ -38,6 +38,15 @@ export default function ExploreFooter() {
         >
           OpenStreetMap contributors
         </a>
+        <span>· Map tiles ©</span>
+        <a
+          href="https://www.esri.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-[#16241B] underline decoration-[#9FB095] underline-offset-2 hover:text-[#2F6B47]"
+        >
+          Esri
+        </a>
       </p>
     </footer>
   );

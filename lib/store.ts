@@ -34,7 +34,10 @@ interface TerrariumState {
   rankResponse: RankResponse | null;
   isRanking: boolean;
   rankError: string | null;
+  /** The listing open in "house view" (map focused on it + details panel). null = main map. */
   selectedListingId: string | null;
+  /** The last listing shown in house view, so the ranked list can return focus to it on close. */
+  lastViewedListingId: string | null;
   chatOpen: boolean;
   enrichmentById: Record<string, ListingEnrichment>;
 
@@ -61,6 +64,8 @@ interface TerrariumState {
   setRankResponse: (res: RankResponse | null) => void;
   ensureRanked: () => void;
   setSelectedListingId: (id: string | null) => void;
+  /** Move house view to the previous (-1) or next (+1) listing in rank order. Clamps at the ends. */
+  stepSelectedListing: (delta: -1 | 1) => void;
   setChatOpen: (open: boolean) => void;
   cacheEnrichment: (id: string, enrichment: ListingEnrichment) => void;
 }
@@ -127,6 +132,7 @@ export const useTerrarium = create<TerrariumState>()((set, get) => {
     isRanking: false,
     rankError: null,
     selectedListingId: null,
+    lastViewedListingId: null,
     chatOpen: true,
     enrichmentById: {},
 
@@ -341,7 +347,22 @@ export const useTerrarium = create<TerrariumState>()((set, get) => {
       }
     },
 
-    setSelectedListingId: (selectedListingId) => set({ selectedListingId }),
+    setSelectedListingId: (selectedListingId) =>
+      set((s) => ({
+        selectedListingId,
+        lastViewedListingId: selectedListingId ?? s.selectedListingId ?? s.lastViewedListingId,
+      })),
+    stepSelectedListing: (delta) => {
+      const { rankResponse, selectedListingId } = get();
+      const results = rankResponse?.results ?? [];
+      if (!selectedListingId || results.length === 0) return;
+      const idx = results.findIndex((r) => r.listing.id === selectedListingId);
+      if (idx < 0) return;
+      const next = Math.max(0, Math.min(results.length - 1, idx + delta));
+      if (next === idx) return;
+      const id = results[next].listing.id;
+      set({ selectedListingId: id, lastViewedListingId: id });
+    },
     setChatOpen: (chatOpen) => set({ chatOpen }),
     cacheEnrichment: (id, enrichment) =>
       set((s) => ({ enrichmentById: { ...s.enrichmentById, [id]: enrichment } })),

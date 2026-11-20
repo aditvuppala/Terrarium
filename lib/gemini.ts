@@ -117,7 +117,8 @@ export async function generateJson<T extends z.ZodType>(opts: GenerateJsonOption
       if (parsed.success) return parsed.data;
       lastError = parsed.error.issues.map((x) => `${x.path.join(".")}: ${x.message}`).slice(0, 3).join("; ");
     } catch (err) {
-      lastError = err instanceof Error ? err.message : String(err);
+      // JSON parse errors can quote the model's output (e.g. lease text): never log that.
+      lastError = err instanceof SyntaxError ? "invalid JSON" : err instanceof Error ? err.message : String(err);
     }
     console.warn(`[gemini${opts.label ? `:${opts.label}` : ""}] attempt ${i + 1} failed: ${lastError}`);
   }

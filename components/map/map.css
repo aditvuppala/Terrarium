@@ -1,0 +1,224 @@
+/* Explore map (components/map/RankMap.tsx). Plain global CSS: classes are prefixed rm-. */
+
+/* ---------- Listing pins: color = rank position, gold ring = top 10 ---------- */
+.rm-pin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+}
+
+.rm-pin-wrapper:focus {
+  outline: none;
+}
+
+.rm-pin-wrapper:focus-visible .rm-pin {
+  outline: 2px solid #2f6b47;
+  outline-offset: 5px;
+}
+
+.rm-pin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 34px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 9999px;
+  background: var(--rm-pin);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 1.5px #fff,
+    0 2px 6px rgba(10, 18, 13, 0.28);
+  transition:
+    transform 140ms ease,
+    opacity 180ms ease;
+}
+
+/* Mock (synthetic) listings: squarer corners. Real listings stay round. */
+.rm-pin--mock {
+  border-radius: 5px;
+}
+
+.rm-pin--top {
+  box-shadow:
+    0 0 0 1.5px #fff,
+    0 0 0 3.5px var(--rm-gold),
+    0 2px 7px rgba(10, 18, 13, 0.3);
+}
+
+.rm-pin:hover {
+  transform: scale(1.12);
+}
+
+.rm-pin--dimmed {
+  opacity: 0.35;
+}
+
+.rm-pin--dimmed:hover {
+  opacity: 0.95;
+}
+
+.rm-pin__rank {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.rm-pin--focused {
+  position: relative;
+  height: 30px;
+  min-width: 58px;
+  padding: 0 11px;
+  font-size: 14px;
+  transform: scale(1.06);
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4.5px var(--rm-pin),
+    0 6px 18px rgba(10, 18, 13, 0.38);
+}
+
+.rm-pin--focused.rm-pin--top {
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4.5px var(--rm-gold),
+    0 6px 18px rgba(10, 18, 13, 0.38);
+}
+
+.rm-pin--focused::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: inherit;
+  border: 2px solid var(--rm-pin);
+  opacity: 0;
+  animation: rm-ping 2.2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes rm-ping {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-pin,
+  .rm-pin--focused::after {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* ---------- Area labels on the label-free basemap ---------- */
+.rm-area-wrapper {
+  background: transparent !important;
+  border: none !important;
+  pointer-events: none !important;
+}
+
+.rm-area {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(22, 36, 27, 0.4);
+  text-shadow:
+    0 0 3px #fff,
+    0 0 8px #fff;
+  transition: opacity 200ms ease;
+}
+
+.rm-root--house .rm-area {
+  opacity: 0.55;
+}
+
+/* ---------- House view route end labels ---------- */
+.rm-end-wrapper {
+  background: transparent !important;
+  border: none !important;
+  pointer-events: none !important;
+}
+
+.rm-end {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(11px, -50%);
+  white-space: nowrap;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--rm-route);
+  border: 1px solid color-mix(in srgb, var(--rm-route) 35%, transparent);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 1px 4px rgba(10, 18, 13, 0.16);
+}
+
+/* ---------- Dark theme ---------- */
+html[data-theme="dark"] .rm-area {
+  color: rgba(230, 238, 229, 0.36);
+  text-shadow:
+    0 0 3px #0e0e0e,
+    0 0 8px #0e0e0e;
+}
+
+html[data-theme="dark"] .rm-end {
+  background: #17221b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .rm-pin {
+  box-shadow:
+    0 0 0 1.5px rgba(236, 242, 235, 0.92),
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .rm-pin--top {
+  box-shadow:
+    0 0 0 1.5px rgba(236, 242, 235, 0.92),
+    0 0 0 3.5px var(--rm-gold),
+    0 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .rm-pin--focused {
+  box-shadow:
+    0 0 0 2px #ecf2eb,
+    0 0 0 4.5px var(--rm-pin),
+    0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .rm-pin--focused.rm-pin--top {
+  box-shadow:
+    0 0 0 2px #ecf2eb,
+    0 0 0 4.5px var(--rm-gold),
+    0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .rm-pin--focused::after {
+  border-color: #ecf2eb;
+}

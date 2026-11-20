@@ -2,10 +2,11 @@ import Link from "next/link";
 import { ChevronRightIcon, PrivacyShieldIcon, TerrariumMark } from "@/components/ui/Icons";
 import { RiverValley, SideTrees, SkyDecor } from "@/components/landing/ForestScene";
 import { QuestionTicker } from "@/components/landing/QuestionTicker";
+import { NightScene } from "@/components/landing/NightScene";
 
 export default function WelcomePage() {
   return (
-    <main className="relative flex min-h-screen flex-1 flex-col overflow-hidden bg-linear-to-b from-[#B7E0E2] to-[#DCF0E3]">
+    <NightScene className="relative flex min-h-screen flex-1 flex-col overflow-hidden bg-linear-to-b from-[#B7E0E2] to-[#DCF0E3]">
       <SkyDecor />
       <SideTrees />
 
@@ -13,12 +14,12 @@ export default function WelcomePage() {
       <section className="relative z-10 mx-auto w-full max-w-3xl px-5 pt-10 pb-8 sm:px-8 sm:pt-14 sm:pb-12">
         <div className="flex items-center gap-4 sm:gap-5">
           <TerrariumMark size={88} className="shrink-0 drop-shadow-[0_6px_14px_rgba(22,36,27,0.18)] sm:h-[120px] sm:w-[120px]" />
-          <span className="font-heading text-4xl font-bold tracking-tight text-[#16241B] sm:text-6xl">
+          <span className="tr-ink font-heading text-4xl font-bold tracking-tight text-[#16241B] sm:text-6xl">
             Terrarium
           </span>
         </div>
 
-        <h1 className="font-heading mt-6 max-w-2xl text-3xl font-bold leading-tight text-[#16241B] sm:text-5xl">
+        <h1 className="tr-ink font-heading mt-6 max-w-2xl text-3xl font-bold leading-tight text-[#16241B] sm:text-5xl">
           Housing that works for{" "}
           <span className="relative inline-block">
             you
@@ -34,7 +35,7 @@ export default function WelcomePage() {
           .
         </h1>
 
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-[#2E4436] sm:text-lg">
+        <p className="tr-ink-muted mt-5 max-w-xl text-base leading-relaxed text-[#2E4436] sm:text-lg">
           We weigh everything you&apos;d look for in a place, plus a few things you might not think to check until after you&apos;ve signed.
         </p>
       </section>
@@ -49,7 +50,11 @@ export default function WelcomePage() {
         {/* soft light hugging the buttons + note so they stand out from the forest */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -inset-x-12 -top-10 -bottom-8 -z-10 bg-[radial-gradient(closest-side,rgba(248,251,244,0.95),rgba(248,251,244,0.75)_55%,rgba(248,251,244,0))] sm:-inset-x-24 sm:-top-14 sm:-bottom-12"
+          className="tr-glow-day pointer-events-none absolute -inset-x-12 -top-10 -bottom-8 -z-10 bg-[radial-gradient(closest-side,rgba(248,251,244,0.95),rgba(248,251,244,0.75)_55%,rgba(248,251,244,0))] sm:-inset-x-24 sm:-top-14 sm:-bottom-12"
+        />
+        <div
+          aria-hidden="true"
+          className="tr-glow-night pointer-events-none absolute -inset-x-12 -top-10 -bottom-8 -z-10 bg-[radial-gradient(closest-side,rgba(10,20,38,0.82),rgba(10,20,38,0.6)_55%,rgba(10,20,38,0))] sm:-inset-x-24 sm:-top-14 sm:-bottom-12"
         />
 
         {/* Two Large Choices */}
@@ -90,13 +95,13 @@ export default function WelcomePage() {
         </div>
 
         {/* Small privacy note */}
-        <p className="mt-7 flex items-center justify-center gap-2 text-center text-sm text-[#3D5245]">
-          <PrivacyShieldIcon size={16} className="shrink-0 text-[#2F6B47]" />
+        <p className="tr-note mt-7 flex items-center justify-center gap-2 text-center text-sm text-[#3D5245]">
+          <PrivacyShieldIcon size={16} className="tr-note-icon shrink-0 text-[#2F6B47]" />
           <span>We only use what you tell us. Nothing is stored.</span>
         </p>
         </div>
         </div>
       </section>
-    </main>
+    </NightScene>
   );
 }

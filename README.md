@@ -37,6 +37,22 @@ To use Gemini, set `GEMINI_API_KEY` and `GEMINI_MODEL` (a current Flash model fr
 | API and logic | backend | `app/api/**`, `lib/` (except `store.ts`), `scripts/**` |
 | Data and mocks | backend | `data/**`, `mocks/**`, `public/photos/` |
 
+## Renter tools (sidebar on /explore)
+
+The menu button on the explore page opens three tools. None of them store anything on our side.
+
+| Route | What it does | Where the logic lives |
+| --- | --- | --- |
+| `/lease-check` | Upload a lease (PDF/photo) or try the sample. Gemini transcribes it and maps clauses to a **fixed list of verified rules** (MCL 554.602/.609/.613/.633/.634, Ann Arbor § 8:530 and § 8:532); every quote must appear verbatim in the text or it's dropped. Deposit and application-fee limits are checked by arithmetic. Mock mode uses `mocks/lease.json`. | `app/api/lease/route.ts`, `lib/lease/*` |
+| `/deposit` | Room-by-room move-in/move-out photos and videos, SHA-256 fingerprinted, stored only in this browser (IndexedDB), exported as a zip with a manifest and a readable report. Michigan Security Deposit Act deadlines computed from the lease dates. | `components/tools/deposit/*`, `lib/deposit/*` |
+| `/split` | Envy-free rent split from one round of bids: welfare-maximizing room assignment, then the midpoint of the envy-free price set (Bellman-Ford on difference constraints), rounded to cents. | `lib/split.ts` |
+
+Each house view also lists **questions to ask the landlord**, generated from what the listing doesn't say (`lib/landlordQuestions.ts`).
+
+**Day/night theme:** the landing page switch (and the small switch in every header) sets `<html data-theme>` and saves it on this device (`components/ui/theme.ts`). Other pages remap the palette classes in `app/globals.css`.
+
+**Photos:** synthetic listings use six illustrated placeholders in `public/photos/` (labelled "Illustration · not the actual unit"). Real listings have none (the source site's terms restrict copying photos).
+
 ## API
 
 All responses validate against `lib/schemas.ts`. Errors are `{ error: string, details?: unknown }`.

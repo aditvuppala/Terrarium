@@ -1,0 +1,288 @@
+/*
+ * Illustrated Ann Arbor map for the onboarding major step.
+ * Plain CSS with an `aamap-` prefix: this repo's turbopack *.css rule
+ * (next.config.ts) bypasses CSS-module class scoping, so styles must be
+ * namespaced by hand. The map is an illustration and keeps its colors in
+ * dark mode on purpose.
+ */
+
+.aamap-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 800 / 640;
+  border-radius: 16px;
+  background: #f3e4d8;
+  box-shadow:
+    0 1px 0 rgba(29, 57, 53, 0.08),
+    0 10px 30px -18px rgba(29, 57, 53, 0.55);
+}
+
+.aamap-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.aamap-title {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.aamap-hand {
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", Georgia, serif;
+  font-style: italic;
+}
+
+.aamap-glow {
+  opacity: 0;
+}
+
+.aamap-glow-on {
+  opacity: 0.22;
+}
+
+.aamap-glow-match {
+  opacity: 0.14;
+}
+
+/* ---- clickable groups (building art + label) ---- */
+
+.aamap-group {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: #1d3935;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.aamap-group:focus-visible {
+  outline: none;
+}
+
+.aamap-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 2px 0 rgba(15, 32, 29, 0.35));
+}
+
+.aamap-group:hover,
+.aamap-group:focus-visible,
+.aamap-group-hot,
+.aamap-group-active {
+  z-index: 2;
+}
+
+.aamap-group:hover .aamap-art,
+.aamap-group:focus-visible .aamap-art,
+.aamap-group-hot .aamap-art,
+.aamap-group-active .aamap-art {
+  transform: translateY(-5px) scale(1.07);
+  filter: drop-shadow(0 0 5px rgba(255, 240, 208, 0.95)) drop-shadow(0 7px 5px rgba(10, 25, 22, 0.45));
+}
+
+.aamap-group-match .aamap-art {
+  filter: drop-shadow(0 0 6px rgba(242, 193, 78, 0.95)) drop-shadow(0 2px 0 rgba(15, 32, 29, 0.35));
+}
+
+.aamap-group-dim {
+  opacity: 0.5;
+}
+
+.aamap-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  max-width: 12.5rem;
+  margin-top: 2px;
+  padding: 3px 10px 3px 3px;
+  border-radius: 999px;
+  border: 1.5px solid #1d3935;
+  background: #fbf3ea;
+  color: #1d3935;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.15;
+  text-align: left;
+  box-shadow: 0 2px 0 rgba(17, 36, 33, 0.45);
+}
+
+.aamap-tag::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 2.5px solid #f2c14e;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.aamap-group:hover .aamap-tag,
+.aamap-group-hot .aamap-tag {
+  background: #ffffff;
+}
+
+.aamap-group:focus-visible .aamap-tag {
+  outline: 3px solid #f2c14e;
+  outline-offset: 3px;
+}
+
+.aamap-group-active .aamap-tag,
+.aamap-group-active:hover .aamap-tag {
+  background: #b65a3c;
+  border-color: #6f2f1c;
+  color: #fbf3ea;
+}
+
+.aamap-group-active .aamap-badge {
+  background: #fbf3ea;
+  color: #b65a3c;
+}
+
+.aamap-group-active .aamap-count {
+  color: #f6d9c8;
+}
+
+.aamap-group-match .aamap-tag::after {
+  opacity: 0.95;
+}
+
+.aamap-badge {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border-radius: 999px;
+  background: #b65a3c;
+  color: #fbf3ea;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.aamap-label {
+  white-space: normal;
+}
+
+.aamap-count {
+  flex: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7f78;
+}
+
+.aamap-current {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 1.5px solid #fbf3ea;
+  background: #2f6b47;
+}
+
+@media (max-width: 639px) {
+  .aamap-frame,
+  .aamap-svg {
+    border-radius: 12px;
+  }
+
+  .aamap-tag {
+    gap: 0;
+    margin-top: -8px;
+    padding: 2px;
+  }
+
+  .aamap-label,
+  .aamap-count {
+    display: none;
+  }
+
+  .aamap-badge {
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+
+  .aamap-current {
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ---- motion (only when the user has not asked for less) ---- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .aamap-art {
+    transition:
+      transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 200ms ease;
+  }
+
+  .aamap-group {
+    transition: opacity 200ms ease;
+  }
+
+  .aamap-tag {
+    transition:
+      background-color 160ms ease,
+      color 160ms ease;
+  }
+
+  .aamap-group-match .aamap-tag::after {
+    animation: aamap-pulse 1.8s ease-out infinite;
+  }
+
+  .aamap-glow {
+    transition: opacity 220ms ease;
+  }
+
+  .aamap-shimmer {
+    animation: aamap-shimmer 7s linear infinite;
+  }
+
+  .aamap-shimmer-slow {
+    animation: aamap-shimmer 11s linear infinite reverse;
+  }
+}
+
+@keyframes aamap-shimmer {
+  to {
+    stroke-dashoffset: -176;
+  }
+}
+
+@keyframes aamap-pulse {
+  0% {
+    opacity: 0.95;
+    transform: scale(0.96);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}

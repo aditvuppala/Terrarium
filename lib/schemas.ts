@@ -312,3 +312,49 @@ export const BackpackResponse = z.object({
   courses: z.array(Course),             // source "backpack_screenshot", confirmed false
   warnings: z.array(z.string()),        // "Couldn't read building for STATS 250"
 });
+
+/* ------------------------------------------------------------------ */
+/* Lease review  (POST /api/lease; rules live in lib/lease/rules.ts)    */
+/* ------------------------------------------------------------------ */
+
+export const LeaseRule = z.object({
+  id: z.string(),
+  jurisdiction: z.enum(["michigan", "ann_arbor"]),
+  title: z.string(),
+  citation: z.string(),                 // "MCL 554.633(1)(e)"
+  sourceUrl: z.string().url(),          // official text
+  explanation: z.string(),              // plain English, paraphrased from the source
+  askLandlord: z.string(),
+  appliesNote: z.string().nullable(),   // scope caveat, e.g. "Ann Arbor city limits only"
+});
+export type LeaseRule = z.infer<typeof LeaseRule>;
+
+export const LeaseFinding = z.object({
+  id: z.string(),
+  rule: LeaseRule,
+  method: z.enum(["model", "deterministic"]),
+  quote: z.string().nullable(),         // verbatim slice of `text`; null for "not found" checks
+  start: z.number().int().min(0).nullable(), // offsets into LeaseReviewResponse.text
+  end: z.number().int().min(0).nullable(),
+  detail: z.string().nullable(),        // deterministic specifics, e.g. "$2,700 deposit is 2× the $1,350 rent"
+});
+export type LeaseFinding = z.infer<typeof LeaseFinding>;
+
+export const LeaseFacts = z.object({
+  monthlyRent: z.number().nullable(),
+  securityDeposit: z.number().nullable(),
+  applicationFee: z.number().nullable(),
+});
+export type LeaseFacts = z.infer<typeof LeaseFacts>;
+
+// POST /api/lease: multipart/form-data field "file" (PDF/PNG/JPEG, <= 10 MB), or JSON LeaseSampleRequest
+export const LeaseSampleRequest = z.object({ sample: z.literal(true) });
+export const LeaseReviewResponse = z.object({
+  source: z.enum(["upload", "sample"]),
+  demo: z.boolean(),                    // true when mocks were used
+  text: z.string(),                     // extracted lease text (never stored)
+  findings: z.array(LeaseFinding),      // ordered by position in text; "not found" checks last
+  facts: LeaseFacts,
+  warnings: z.array(z.string()),
+});
+export type LeaseReviewResponse = z.infer<typeof LeaseReviewResponse>;

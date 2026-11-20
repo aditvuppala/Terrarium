@@ -1,0 +1,60 @@
+{
+  "_comment": "Mock lease review (NEXT_PUBLIC_USE_MOCKS=true or no Gemini key). `text` is an obviously fictional sample lease; `findings`/`amounts` are in the same shape the model returns, and go through the same validation (lib/lease/review.ts).",
+  "text": "SAMPLE RESIDENTIAL LEASE AGREEMENT\n(Fictional example for demonstration only. Not a real landlord, property or tenant.)\n\nThis Lease Agreement is made on November 2, 2026 between Placeholder Property Group LLC (\"Landlord\") and Sample Student (\"Tenant\") for the premises at 123 Example Street, Apt. 4, Ann Arbor, Michigan 48104 (the \"Premises\").\n\n1. TERM\nThe lease term begins on September 1, 2027 and ends at 12:00 noon on August 31, 2028.\n\n2. RENT\nTenant shall pay monthly rent of $1,350.00, due on the first day of each month. Rent paid after the fifth day of the month is subject to a late fee of $25.00.\n\n3. PAYMENT OF RENT\nRent may be paid by check at the Landlord's office at no charge, or online through the resident portal for a processing fee of $2.95 per payment.\n\n4. APPLICATION AND HOLDING FEES\nEach applicant shall pay a non-refundable application fee of $75.00 per applicant. To reserve the Premises before the lease term begins, Tenant shall pay a holding fee of $300.00, which is not applied to rent or to the security deposit.\n\n5. SECURITY DEPOSIT\nTenant shall pay a security deposit of $2,700.00 upon signing this Lease. Landlord will return the security deposit, less any lawful deductions, within 60 days after Tenant moves out.\n\n6. AMENITY FEE\nIn addition to rent, Tenant shall pay a mandatory amenity fee of $40.00 per month for use of the fitness room and study lounge.\n\n7. UTILITIES\nTenant is responsible for electricity and internet service. Landlord provides water, sewer and trash collection.\n\n8. USE AND OCCUPANCY\nThe Premises shall be used only as a private residence for the Tenant named above. Quiet hours are from 11:00 p.m. to 8:00 a.m. on weeknights.\n\n9. MAINTENANCE AND REPAIRS\nTenant shall keep the Premises clean and shall promptly report any needed repairs to Landlord in writing. Landlord will make necessary repairs within a reasonable time after notice.\n\n10. LIABILITY\nLandlord shall not be liable for any injury, loss or damage to Tenant, Tenant's guests or Tenant's property, including any injury, loss or damage caused by the negligence of Landlord or Landlord's employees.\n\n11. ENTRY AND SHOWINGS\nLandlord may enter the Premises at reasonable times with 24 hours' notice to make repairs. Beginning 90 days after the start of the lease term, Landlord may show the Premises to prospective tenants with 24 hours' notice.\n\n12. RENEWAL\nIf Landlord offers to renew this Lease, Tenant must accept the renewal offer in writing within 7 days after it is sent, or the offer will expire.\n\n13. RULES AND REGULATIONS\nLandlord may change or add to the rules and regulations of the building at any time, and the changes will become part of this Lease when posted in the lobby.\n\n14. DEFAULT AND LEGAL COSTS\nIf Tenant breaks any term of this Lease, Tenant shall pay all of Landlord's attorney fees and collection costs, whether or not a lawsuit is filed.\n\n15. JURY TRIAL\nTenant waives the right to a trial by jury in any lawsuit arising out of this Lease.\n\n16. PETS\nNo pets are allowed without Landlord's written consent. Approved pets require a pet fee of $25.00 per month.\n\n17. SMOKING\nSmoking is not permitted anywhere in the building.\n\n18. NOTICES\nNotices to Landlord shall be sent to Placeholder Property Group LLC, 456 Sample Avenue, Ann Arbor, Michigan 48103.\n\n19. ENTIRE AGREEMENT\nThis Lease is the entire agreement between Landlord and Tenant.\n\nLandlord: ______________________    Tenant: ______________________",
+  "findings": [
+    {
+      "ruleId": "a2_application_fee",
+      "quote": "Each applicant shall pay a non-refundable application fee of $75.00 per applicant."
+    },
+    {
+      "ruleId": "a2_pretenancy_fee",
+      "quote": "To reserve the Premises before the lease term begins, Tenant shall pay a holding fee of $300.00, which is not applied to rent or to the security deposit."
+    },
+    {
+      "ruleId": "deposit_timeline",
+      "quote": "Landlord will return the security deposit, less any lawful deductions, within 60 days after Tenant moves out."
+    },
+    {
+      "ruleId": "a2_mandatory_fee",
+      "quote": "In addition to rent, Tenant shall pay a mandatory amenity fee of $40.00 per month for use of the fitness room and study lounge."
+    },
+    {
+      "ruleId": "exculpatory",
+      "quote": "Landlord shall not be liable for any injury, loss or damage to Tenant, Tenant's guests or Tenant's property, including any injury, loss or damage caused by the negligence of Landlord or Landlord's employees."
+    },
+    {
+      "ruleId": "a2_early_showing",
+      "quote": "Beginning 90 days after the start of the lease term, Landlord may show the Premises to prospective tenants with 24 hours' notice."
+    },
+    {
+      "ruleId": "a2_renewal_rights",
+      "quote": "If Landlord offers to renew this Lease, Tenant must accept the renewal offer in writing within 7 days after it is sent, or the offer will expire."
+    },
+    {
+      "ruleId": "unilateral_changes",
+      "quote": "Landlord may change or add to the rules and regulations of the building at any time, and the changes will become part of this Lease when posted in the lobby."
+    },
+    {
+      "ruleId": "attorney_fees",
+      "quote": "If Tenant breaks any term of this Lease, Tenant shall pay all of Landlord's attorney fees and collection costs, whether or not a lawsuit is filed."
+    },
+    {
+      "ruleId": "jury_and_notice_waiver",
+      "quote": "Tenant waives the right to a trial by jury in any lawsuit arising out of this Lease."
+    }
+  ],
+  "amounts": {
+    "monthlyRent": {
+      "amount": 1350,
+      "quote": "Tenant shall pay monthly rent of $1,350.00, due on the first day of each month."
+    },
+    "securityDeposit": {
+      "amount": 2700,
+      "quote": "Tenant shall pay a security deposit of $2,700.00 upon signing this Lease."
+    },
+    "applicationFee": {
+      "amount": 75,
+      "quote": "Each applicant shall pay a non-refundable application fee of $75.00 per applicant."
+    }
+  }
+}

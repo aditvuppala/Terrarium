@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import PriorityStrip from "@/components/explore/PriorityStrip";
+import ToolsMenu from "@/components/tools/ToolsMenu";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import { YEAR_LABELS } from "@/components/shared/constants";
 import { TerrariumMark } from "@/components/ui/Icons";
 import { useTerrarium } from "@/lib/store";
@@ -28,6 +30,8 @@ export default function ExploreHeader() {
       {/* Top Row: Brand + Fit Confidence Meter + Profile Link */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
+          <ToolsMenu />
+          <ThemeToggle />
           <Link
             href="/"
             className="inline-flex min-h-[44px] items-center gap-2.5 rounded-xl px-2 py-1 text-[#16241B] hover:bg-[#E6ECE1]"

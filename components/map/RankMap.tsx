@@ -1,427 +1,519 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
+import "./map.css";
 import L from "leaflet";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import {
   CircleMarker,
   MapContainer,
   Marker,
+  Polyline,
   TileLayer,
   Tooltip,
   ZoomControl,
   useMap,
 } from "react-leaflet";
-import gtfsStopsJson from "@/data/processed/gtfs-stops.json";
-import placesJson from "@/data/processed/places.json";
+import { EMPTY_COURSES, EMPTY_RESULTS, formatListingPrice } from "@/components/shared/constants";
 import {
-  BUILDINGS_BY_CODE,
-  EMPTY_CATEGORIES,
-  EMPTY_COURSES,
-  EMPTY_RESULTS,
-  PLACE_CATEGORY_LABELS,
-} from "@/components/shared/constants";
-import { BuildingIcon, BusIcon, PinIcon } from "@/components/ui/Icons";
-import type { PlaceCategory, ScoredListing, UMBuilding } from "@/lib/schemas";
+  ROUTE_COLORS,
+  ROUTE_KINDS,
+  ROUTE_LABELS,
+  buildHouseRoutes,
+  curvedPath,
+  formatMin,
+  type HouseRoutes,
+  type RouteKind,
+  type RouteTarget,
+} from "@/components/map/houseRoutes";
+import { GOLD, RANK_GRADIENT_CSS, TOP_TIER, rankColor } from "@/components/map/rankColors";
+import { useTheme } from "@/components/map/useTheme";
+import { CAMPUS_CENTROIDS } from "@/lib/geo";
+import type { ScoredListing } from "@/lib/schemas";
 import { useTerrarium } from "@/lib/store";
 
 const ANN_ARBOR: [number, number] = [42.2808, -83.743];
 
-interface RawGtfsStop {
-  stopId: string;
-  stopName: string;
-  agency: "TheRide" | "UM";
-  lat: number;
-  lng: number;
-  routes: { routeId: string; routeName: string; headsigns: string[] }[];
+// Minimal gray canvas basemaps (light + dark) that work without an API key.
+// (CARTO's no-label tiles now serve an "API key required" watermark without a key.)
+const TILE_ATTRIBUTION =
+  'Tiles &copy; <a href="https://www.esri.com">Esri</a> &mdash; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const TILE_URL = {
+  light: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+  dark: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+} as const;
+
+/** Subtle place names on the label-free basemap, so students still know where campus is. */
+const AREA_LABELS: { name: string; lat: number; lng: number }[] = [
+  { name: "Central Campus", ...CAMPUS_CENTROIDS.central },
+  { name: "North Campus", lat: 42.2935, lng: -83.7165 },
+  { name: "Downtown", lat: 42.2806, lng: -83.7494 },
+];
+
+function areaLabelIcon(name: string): L.DivIcon {
+  return L.divIcon({
+    className: "rm-area-wrapper",
+    html: `<span class="rm-area">${name}</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
+  });
 }
+const AREA_ICONS = AREA_LABELS.map((a) => ({ ...a, icon: areaLabelIcon(a.name) }));
 
-interface RawPlace {
-  id: string;
-  name: string;
-  category: PlaceCategory;
-  lat: number;
-  lng: number;
-}
-
-/* Filter GTFS stops to Ann Arbor campus & residential area so map rendering stays instant */
-const CORE_STOPS: RawGtfsStop[] = (gtfsStopsJson as RawGtfsStop[]).filter(
-  (s) => s.lat >= 42.24 && s.lat <= 42.315 && s.lng >= -83.79 && s.lng <= -83.69,
-);
-
-const ALL_PLACES: RawPlace[] = placesJson as RawPlace[];
-
-function createListingIcon(item: ScoredListing, selected: boolean): L.DivIcon {
+function listingIcon(
+  item: ScoredListing,
+  index: number,
+  total: number,
+  state: "default" | "focused" | "dimmed",
+): L.DivIcon {
   const { listing, score, rank } = item;
-  const isMock = listing.provenance.isSynthetic;
-  const isTop3 = rank <= 3;
-
-  const shapeClass = isMock ? "terrarium-pin--mock" : "terrarium-pin--real";
-  const toneClass = selected
-    ? "terrarium-pin--selected"
-    : isTop3
-      ? "terrarium-pin--top"
-      : "terrarium-pin--default";
-
-  const rankPrefix = isTop3 ? `<span style="opacity:0.82;font-weight:600;font-size:11px">#${rank}</span>` : "";
-
+  const classes = [
+    "rm-pin",
+    listing.provenance.isSynthetic ? "rm-pin--mock" : "rm-pin--real",
+    rank <= TOP_TIER ? "rm-pin--top" : "",
+    state === "focused" ? "rm-pin--focused" : "",
+    state === "dimmed" ? "rm-pin--dimmed" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const label =
+    state === "focused"
+      ? `<span class="rm-pin__rank">#${rank}</span><span>${Math.round(score)}</span>`
+      : `<span>${Math.round(score)}</span>`;
   return L.divIcon({
-    className: "terrarium-pin-wrapper",
-    html: `<div class="terrarium-pin ${shapeClass} ${toneClass}">${rankPrefix}<span>${Math.round(score)}</span></div>`,
-    iconSize: selected ? [62, 38] : isTop3 ? [56, 32] : [46, 32],
-    iconAnchor: selected ? [31, 19] : isTop3 ? [28, 16] : [23, 16],
+    className: "rm-pin-wrapper",
+    html: `<div class="${classes}" style="--rm-pin:${rankColor(index, total)};--rm-gold:${GOLD}">${label}</div>`,
+    iconSize: [40, 28],
+    iconAnchor: [20, 14],
   });
 }
 
-function createBuildingIcon(code: string, confirmed: boolean): L.DivIcon {
-  const borderStyle = confirmed ? "2px solid #16241B" : "2px dashed #7A3415";
-  const bg = confirmed ? "#DFEAE2" : "#FBF1E8";
-  const color = confirmed ? "#16241B" : "#7A3415";
+function routeEndIcon(target: RouteTarget, color: string): L.DivIcon {
+  const text =
+    target.kind === "classes"
+      ? `${escapeHtml(target.label)} · ${formatMin(target.walkMin)}`
+      : formatMin(target.walkMin);
   return L.divIcon({
-    className: "terrarium-pin-wrapper",
-    html: `<div style="display:inline-flex;align-items:center;justify-content:center;padding:3px 8px;border-radius:6px;background:${bg};color:${color};border:${borderStyle};font:700 11px var(--font-sans,sans-serif);white-space:nowrap;box-shadow:0 2px 5px rgba(22,36,27,0.16)">${code}</div>`,
-    iconSize: [48, 24],
-    iconAnchor: [24, 12],
+    className: "rm-end-wrapper",
+    html: `<span class="rm-end rm-end--${target.kind}" style="--rm-route:${color}">${text}</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
   });
 }
 
-function MapViewportSync({ selectedListing }: { selectedListing: ScoredListing | null }) {
+function escapeHtml(s: string): string {
+  return s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
+/* ------------------------------------------------------------------ */
+/* Viewport: initial fit, house-view zoom in, restore on exit           */
+/* ------------------------------------------------------------------ */
+
+function ViewController({
+  results,
+  focused,
+  routes,
+  enrichmentLoaded,
+}: {
+  results: ScoredListing[];
+  focused: ScoredListing | null;
+  routes: HouseRoutes | null;
+  enrichmentLoaded: boolean;
+}) {
   const map = useMap();
+  const savedView = useRef<{ center: L.LatLng; zoom: number } | null>(null);
+  const fittedKey = useRef<string | null>(null);
+  const didInitialFit = useRef(false);
 
   useEffect(() => {
-    const container = map.getContainer();
-    const ro = new ResizeObserver(() => {
-      map.invalidateSize({ animate: false });
-    });
-    ro.observe(container);
+    const ro = new ResizeObserver(() => map.invalidateSize({ animate: false }));
+    ro.observe(map.getContainer());
     return () => ro.disconnect();
   }, [map]);
 
+  // First time results arrive: frame every listing.
   useEffect(() => {
-    if (!selectedListing) return;
-    const { lat, lng } = selectedListing.listing;
-    const target = L.latLng(lat, lng);
-    if (!map.getBounds().pad(-0.18).contains(target)) {
-      map.panTo(target, { animate: true });
+    if (didInitialFit.current || results.length === 0 || focused) return;
+    didInitialFit.current = true;
+    const bounds = L.latLngBounds(results.map((r) => [r.listing.lat, r.listing.lng]));
+    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 15, animate: false });
+  }, [map, results, focused]);
+
+  const focusedId = focused?.listing.id ?? null;
+
+  // Enter / leave house view.
+  useEffect(() => {
+    if (!focusedId) {
+      fittedKey.current = null;
+      map.keyboard?.enable();
+      const saved = savedView.current;
+      if (saved) {
+        savedView.current = null;
+        map.flyTo(saved.center, saved.zoom, { duration: 0.6 });
+      }
+      return;
     }
-  }, [map, selectedListing]);
+    if (!savedView.current) {
+      savedView.current = { center: map.getCenter(), zoom: map.getZoom() };
+    }
+    // Arrow keys belong to house navigation while a house is open.
+    map.keyboard?.disable();
+  }, [map, focusedId]);
+
+  // Frame the house and its routes; refit once more when the enrichment arrives.
+  useEffect(() => {
+    if (!focused || !routes) return;
+    const key = `${focused.listing.id}|${enrichmentLoaded}`;
+    if (fittedKey.current === key) return;
+    fittedKey.current = key;
+    const h = L.latLng(focused.listing.lat, focused.listing.lng);
+    const pts: L.LatLngExpression[] = [h];
+    // Local stops and food: mirror them around the house so it stays centered.
+    for (const t of [...routes.buses, ...routes.food]) {
+      pts.push([t.lat, t.lng], [2 * h.lat - t.lat, 2 * h.lng - t.lng]);
+    }
+    for (const t of routes.classes) pts.push([t.lat, t.lng]);
+    const bounds = L.latLngBounds(pts).pad(0.04);
+    map.flyToBounds(bounds, { padding: [64, 64], maxZoom: 17, duration: 0.7 });
+  }, [map, focused, routes, enrichmentLoaded]);
 
   return null;
 }
+
+/* ------------------------------------------------------------------ */
+/* House view routes                                                    */
+/* ------------------------------------------------------------------ */
+
+function RouteLayer({
+  from,
+  targets,
+  color,
+  casing,
+}: {
+  from: { lat: number; lng: number };
+  targets: RouteTarget[];
+  color: string;
+  casing: string;
+}) {
+  return (
+    <>
+      {targets.map((t, i) => {
+        const path = curvedPath(from, t, (i % 2 === 0 ? 1 : -1) * (0.12 + 0.04 * (i % 3)));
+        const tip = (
+          <div>
+            <div className="font-semibold">{t.detail}</div>
+            <div className="text-[#3D5245]">
+              ~{formatMin(t.walkMin)} estimated walk
+              {t.busMin !== null ? ` · ~${formatMin(t.busMin)} by bus` : ""}
+            </div>
+            {t.courses.length > 0 && (
+              <div className="text-[#3D5245]">Classes: {t.courses.join(", ")}</div>
+            )}
+            {t.routes.length > 0 && (
+              <div className="text-[#3D5245]">Routes: {t.routes.join(", ")}</div>
+            )}
+            {t.approximate && t.kind === "classes" && (
+              <div className="text-[#7A3415]">Approximate destination</div>
+            )}
+          </div>
+        );
+        return (
+          <RouteLine
+            key={t.id}
+            path={path}
+            target={t}
+            color={color}
+            casing={casing}
+            tip={tip}
+          />
+        );
+      })}
+    </>
+  );
+}
+
+function RouteLine({
+  path,
+  target,
+  color,
+  casing,
+  tip,
+}: {
+  path: [number, number][];
+  target: RouteTarget;
+  color: string;
+  casing: string;
+  tip: ReactNode;
+}) {
+  const endIcon = useMemo(() => routeEndIcon(target, color), [target, color]);
+  return (
+    <>
+      <Polyline
+        positions={path}
+        interactive={false}
+        pathOptions={{ color: casing, weight: 7, opacity: 0.75, lineCap: "round" }}
+      />
+      <Polyline
+        positions={path}
+        pathOptions={{
+          color,
+          weight: 3.5,
+          opacity: 0.95,
+          dashArray: target.kind === "classes" ? "10 7" : "6 6",
+          lineCap: "round",
+        }}
+      >
+        <Tooltip className="terrarium-tooltip" sticky>
+          {tip}
+        </Tooltip>
+      </Polyline>
+      <CircleMarker
+        center={[target.lat, target.lng]}
+        radius={target.kind === "classes" ? 7 : 5.5}
+        pathOptions={{ color: casing, weight: 2, fillColor: color, fillOpacity: 1 }}
+      >
+        <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -8]}>
+          {tip}
+        </Tooltip>
+      </CircleMarker>
+      {(target.kind === "classes" || target.kind === "buses") && (
+        <Marker
+          position={[target.lat, target.lng]}
+          icon={endIcon}
+          interactive={false}
+          keyboard={false}
+          zIndexOffset={-200}
+        />
+      )}
+    </>
+  );
+}
+
+function RouteLegend({
+  routes,
+  visible,
+  onToggle,
+  colors,
+}: {
+  routes: HouseRoutes;
+  visible: Record<RouteKind, boolean>;
+  onToggle: (k: RouteKind) => void;
+  colors: Record<RouteKind, string>;
+}) {
+  return (
+    <div className="rm-legend absolute bottom-3 left-3 z-[850] max-w-[calc(100%-5rem)] rounded-xl border border-[#C8D3C1] bg-[#FCFDFB] px-2.5 py-2 text-[11px] text-[#16241B] shadow-md">
+      <div role="group" aria-label="Show or hide routes" className="flex flex-wrap gap-1.5">
+        {ROUTE_KINDS.map((k) => {
+          const n = routes[k].length;
+          return (
+            <button
+              key={k}
+              type="button"
+              aria-pressed={visible[k]}
+              onClick={() => onToggle(k)}
+              disabled={n === 0}
+              className={`inline-flex min-h-[32px] items-center gap-1.5 rounded-lg border px-2 py-1 font-semibold transition-opacity disabled:cursor-default disabled:opacity-40 ${
+                visible[k]
+                  ? "border-[#C8D3C1] bg-[#F3F5EF]"
+                  : "border-[#E6ECE1] bg-[#FCFDFB] opacity-55"
+              }`}
+            >
+              <span
+                aria-hidden="true"
+                className="inline-block h-[3px] w-4 rounded-full"
+                style={{ background: colors[k] }}
+              />
+              <span>
+                {k === "classes" && routes.classBasis === "campus" ? "Campus" : ROUTE_LABELS[k]}
+              </span>
+              <span className="tabular-nums text-[#3D5245]">{n}</span>
+            </button>
+          );
+        })}
+      </div>
+      <p className="mt-1.5 hidden text-[10.5px] leading-snug text-[#3D5245] sm:block">
+        Lines are sketches, not street routes. Times are estimated walks.
+      </p>
+    </div>
+  );
+}
+
+function RankLegend() {
+  return (
+    <div className="pointer-events-none absolute bottom-3 left-3 z-[850] rounded-xl border border-[#C8D3C1] bg-[#FCFDFB] px-3 py-2 text-[11px] text-[#16241B] shadow-sm">
+      <div className="flex items-center gap-2">
+        <span className="font-semibold">Best</span>
+        <span
+          aria-hidden="true"
+          className="inline-block h-2 w-24 rounded-full"
+          style={{ background: RANK_GRADIENT_CSS }}
+        />
+        <span className="font-semibold">Lowest</span>
+      </div>
+      <div className="mt-1.5 flex items-center gap-3 text-[#3D5245]">
+        <span className="inline-flex items-center gap-1.5">
+          <span
+            aria-hidden="true"
+            className="inline-block h-3 w-4 rounded-full"
+            style={{ background: "#15803D", boxShadow: `0 0 0 1.5px #fff, 0 0 0 3px ${GOLD}` }}
+          />
+          Top 10
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden="true" className="inline-block h-3 w-4 rounded-full bg-[#3D5245]" />
+          Real
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span aria-hidden="true" className="inline-block h-3 w-4 rounded-[3px] bg-[#3D5245]" />
+          Mock
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Map                                                                  */
+/* ------------------------------------------------------------------ */
+
+const ALL_VISIBLE: Record<RouteKind, boolean> = { classes: true, buses: true, food: true };
 
 export default function RankMap() {
   const results = useTerrarium((s) => s.rankResponse?.results ?? EMPTY_RESULTS);
   const selectedId = useTerrarium((s) => s.selectedListingId);
   const setSelectedListingId = useTerrarium((s) => s.setSelectedListingId);
   const courses = useTerrarium((s) => s.profile.courses ?? EMPTY_COURSES);
-  const placeCategories = useTerrarium((s) => s.profile.placeCategories ?? EMPTY_CATEGORIES);
-  const frequentPlaces = useTerrarium((s) => s.profile.frequentPlaces);
-  const enrichmentById = useTerrarium((s) => s.enrichmentById);
-  const askChatAboutPlaceCategories = useTerrarium((s) => s.askChatAboutPlaceCategories);
+  const majorCampus = useTerrarium((s) => s.profile.majorCampus);
+  const enrichment = useTerrarium((s) => (selectedId ? s.enrichmentById[selectedId] : undefined));
+  const theme = useTheme();
+  const [visible, setVisible] = useState<Record<RouteKind, boolean>>(ALL_VISIBLE);
 
-  const [showBusStops, setShowBusStops] = useState<boolean>(false);
-  const [showUserPlaces, setShowUserPlaces] = useState<boolean>(false);
-  const [showClassBuildings, setShowClassBuildings] = useState<boolean>(true);
-
-  const selectedScored = useMemo(
-    () => results.find((r) => r.listing.id === selectedId) ?? null,
+  const focusedIndex = useMemo(
+    () => (selectedId ? results.findIndex((r) => r.listing.id === selectedId) : -1),
     [results, selectedId],
   );
+  const focused = focusedIndex >= 0 ? results[focusedIndex] : null;
 
-  const selectedEnrichment = selectedId ? enrichmentById[selectedId] : undefined;
-
-  const classBuildingItems = useMemo(() => {
-    const grouped = new Map<
-      string,
-      { building: UMBuilding; codes: string[]; allConfirmed: boolean }
-    >();
-    for (const c of courses) {
-      if (!c.buildingCode) continue;
-      const b = BUILDINGS_BY_CODE.get(c.buildingCode);
-      if (!b) continue;
-      const existing = grouped.get(b.code);
-      if (existing) {
-        if (!existing.codes.includes(c.code)) existing.codes.push(c.code);
-        existing.allConfirmed = existing.allConfirmed && c.confirmed;
-      } else {
-        grouped.set(b.code, {
-          building: b,
-          codes: [c.code],
-          allConfirmed: c.confirmed,
-        });
-      }
-    }
-    return [...grouped.values()];
-  }, [courses]);
-
-  const filteredCategoryPlaces = useMemo(() => {
-    if (!showUserPlaces || placeCategories.length === 0) return [];
-    const allowed = new Set(placeCategories);
-    return ALL_PLACES.filter((p) => allowed.has(p.category));
-  }, [showUserPlaces, placeCategories]);
-
-  const pinnedFrequentPlaces = useMemo(
-    () =>
-      showUserPlaces
-        ? frequentPlaces.filter(
-            (p): p is { label: string; lat: number; lng: number; timesPerWeek: number | null } =>
-              p.lat !== null && p.lng !== null,
-          )
-        : [],
-    [showUserPlaces, frequentPlaces],
+  const routes = useMemo(
+    () => (focused ? buildHouseRoutes(focused.listing, enrichment, courses, majorCampus) : null),
+    [focused, enrichment, courses, majorCampus],
   );
 
-  const highlightedStopIds = useMemo(
-    () => new Set(selectedEnrichment?.stops.map((s) => s.stopId) ?? []),
-    [selectedEnrichment],
-  );
+  // Icons are rebuilt only when ranking, focus or result count changes.
+  const icons = useMemo(() => {
+    const total = results.length;
+    return results.map((item, index) =>
+      listingIcon(
+        item,
+        index,
+        total,
+        !focused ? "default" : item.listing.id === focused.listing.id ? "focused" : "dimmed",
+      ),
+    );
+  }, [results, focused]);
 
-  /* Render lower-ranked pins first so top-3 and selected pins sit cleanly on top */
-  const orderedForMap = useMemo(
-    () => [...results].reverse(),
-    [results],
-  );
+  // Draw worst first so better listings sit on top.
+  const drawOrder = useMemo(() => results.map((_, i) => results.length - 1 - i), [results]);
+
+  const colors = ROUTE_COLORS[theme];
+  const casing = theme === "dark" ? "#0F1612" : "#FFFFFF";
 
   return (
-    <div className="relative h-full w-full">
-      {/* Optional Layer Toggles */}
-      <div
-        role="group"
-        aria-label="Map layer toggles"
-        className="absolute left-3 top-3 z-[900] flex flex-wrap gap-2"
-      >
-        <button
-          type="button"
-          aria-pressed={showBusStops}
-          onClick={() => setShowBusStops((v) => !v)}
-          className={`inline-flex min-h-[44px] items-center gap-2 rounded-xl border px-3.5 py-2 text-xs font-semibold shadow-sm transition-colors ${
-            showBusStops
-              ? "border-[#2F6B47] bg-[#2F6B47] text-white"
-              : "border-[#C8D3C1] bg-[#FCFDFB] text-[#16241B] hover:bg-[#E6ECE1]"
-          }`}
-        >
-          <BusIcon size={15} />
-          <span>Bus stops</span>
-        </button>
-
-        <button
-          type="button"
-          aria-pressed={showUserPlaces}
-          onClick={() => setShowUserPlaces((v) => !v)}
-          className={`inline-flex min-h-[44px] items-center gap-2 rounded-xl border px-3.5 py-2 text-xs font-semibold shadow-sm transition-colors ${
-            showUserPlaces
-              ? "border-[#2F6B47] bg-[#2F6B47] text-white"
-              : "border-[#C8D3C1] bg-[#FCFDFB] text-[#16241B] hover:bg-[#E6ECE1]"
-          }`}
-        >
-          <PinIcon size={15} />
-          <span>My places</span>
-        </button>
-
-        <button
-          type="button"
-          aria-pressed={showClassBuildings}
-          onClick={() => setShowClassBuildings((v) => !v)}
-          className={`inline-flex min-h-[44px] items-center gap-2 rounded-xl border px-3.5 py-2 text-xs font-semibold shadow-sm transition-colors ${
-            showClassBuildings
-              ? "border-[#2F6B47] bg-[#2F6B47] text-white"
-              : "border-[#C8D3C1] bg-[#FCFDFB] text-[#16241B] hover:bg-[#E6ECE1]"
-          }`}
-        >
-          <BuildingIcon size={15} />
-          <span>Class buildings</span>
-          {classBuildingItems.length > 0 && (
-            <span
-              className={`rounded-full px-1.5 py-0.5 text-[11px] ${
-                showClassBuildings ? "bg-white/20 text-white" : "bg-[#DFEAE2] text-[#1C452C]"
-              }`}
-            >
-              {classBuildingItems.length}
-            </span>
-          )}
-        </button>
-      </div>
-
-      {/* Helper note if user toggles on an empty user-places layer */}
-      {showUserPlaces &&
-        filteredCategoryPlaces.length === 0 &&
-        pinnedFrequentPlaces.length === 0 && (
-          <div className="absolute left-3 top-16 z-[900] flex max-w-xs items-center gap-2.5 rounded-xl border border-[#C8D3C1] bg-[#FCFDFB] px-3.5 py-2 text-xs text-[#3D5245] shadow-md">
-            <span>No place categories chosen yet.</span>
-            <button
-              type="button"
-              onClick={askChatAboutPlaceCategories}
-              className="min-h-[36px] shrink-0 rounded-lg bg-[#2F6B47] px-2.5 py-1 font-semibold text-white hover:bg-[#245538]"
-            >
-              Choose in chat
-            </button>
-          </div>
-        )}
-
-      {/* Compact Map Legend (Bottom-Left) */}
-      <div className="pointer-events-none absolute bottom-6 left-3 z-[850] hidden rounded-xl border border-[#C8D3C1] bg-[#FCFDFB]/95 px-3 py-2 text-[11px] text-[#16241B] shadow-sm sm:block">
-        <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="inline-block h-3 w-4 rounded-full border border-[#16241B] bg-[#2F6B47]" />
-            <span>Top 3</span>
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="inline-block h-3 w-4 rounded-full border-2 border-[#16241B] bg-[#FCFDFB]" />
-            <span>Real listing</span>
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="inline-block h-3 w-4 rounded-[3px] border-2 border-dashed border-[#3D5245] bg-[#FCFDFB]" />
-            <span>Mock listing</span>
-          </span>
-        </div>
-      </div>
-
+    <div className={`rm-root relative h-full w-full ${focused ? "rm-root--house" : ""}`}>
       <MapContainer
         center={ANN_ARBOR}
         zoom={14}
+        maxZoom={18}
         zoomControl={false}
         preferCanvas
         className="h-full w-full"
+        aria-label={
+          focused
+            ? `Map focused on ${focused.listing.name} with estimated routes`
+            : "Map of ranked Ann Arbor listings"
+        }
       >
-        <ZoomControl position="bottomleft" />
-        <MapViewportSync selectedListing={selectedScored} />
-
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        <ZoomControl position="bottomright" />
+        <ViewController
+          results={results}
+          focused={focused}
+          routes={routes}
+          enrichmentLoaded={Boolean(enrichment)}
         />
 
-        {/* Optional Layer 1: Bus Stops */}
-        {showBusStops &&
-          CORE_STOPS.map((stop) => {
-            const isNearSelected = highlightedStopIds.has(stop.stopId);
-            const isUM = stop.agency === "UM";
-            return (
-              <CircleMarker
-                key={stop.stopId}
-                center={[stop.lat, stop.lng]}
-                radius={isNearSelected ? 7 : 4.5}
-                pathOptions={{
-                  color: isNearSelected ? "#16241B" : isUM ? "#1C452C" : "#3D5245",
-                  fillColor: isNearSelected ? "#2F6B47" : isUM ? "#2F6B47" : "#6A8273",
-                  fillOpacity: isNearSelected ? 0.95 : 0.7,
-                  weight: isNearSelected ? 2 : 1,
-                }}
-              >
-                <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -6]}>
-                  <div>
-                    <div className="font-semibold">
-                      {stop.stopName} ({stop.agency === "UM" ? "U-M Transit" : "TheRide"})
-                    </div>
-                    {stop.routes.length > 0 && (
-                      <div className="text-[#3D5245]">
-                        {stop.routes
-                          .slice(0, 3)
-                          .map((r) => r.routeName)
-                          .join(", ")}
-                      </div>
-                    )}
-                  </div>
-                </Tooltip>
-              </CircleMarker>
-            );
-          })}
+        <TileLayer
+          key={theme}
+          attribution={TILE_ATTRIBUTION}
+          url={TILE_URL[theme]}
+          maxNativeZoom={16}
+          maxZoom={18}
+        />
 
-        {/* Optional Layer 2: User's Places (selected categories + frequentPlaces) */}
-        {showUserPlaces &&
-          filteredCategoryPlaces.map((place) => (
-            <CircleMarker
-              key={place.id}
-              center={[place.lat, place.lng]}
-              radius={5.5}
-              pathOptions={{
-                color: "#7A3415",
-                fillColor: "#FBF1E8",
-                fillOpacity: 0.92,
-                weight: 1.8,
-              }}
-            >
-              <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -6]}>
-                <div>
-                  <span className="font-semibold">{place.name}</span>
-                  <span className="ml-1.5 text-[#3D5245]">
-                    · {PLACE_CATEGORY_LABELS[place.category]}
-                  </span>
-                </div>
-              </Tooltip>
-            </CircleMarker>
-          ))}
-
-        {pinnedFrequentPlaces.map((fp, idx) => (
-          <CircleMarker
-            key={`fp-${fp.label}-${idx}`}
-            center={[fp.lat, fp.lng]}
-            radius={7}
-            pathOptions={{
-              color: "#16241B",
-              fillColor: "#2F6B47",
-              fillOpacity: 0.95,
-              weight: 2,
-            }}
-          >
-            <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -8]}>
-              <div className="font-semibold">Your place: {fp.label}</div>
-            </Tooltip>
-          </CircleMarker>
+        {AREA_ICONS.map((a) => (
+          <Marker
+            key={a.name}
+            position={[a.lat, a.lng]}
+            icon={a.icon}
+            interactive={false}
+            keyboard={false}
+            zIndexOffset={-1000}
+          />
         ))}
 
-        {/* Optional Layer 3: User's Class Buildings */}
-        {showClassBuildings &&
-          classBuildingItems.map(({ building, codes, allConfirmed }) => (
-            <Marker
-              key={`bldg-${building.code}`}
-              position={[building.lat, building.lng]}
-              icon={createBuildingIcon(building.code, allConfirmed)}
-              zIndexOffset={400}
-            >
-              <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -12]}>
-                <div>
-                  <div className="font-semibold">
-                    {building.name} ({building.code})
-                  </div>
-                  <div className="text-[#3D5245]">
-                    Classes: {codes.join(", ")}
-                    {!allConfirmed ? " · Please confirm in chat" : ""}
-                  </div>
-                </div>
-              </Tooltip>
-            </Marker>
+        {focused &&
+          routes &&
+          ROUTE_KINDS.filter((k) => visible[k]).map((k) => (
+            <RouteLayer
+              key={`${focused.listing.id}-${k}`}
+              from={focused.listing}
+              targets={routes[k]}
+              color={colors[k]}
+              casing={casing}
+            />
           ))}
 
-        {/* Listing Score Markers */}
-        {orderedForMap.map((item) => {
-          const isSelected = item.listing.id === selectedId;
-          const isTop3 = item.rank <= 3;
+        {drawOrder.map((index) => {
+          const item = results[index];
+          const isFocused = focused?.listing.id === item.listing.id;
           return (
             <Marker
               key={item.listing.id}
               position={[item.listing.lat, item.listing.lng]}
-              icon={createListingIcon(item, isSelected)}
-              zIndexOffset={isSelected ? 1000 : isTop3 ? 700 - item.rank : 100}
+              icon={icons[index]}
+              title={`#${item.rank} ${item.listing.name}, score ${Math.round(item.score)}`}
+              zIndexOffset={isFocused ? 2000 : 1000 - index}
               eventHandlers={{
                 click: () => setSelectedListingId(item.listing.id),
               }}
             >
-              <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -16]}>
-                <div>
-                  <div className="font-semibold">
-                    #{item.rank} {item.listing.name}
+              {!isFocused && (
+                <Tooltip className="terrarium-tooltip" direction="top" offset={[0, -14]}>
+                  <div>
+                    <div className="font-semibold">
+                      #{item.rank} {item.listing.name}
+                    </div>
+                    <div className="text-[#3D5245]">
+                      Score {Math.round(item.score)} · {formatListingPrice(item.listing)}
+                      {item.listing.provenance.isSynthetic ? " · Mock listing" : ""}
+                    </div>
                   </div>
-                  <div className="text-[#3D5245]">
-                    Score {Math.round(item.score)} ·{" "}
-                    {item.listing.provenance.isSynthetic ? "Mock listing" : "Real listing"}
-                  </div>
-                </div>
-              </Tooltip>
+                </Tooltip>
+              )}
             </Marker>
           );
         })}
       </MapContainer>
+
+      {focused && routes ? (
+        <RouteLegend
+          routes={routes}
+          visible={visible}
+          colors={colors}
+          onToggle={(k) => setVisible((v) => ({ ...v, [k]: !v[k] }))}
+        />
+      ) : (
+        <RankLegend />
+      )}
     </div>
   );
 }
